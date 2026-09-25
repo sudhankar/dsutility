@@ -11,7 +11,7 @@ window.DSPDF_CONFIG = {
 
   /**
    * 👉 OWNER: basePath
-   * If your site lives at  https://dspdf.pages.dev/
+   * If your site lives at  https://dsutility.pages.dev/
    * then basePath should be "/"
    *
    * If your site lives at  https://sudhankar.github.io/
@@ -27,7 +27,7 @@ window.DSPDF_CONFIG = {
    * 👉 OWNER: siteUrl — the full public URL, WITH trailing slash.
    * Used for sitemap, canonical tags, Open Graph.
    */
-  siteUrl: "https://dspdf.pages.dev/",
+  siteUrl: "https://dsutility.pages.dev/",
 
   /**
    * 👉 OWNER: Your real contact email. Shown on /contact.

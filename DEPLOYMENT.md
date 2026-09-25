@@ -99,7 +99,7 @@ git push -u origin main
 6. Click **Save**.
 7. Wait 1–3 minutes. Refresh the page. You'll see a green message:
 
-   **"Your site is live at https://dspdf.pages.dev/"**
+   **"Your site is live at https://dsutility.pages.dev/"**
 
 **Ye URL aapka live site ka address hai.** Copy karke rakhein.
 
@@ -120,7 +120,7 @@ This step makes the site work correctly under your GitHub Pages URL.
 GitHub Pages hosts your site at a URL like:
 
 ```
-https://dspdf.pages.dev/
+https://dsutility.pages.dev/
 ```
 
 Because your site lives in a subfolder (`/dspdf/`), all internal links and assets need to know that. This is what `basePath` does.
@@ -129,7 +129,7 @@ Because your site lives in a subfolder (`/dspdf/`), all internal links and asset
 
 | Your live URL | basePath should be |
 |---|---|
-| `https://dspdf.pages.dev/` | `/dspdf/` |
+| `https://dsutility.pages.dev/` | `/dspdf/` |
 | `https://priya.github.io/my-pdf-tools/` | `/my-pdf-tools/` |
 | `https://username.github.io/` | `/` |
 | `https://dspdf.com/` (custom domain) | `/` |
@@ -141,13 +141,13 @@ Because your site lives in a subfolder (`/dspdf/`), all internal links and asset
 3. Find these lines:
    ```javascript
    basePath: "/",
-   siteUrl: "https://dspdf.pages.dev/",
+   siteUrl: "https://dsutility.pages.dev/",
    contactEmail: "dstechnocomp@gmail.com",
    ```
 4. Change them to your real values. For example, if your username is `sudhankar` and your repo is `dspdf`:
    ```javascript
    basePath: "/dspdf/",
-   siteUrl: "https://dspdf.pages.dev/",
+   siteUrl: "https://dsutility.pages.dev/",
    contactEmail: "your-real-email@example.com",
    ```
 5. Scroll to the bottom, click **Commit changes**.
@@ -156,12 +156,12 @@ Because your site lives in a subfolder (`/dspdf/`), all internal links and asset
 
 1. Open `sitemap.xml` in your repository. Click the pencil icon.
 2. Use the browser's Find and Replace (Ctrl+H on Windows, Cmd+Option+F on Mac):
-   - Find: `dspdf.pages.dev`
+   - Find: `dsutility.pages.dev`
    - Replace with: `YOUR-USERNAME.github.io/YOUR-REPO-NAME` (your real username + repo)
 3. Commit.
 4. Open `robots.txt`, click the pencil, find the line:
    ```
-   Sitemap: https://dspdf.pages.dev/sitemap.xml
+   Sitemap: https://dsutility.pages.dev/sitemap.xml
    ```
    and change it to your real URL. Commit.
 
@@ -199,8 +199,8 @@ GitHub Pages rebuilds within 1–2 minutes after a change. Then visit your live 
 - [ ] Drop a PDF into the merge tool — thumbnails appear
 - [ ] Merge two small PDFs — output downloads
 - [ ] Toggle dark/light theme — preference persists on refresh
-- [ ] Visit `https://dspdf.pages.dev/sitemap.xml` — XML loads
-- [ ] Visit `https://dspdf.pages.dev/robots.txt` — text loads
+- [ ] Visit `https://dsutility.pages.dev/sitemap.xml` — XML loads
+- [ ] Visit `https://dsutility.pages.dev/robots.txt` — text loads
 - [ ] Visit a nonexistent URL like `/nope` — 404 page appears
 
 ---
@@ -332,7 +332,7 @@ If you're stuck, take a screenshot of the error message and include it in a mess
 - [ ] All files uploaded to GitHub
 - [ ] GitHub Pages enabled in Settings → Pages
 - [ ] `js/config.js` — `basePath`, `siteUrl`, and `contactEmail` updated
-- [ ] `sitemap.xml` — replaced `dspdf.pages.dev` with real URL
+- [ ] `sitemap.xml` — replaced `dsutility.pages.dev` with real URL
 - [ ] `robots.txt` — sitemap URL updated
 - [ ] `404.html` — absolute paths updated (if using subpath)
 - [ ] Homepage loads with styles and working tool links

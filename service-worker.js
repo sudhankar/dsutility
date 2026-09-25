@@ -16,7 +16,7 @@
  *    below to make them work offline.
  */
 
-var CACHE_VERSION = "dsutility-v38";
+var CACHE_VERSION = "dsutility-v39";
 var PRECACHE_URLS = [
   "./",
   "./index.html",
@@ -34,6 +34,9 @@ var PRECACHE_URLS = [
   "./images/favicon.svg",
   "./js/tools/pdf-page-size-checker.js",
   "./js/tools/pdf-version-checker.js",
+  "./js/tools/text-to-pdf.js",
+  "./tools/text-to-pdf/index.html",
+  "./blog/text-to-pdf-guide/index.html",
   "./tools/pdf-page-size-checker/index.html",
   "./tools/pdf-version-checker/index.html",
   "./blog/pdf-page-size-checker/index.html",

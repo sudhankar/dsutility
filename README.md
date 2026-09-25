@@ -96,7 +96,7 @@ window.DSUTILITY_CONFIG = {
   basePath: "/",
 
   // 👉 Your full public URL, WITH trailing slash.
-  siteUrl: "https://dspdf.pages.dev/",
+  siteUrl: "https://dsutility.pages.dev/",
 
   // 👉 Your real contact email. Shown on Contact page.
   contactEmail: "dstechnocomp@gmail.com",
@@ -119,12 +119,12 @@ The single most common deployment mistake is setting `basePath` wrong. Two scena
 
 | Your deployed URL | basePath | siteUrl |
 |---|---|---|
-| `https://dspdf.pages.dev/` | `/dspdf/` | `https://dspdf.pages.dev/` |
+| `https://dsutility.pages.dev/` | `/dspdf/` | `https://dsutility.pages.dev/` |
 | `https://sudhankar.github.io/` | `/` | `https://sudhankar.github.io/` |
 | `https://dspdf.com/` | `/` | `https://dspdf.com/` |
 
 Also update these two files to match:
-- `sitemap.xml` — find/replace `dspdf.pages.dev` with your real URL
+- `sitemap.xml` — find/replace `dsutility.pages.dev` with your real URL
 - `robots.txt` — same
 
 ---
@@ -222,7 +222,7 @@ Whenever you add a page, add a `<url>` block:
 
 ```xml
 <url>
-  <loc>https://dspdf.pages.dev/path/to/page/</loc>
+  <loc>https://dsutility.pages.dev/path/to/page/</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>

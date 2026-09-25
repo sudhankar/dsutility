@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dspdf.pages.dev/sitemap.xml
+Sitemap: https://dsutility.pages.dev/sitemap.xml
