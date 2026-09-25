@@ -1,0 +1,8 @@
+# DSPDF robots.txt
+# Public pages and assets are crawlable.
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dspdf.pages.dev/sitemap.xml
