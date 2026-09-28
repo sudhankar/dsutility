@@ -87,4 +87,18 @@
   <url><loc>https://dsutility.pages.dev/blog/pdf-version-checker/</loc></url>
   <url><loc>https://dsutility.pages.dev/tools/text-to-pdf/</loc></url>
   <url><loc>https://dsutility.pages.dev/blog/text-to-pdf-guide/</loc></url>
+  <url><loc>https://dsutility.pages.dev/tools/pdf-to-markdown/</loc></url>
+  <url><loc>https://dsutility.pages.dev/blog/pdf-to-markdown-guide/</loc></url>
+  <url><loc>https://dsutility.pages.dev/tools/da-arrears-calculator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/blog/da-arrears-calculator-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/tools/nps-calculator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/blog/nps-calculator-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/tools/leave-encashment-calculator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/blog/leave-encashment-calculator-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/tools/image-resize-compress/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/blog/image-resize-compress-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dsutility.pages.dev/tools/passport-photo/</loc></url>
+  <url><loc>https://dsutility.pages.dev/blog/passport-photo-guide/</loc></url>
+  <url><loc>https://dsutility.pages.dev/tools/image-to-text/</loc></url>
+  <url><loc>https://dsutility.pages.dev/blog/image-to-text-ocr-guide/</loc></url>
 </urlset>

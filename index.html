@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#0A1929" />
 
-<title>DSUTILITY — Free Private PDF Tools That Run in Your Browser</title>
-<meta name="description" content="Merge, split, compress, sign, and edit PDFs entirely in your browser. No uploads, no accounts, no tracking. Your files never leave your device." />
+<title>DSUTILITY — Free Browser-Based PDF, Image &amp; Utility Tools</title>
+<meta name="description" content="Free browser-based PDF, image, document and everyday utility tools. Process supported files locally in your browser with privacy-focused tools and practical calculators." />
 
 <link rel="canonical" href="https://dsutility.pages.dev/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="DSUTILITY — Private PDF Tools in Your Browser" />
-<meta property="og:description" content="Free PDF tools that run 100% on your device. No uploads. No accounts. No tracking." />
+<meta property="og:title" content="DSUTILITY — Free PDF, Image & Utility Tools" />
+<meta property="og:description" content="Free browser-based PDF, image, document and everyday utility tools. No uploads for supported local-processing tools." />
 <meta property="og:url" content="https://dsutility.pages.dev/" />
 <meta property="og:image" content="https://dsutility.pages.dev/images/logo.svg" />
 <meta property="og:site_name" content="DSUTILITY" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="DSUTILITY — Private PDF Tools in Your Browser" />
-<meta name="twitter:description" content="Free PDF tools that run 100% on your device. No uploads. No accounts. No tracking." />
+<meta name="twitter:title" content="DSUTILITY — Free PDF, Image & Utility Tools" />
+<meta name="twitter:description" content="Free browser-based PDF, image, document and everyday utility tools. No uploads for supported local-processing tools." />
 <meta name="twitter:image" content="https://dsutility.pages.dev/images/logo.svg" />
 
 <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
@@ -44,8 +44,8 @@
       "@id": "https://dsutility.pages.dev/#website",
       "url": "https://dsutility.pages.dev/",
       "name": "DSUTILITY",
-      "description": "Free private PDF tools that run entirely in your browser.",
-      "inLanguage": "en",
+      "description": "Free browser-based PDF, image, document and utility tools, with local processing for supported tools.",
+      "inLanguage": "en"
     },
     {
       "@type": "Organization",
@@ -95,19 +95,23 @@
         <img src="images/logo.svg" alt="DSUTILITY logo" class="home-brand-lockup__logo" />
         <div class="home-brand-lockup__creator"><span class="home-brand-lockup__line"></span><span>Sudhakar Creations</span><span class="home-brand-lockup__line"></span></div>
       </div>
-      <span class="hero__tagline">🔒 100% Client-Side · No Uploads · No Accounts</span>
-      <h1>Powerful PDF Tools. <span class="accent">100% Private.</span> Runs in Your Browser.</h1>
-      <p class="hero__sub">Your files never leave your device. Merge, split, compress, sign, and edit PDFs — all processed locally using modern browser technology.</p>
+      <span class="hero__tagline">🔒 Privacy-first utilities · No account required</span>
+      <h1>Useful Digital Tools. <span class="accent">Simple, Private &amp; Free.</span></h1>
+      <p class="hero__sub">DSUTILITY brings PDF tools, image utilities, document converters and practical everyday calculators together in one lightweight browser-based toolkit. Supported file processing happens locally on your device.</p>
 
-      <div class="upload-zone" id="hero-drop" role="button" tabindex="0"
-           aria-label="Drop a PDF here or click to open the tool directory">
-        <svg class="upload-zone__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="17 8 12 3 7 8"/>
-          <line x1="12" y1="3" x2="12" y2="15"/>
-        </svg>
-        <p class="upload-zone__title">Drop a PDF here — we'll show you the right tool</p>
-        <p class="upload-zone__hint">Or <a href="tools/index.html">browse all tools →</a></p>
+      <div class="home-tool-search" role="search">
+        <label class="sr-only" for="homeToolSearch">Search DSUTILITY tools</label>
+        <div class="home-tool-search__box">
+          <span aria-hidden="true">⌕</span>
+          <input id="homeToolSearch" type="search" placeholder="What do you want to do? Search tools…" autocomplete="off" />
+          <a class="btn btn-primary" href="tools/index.html" id="homeToolSearchBtn">Browse Tools</a>
+        </div>
+        <div class="home-tool-search__quick" aria-label="Popular categories">
+          <a href="tools/index.html#government">Government &amp; Office</a>
+          <a href="tools/index.html#pdf">PDF Tools</a>
+          <a href="tools/index.html#convert">Convert</a>
+          <a href="tools/index.html#images">Image Tools</a>
+        </div>
       </div>
 
       <ul class="trust-badges">
@@ -121,9 +125,9 @@
   <!-- ============================ POPULAR TOOLS ============================ -->
   <section class="section">
     <div class="container">
-      <span class="eyebrow">Most Used</span>
-      <h2>Popular PDF Tools</h2>
-      <p class="lead mb-6">Everything you need to handle PDFs — all running privately in your browser.</p>
+      <span class="eyebrow">Popular Utilities</span>
+      <h2>Tools People Use Every Day</h2>
+      <p class="lead mb-6">Start with popular PDF, image and office utilities, then explore the full collection by category.</p>
 
       <div class="grid grid--3">
         <a class="tool-card" href="tools/pdf-editor/index.html">
@@ -131,6 +135,30 @@
           <h3 class="tool-card__title">PDF Editor</h3>
           <p class="tool-card__desc">Add text, images, shapes, signatures, and annotations on top of any PDF.</p>
           <span class="tool-card__meta">Most popular</span>
+        </a>
+
+        <a class="tool-card" href="tools/image-resize-compress/index.html">
+          <span class="tool-card__icon" aria-hidden="true">🖼</span>
+          <h3 class="tool-card__title">Image Resize &amp; Compress</h3>
+          <p class="tool-card__desc">Resize common images and reduce file size locally in your browser.</p>
+        </a>
+
+        <a class="tool-card" href="tools/da-arrears-calculator/index.html">
+          <span class="tool-card__icon" aria-hidden="true">₹</span>
+          <h3 class="tool-card__title">DA Arrears Calculator</h3>
+          <p class="tool-card__desc">Estimate DA differences across your selected pay and rate periods.</p>
+        </a>
+
+        <a class="tool-card" href="tools/nps-calculator/index.html">
+          <span class="tool-card__icon" aria-hidden="true">NPS</span>
+          <h3 class="tool-card__title">NPS Calculator</h3>
+          <p class="tool-card__desc">Explore contribution and retirement-corpus estimates with your own inputs.</p>
+        </a>
+
+        <a class="tool-card" href="tools/leave-encashment-calculator/index.html">
+          <span class="tool-card__icon" aria-hidden="true">📅</span>
+          <h3 class="tool-card__title">Leave Encashment Calculator</h3>
+          <p class="tool-card__desc">Estimate leave-encashment value from basic pay, DA and eligible days.</p>
         </a>
 
         <a class="tool-card" href="tools/merge-pdf/index.html">
@@ -193,7 +221,7 @@
   <section class="section section--tight">
     <div class="container">
       <span class="eyebrow">Browse by Category</span>
-      <h2>Every PDF Task, One Place</h2>
+      <h2>Useful Utilities, One Place</h2>
 
       <ul class="category-chips mt-4">
         <li><a class="category-chip is-active" href="tools/index.html#organize">Organize</a></li>
@@ -202,9 +230,16 @@
         <li><a class="category-chip" href="tools/index.html#security">Security</a></li>
         <li><a class="category-chip" href="tools/index.html#optimize">Optimize</a></li>
         <li><a class="category-chip" href="tools/index.html#ocr">OCR</a></li>
+        <li><a class="category-chip" href="tools/index.html#government">Government &amp; Office</a></li>
+        <li><a class="category-chip" href="tools/index.html#images">Image Tools</a></li>
       </ul>
 
       <div class="grid grid--4">
+        <a class="tool-card" href="tools/da-arrears-calculator/index.html"><span class="tool-card__icon">₹</span><h3 class="tool-card__title">DA Arrears Calculator</h3><p class="tool-card__desc">Estimate DA differences using your own pay and rate periods.</p></a>
+        <a class="tool-card" href="tools/nps-calculator/index.html"><span class="tool-card__icon">NPS</span><h3 class="tool-card__title">NPS Calculator</h3><p class="tool-card__desc">Estimate NPS contributions and a projected retirement corpus.</p></a>
+        <a class="tool-card" href="tools/leave-encashment-calculator/index.html"><span class="tool-card__icon">📅</span><h3 class="tool-card__title">Leave Encashment Calculator</h3><p class="tool-card__desc">Estimate earned-leave cash equivalent from Basic Pay, DA and eligible days.</p></a>
+        <a class="tool-card" href="tools/image-resize-compress/index.html"><span class="tool-card__icon">🖼</span><h3 class="tool-card__title">Image Resize &amp; Compress</h3><p class="tool-card__desc">Resize JPG, PNG and WebP images and reduce file size in your browser.</p></a>
+        <a class="tool-card" href="tools/passport-photo/index.html"><span class="tool-card__icon">🪪</span><h3 class="tool-card__title">Passport Photo &amp; ID Photo</h3><p class="tool-card__desc">Prepare common ID photo ratios and output sizes locally.</p></a>
                 <a class="tool-card" href="tools/reverse-pages/index.html"><span class="tool-card__icon">↔</span><h3 class="tool-card__title">Reverse PDF Pages</h3><p class="tool-card__desc">Reverse the order of PDF pages.</p></a>
         <a class="tool-card" href="tools/insert-blank-page/index.html"><span class="tool-card__icon">＋</span><h3 class="tool-card__title">Insert Blank Page</h3><p class="tool-card__desc">Add a blank page anywhere in a PDF.</p></a>
 <a class="tool-card" href="tools/duplicate-pages/index.html"><span class="tool-card__icon" aria-hidden="true">⧉</span><h3 class="tool-card__title">Duplicate PDF Pages</h3><p class="tool-card__desc">Copy selected pages and append them to a new PDF.</p></a>
@@ -221,6 +256,7 @@
         </a>
           <a class="tool-card" href="tools/pdf-to-webp/index.html"><span class="tool-card__icon">🌐</span><h3 class="tool-card__title">PDF to WebP</h3><p class="tool-card__desc">Convert PDF pages to compact WebP images.</p></a>
         <a class="tool-card" href="tools/text-to-pdf/index.html"><span class="tool-card__icon">T→PDF</span><h3 class="tool-card__title">Text to PDF</h3><p class="tool-card__desc">Create a simple PDF from plain text.</p></a>
+        <a class="tool-card" href="tools/pdf-to-markdown/index.html"><span class="tool-card__icon">MD</span><h3 class="tool-card__title">PDF to Markdown</h3><p class="tool-card__desc">Extract PDF text into a simple Markdown document.</p></a>
         <a class="tool-card" href="tools/watermark-pdf/index.html">
           <span class="tool-card__icon" aria-hidden="true">💧</span>
           <h3 class="tool-card__title">Watermark PDF</h3>
@@ -267,9 +303,9 @@
       <div class="grid grid--2" style="align-items:center; gap: var(--space-7);">
         <div>
           <span class="eyebrow">Why DSUTILITY</span>
-          <h2>Your Files Never Leave Your Device</h2>
-          <p class="lead">Most online PDF tools upload your documents to a server, process them somewhere, and hope you don't read the privacy policy. We built DSUTILITY because that never sat right with us.</p>
-          <p>Every operation here — merging, splitting, editing, compressing — happens directly inside your browser tab using WebAssembly and modern JavaScript. Your file goes from your hard drive into your browser's memory and back out as a download. Nowhere else.</p>
+          <h2>A Utility Toolkit Built Around Practical Use</h2>
+          <p class="lead">DSUTILITY is growing beyond a PDF-only site into a focused collection of useful browser utilities for documents, images, office work and everyday calculations.</p>
+          <p>For supported file-processing tools, your file is read and processed in the browser rather than uploaded to a processing server. PDF and image utilities can therefore remain useful without requiring an account or a server-side file workflow.</p>
           <p>The tools are designed to process your files locally in the browser. Some tool libraries may still need to be loaded by the browser before a tool can run.</p>
           <a class="btn btn-secondary mt-4" href="blog/why-pdfs-never-leave-your-device/index.html">Read why this matters →</a>
         </div>
@@ -277,11 +313,11 @@
           <div class="grid" style="gap: var(--space-4);">
             <div class="alert alert-info">
               <strong>🔒</strong>
-              <div><strong>No uploads.</strong> Your file is read locally with the FileReader API — nothing is transmitted.</div>
+              <div><strong>Local processing.</strong> Supported file tools process your files inside the browser rather than uploading the document for server-side processing.</div>
             </div>
             <div class="alert alert-info">
               <strong>🧠</strong>
-              <div><strong>Real processing.</strong> We use pdf-lib, pdf.js, and Tesseract.js — the same libraries that power tools you already trust.</div>
+              <div><strong>Focused loading.</strong> Heavy PDF/OCR libraries are intended to load only where a tool needs them, keeping ordinary pages and articles lighter.</div>
             </div>
             <div class="alert alert-info">
               <strong>🕵️</strong>
@@ -331,7 +367,7 @@
     <div class="container">
       <span class="eyebrow">From the Blog</span>
       <h2>Guides, Tips &amp; Honest Explainers</h2>
-      <p class="lead mb-6">Practical articles about working with PDFs — no fluff, no hype.</p>
+      <p class="lead mb-6">Practical guides covering PDFs, images, office work and useful everyday utilities — with honest explanations and limitations.</p>
 
       <div class="grid grid--3">
         <a class="tool-card" href="blog/how-to-merge-pdf-files/index.html">
@@ -411,7 +447,7 @@
       <div>
         <a class="navbar__brand" href="index.html" aria-label="DSUTILITY home"><img src="images/logo.svg" alt="DSUTILITY logo" class="dspdf-shared-logo" /></a>
         <p class="mt-4" style="font-size: 0.9rem; max-width: 34ch;">
-          Powerful PDF tools that respect your privacy. Everything runs in your browser — nothing is uploaded.
+          Practical PDF, image and utility tools designed for simple browser-based use, with local processing for supported file tools.
         </p>
       </div>
 
@@ -422,6 +458,7 @@
           <li><a href="tools/merge-pdf/index.html">Merge PDF</a></li>
           <li><a href="tools/split-pdf/index.html">Split PDF</a></li>
           <li><a href="tools/compress-pdf/index.html">Compress PDF</a></li>
+          <li><a href="tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li>
           <li><a href="tools/index.html">All tools</a></li>
         </ul>
       </div>
@@ -451,7 +488,7 @@
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> DSUTILITY. All rights reserved.</span>
       <span class="footer__badge">
-        <span aria-hidden="true">🔒</span> All processing happens in your browser.
+        <span aria-hidden="true">🔒</span> Supported file processing happens in your browser.
       </span>
     </div>
   </div>
@@ -460,35 +497,19 @@
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 
+
+
 <script>
-/* Hero PDF drop: keep the selected PDF for the next tool page. */
-(function () {
-  var zone = document.getElementById("hero-drop");
-  if (!zone) return;
-  var DB_NAME = "dspdf-local";
-  var STORE = "handoff";
-  function openDB() {
-    return new Promise(function(resolve,reject){
-      var r=indexedDB.open(DB_NAME,1);
-      r.onupgradeneeded=function(){ if(!r.result.objectStoreNames.contains(STORE)) r.result.createObjectStore(STORE); };
-      r.onsuccess=function(){resolve(r.result);}; r.onerror=function(){reject(r.error);};
-    });
-  }
-  function putFile(file){
-    return openDB().then(function(db){
-      return new Promise(function(resolve,reject){
-        var tx=db.transaction(STORE,"readwrite");
-        tx.objectStore(STORE).put({name:file.name,type:file.type,bytes:file},"pdf");
-        tx.oncomplete=function(){db.close();resolve();}; tx.onerror=function(){db.close();reject(tx.error);};
-      });
-    });
-  }
-  function go(){ window.location.href="tools/index.html?pdfReady=1"; }
-  zone.addEventListener("click", function(e){ if(e.target.closest("a")) return; var input=document.createElement("input"); input.type="file"; input.accept="application/pdf,.pdf"; input.onchange=function(){ if(input.files[0]) putFile(input.files[0]).then(go); }; input.click(); });
-  zone.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault(); zone.click();}});
-  ["dragenter","dragover"].forEach(function(ev){zone.addEventListener(ev,function(e){e.preventDefault();e.stopPropagation();zone.classList.add("is-dragover");});});
-  ["dragleave","drop"].forEach(function(ev){zone.addEventListener(ev,function(e){e.preventDefault();e.stopPropagation();zone.classList.remove("is-dragover");});});
-  zone.addEventListener("drop",function(e){var f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]; if(!f || !(f.type==="application/pdf"||/\.pdf$/i.test(f.name))) return; putFile(f).then(go);});
+(function(){
+  var input=document.getElementById('homeToolSearch');
+  if(!input)return;
+  var cards=[].slice.call(document.querySelectorAll('.grid .tool-card'));
+  input.addEventListener('input',function(){
+    var q=input.value.trim().toLowerCase();
+    if(!q){cards.forEach(function(c){c.hidden=false});return;}
+    cards.forEach(function(c){c.hidden=c.textContent.toLowerCase().indexOf(q)===-1;});
+  });
+  input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();var first=cards.find(function(c){return !c.hidden});if(first)first.click();else window.location.href='tools/index.html';}});
 })();
 </script>
 
