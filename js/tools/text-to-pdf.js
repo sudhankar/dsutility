@@ -17,7 +17,6 @@
       if (c === 92 || c === 40 || c === 41) out += "\\" + s.charAt(i);
       else if (c >= 32 && c <= 126) out += s.charAt(i);
       else if (c === 9) out += " ";
-      else if (c >= 160 && c <= 255) out += String.fromCharCode(c);
       else out += "?";
     }
     return out;
@@ -67,7 +66,10 @@
     });
     objects[pagesId - 1] = "<< /Type /Pages /Kids [" + pageIds.map(function (id) { return id + " 0 R"; }).join(" ") + "] /Count " + pageIds.length + " >>";
     objects[catalogId - 1] = "<< /Type /Catalog /Pages " + pagesId + " 0 R >>";
-    var pdf = "%PDF-1.4\n%\xE2\xE3\xCF\xD3\n", offsets = [0];
+    // Keep the entire generated source ASCII so JavaScript string offsets match
+    // the byte offsets used by the PDF cross-reference table. A binary marker
+    // here would become multi-byte UTF-8 when encoded and corrupt xref offsets.
+    var pdf = "%PDF-1.4\n%DSUTILITY\n", offsets = [0];
     objects.forEach(function (body, i) {
       offsets.push(pdf.length);
       pdf += (i + 1) + " 0 obj\n" + body + "\nendobj\n";

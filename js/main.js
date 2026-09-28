@@ -1,11 +1,11 @@
 /**
- * DSPDF — Shared UI (navigation, theme, toasts, small helpers).
+ * DSUTILITY — Shared UI (navigation, theme, toasts, small helpers).
  * Loaded on every page. Keep it small and dependency-free.
  */
 (function () {
   "use strict";
 
-  var CFG = window.DSPDF_CONFIG;
+  var CFG = window.DSUTILITY_CONFIG;
   var log = window.dspdfLog || function () {};
 
   /* ---------- Theme (dark default, light toggle, remembers choice) ---------- */

@@ -1,11 +1,11 @@
 /**
- * DSPDF — Site Configuration
+ * DSUTILITY — Site Configuration
  * -------------------------------------------------
  * 👉 OWNER: This is THE most important file for deployment.
  *    Read the comments carefully and edit only the marked lines.
  *    Everything else uses these values automatically.
  */
-window.DSPDF_CONFIG = {
+window.DSUTILITY_CONFIG = {
   siteName: "DSUTILITY",
   tagline: "Useful PDF, Image & Everyday Tools. Private and Browser-Based.",
 
@@ -75,5 +75,7 @@ window.DSPDF_DEBUG = (function () {
 })();
 
 window.dspdfLog = function () {
-  if (window.DSPDF_DEBUG) console.log.apply(console, ["[DSPDF]"].concat([].slice.call(arguments)));
+  if (window.DSPDF_DEBUG) console.log.apply(console, ["[DSUTILITY]"].concat([].slice.call(arguments)));
 };
+// Backward-compatible alias for older tool scripts.
+window.DSPDF_CONFIG = window.DSUTILITY_CONFIG;
