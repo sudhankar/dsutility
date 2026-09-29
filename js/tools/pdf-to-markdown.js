@@ -8,9 +8,10 @@
   var progressUI=null;
   function el(id){return document.getElementById(id);}
   function loadScript(src){return new Promise(function(resolve,reject){if(window.pdfjsLib)return resolve();var s=document.createElement("script");s.src=src;s.onload=resolve;s.onerror=function(){reject(new Error("Could not load the PDF reader."));};document.head.appendChild(s);});}
-  function esc(s){return String(s||"").replace(/[\\`*_{}\[\]()<>#+\-.!|]/g,function(c){return "\\"+c;});}
+  function esc(s){return String(s||'').replace(/\\/g,'\\\\').replace(/([\`*_{}\[\]()#+!|])/g,'\\$1');}
+  function resetUI(){state.file=null;state.pdfDoc=null;el('p2m-toolbar').hidden=true;el('p2m-info').textContent='';D.clearAlert('p2m-alert');if(progressUI&&el('p2m-progress'))el('p2m-progress').hidden=true;}
   async function loadPdf(file){
-    D.clearAlert("p2m-alert"); el("p2m-toolbar").hidden=true;
+    resetUI();
     if(!(file.type==="application/pdf"||/\.pdf$/i.test(file.name))){D.showError("p2m-alert","Please choose a PDF.");return;}
     try{
       D.showInfo("p2m-alert","Reading PDF…");
@@ -32,7 +33,7 @@
         for(var i=0;i<tc.items.length;i++){
           var item=tc.items[i], y=item.transform&&item.transform.length?item.transform[5]:null;
           if(lastY!==null&&y!==null&&Math.abs(y-lastY)>4){if(line.trim())lines.push(line.trim());line="";}
-          line+=(item.str||""); lastY=y;
+          line+=(line && item.str ? ' ' : '')+(item.str||''); lastY=y;
         }
         if(line.trim())lines.push(line.trim());
         var body=lines.map(function(x){return esc(x);}).join("  \n");
@@ -43,7 +44,7 @@
       var md="# "+title.replace(/[\\#]/g,"\\$&")+"\n\n"+sections.join("\n\n---\n\n")+"\n";
       var blob=new Blob([md],{type:"text/markdown;charset=utf-8"});
       D.downloadBlob(blob,title+"-markdown.md");
-      progressUI.set(100,"Done — Markdown file downloaded.");
+      progressUI.set(100,"Done — Markdown file downloaded.");setTimeout(function(){if(el("p2m-progress"))el("p2m-progress").hidden=true;},1200);setTimeout(function(){if(el("p2m-progress"))el("p2m-progress").hidden=true;},1200);
       if(window.dspdfToast)window.dspdfToast("Markdown file saved","success");
     }catch(err){log(err);progressUI.error("Conversion failed.");D.showError("p2m-alert",D.humanError(err,"Could not convert this PDF to Markdown."));}
   }

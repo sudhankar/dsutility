@@ -109,6 +109,7 @@
     } finally { button.disabled = false; }
   }
   function init() {
+    el("textpdf-file").addEventListener("change", async function(){var f=this.files&&this.files[0];if(!f)return;try{el("textpdf-input").value=await f.text();resetStatus();D.showInfo("textpdf-alert","Text file loaded. Review it, then create the PDF.")}catch(e){D.showError("textpdf-alert","Could not read this text file.")}});
     el("textpdf-input").addEventListener("input", resetStatus);
     el("textpdf-create").addEventListener("click", createPdf);
   }
