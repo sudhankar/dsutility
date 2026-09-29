@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../css/da-arrear.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"DA Arrears Calculator — DSUTILITY","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/da-arrears-calculator/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"DA Arrears Calculator","item":"https://dsutility.pages.dev/tools/da-arrears-calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I calculate arrears for several employees?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add as many employee rows as required. Each employee can be marked as GPF, NPS or UPS and has an editable deduction amount."}},{"@type":"Question","name":"How are the monthly DA arrears calculated?","acceptedAnswer":{"@type":"Answer","text":"For each month, the calculator multiplies Basic Pay by the difference between Due DA and Drawn DA. The monthly results are then added to the employee's total arrear."}},{"@type":"Question","name":"Can GPF, NPS and UPS deductions be edited?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator applies a default deduction based on the selected type, but the deduction amount can be edited before calculation."}},{"@type":"Question","name":"Is this an official government calculator?","acceptedAnswer":{"@type":"Answer","text":"No. It is an independent calculation aid. Verify the applicable government order, employee category, contribution rules, rounding and departmental instructions before using a statement for official payment or recovery."}}]}</script>
-</head>
+<link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#0A1929"></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="navbar"><div class="container navbar__inner"><a class="navbar__brand" href="../../index.html" aria-label="DSUTILITY home"><img class="dspdf-shared-logo" src="../../images/logo.svg" alt="DSUTILITY logo"></a><button class="navbar__toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">☰</button><nav aria-label="Primary"><ul class="navbar__menu" id="primary-nav" data-nav-menu><li><a href="../index.html">All Tools</a></li><li><a href="../pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button class="theme-toggle" data-theme-toggle aria-label="Switch theme">☀️</button></div></div></header>
@@ -27,13 +27,13 @@
 <h2 id="calc-heading" class="sr-only">DA arrears statement calculator</h2>
 
 <div class="da-settings">
-  <div class="da-setting"><label for="fromMonth">From Month</label><select id="fromMonth"></select></div>
-  <div class="da-setting"><label for="toMonth">To Month</label><select id="toMonth"></select></div>
+  <div class="da-setting"><label>From Month</label><div class="month-year-picker" aria-label="From month and year"><select id="fromMonth" aria-label="From month"></select><select id="fromYear" aria-label="From year"></select></div></div>
+  <div class="da-setting"><label>To Month</label><div class="month-year-picker" aria-label="To month and year"><select id="toMonth" aria-label="To month"></select><select id="toYear" aria-label="To year"></select></div></div>
   <div class="da-setting"><label for="dueDA">Due DA %</label><div class="input-suffix"><input id="dueDA" type="number" min="0" max="200" step="0.01" value="60"><span>%</span></div></div>
   <div class="da-setting"><label for="drawnDA">Drawn DA %</label><div class="input-suffix"><input id="drawnDA" type="number" min="0" max="200" step="0.01" value="58"><span>%</span></div></div>
 </div>
 
-<div class="da-rate-note" id="rateNote">DA difference: <strong>2.00%</strong> · 7 months selected · Monthly amount = Basic Pay × DA difference.</div>
+<div class="da-rate-note" id="rateNote"><span id="periodHelp">Month picker allows older arrear periods as well.</span> · DA difference: <strong>2.00%</strong> · 7 months selected · Monthly amount = Basic Pay × DA difference.</div>
 
 <div class="statement-toolbar">
   <div><strong>Employee Arrear Statement</strong><span class="toolbar-sub">Add employees below. Deduction defaults are editable.</span></div>

@@ -3,19 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>All PDF Tools — Free, Private, Browser-Based | DSUTILITY</title>
-<meta name="description" content="Browse every DSUTILITY tool: merge, split, compress, rotate, sign, edit, protect, OCR and more. All free, all private, all running in your browser." />
+<title>All Tools — PDF, Image, Office &amp; Utility Tools | DSUTILITY</title>
+<meta name="description" content="Browse DSUTILITY tools for PDF, images, documents, government and office work, OCR and practical everyday tasks. Explore useful browser-based utilities." />
 <link rel="canonical" href="https://dsutility.pages.dev/tools/" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="All PDF Tools — DSUTILITY" />
-<meta property="og:description" content="Every PDF tool you need. Free and private." />
+<meta property="og:title" content="All Tools — DSUTILITY" />
+<meta property="og:description" content="Explore useful PDF, image, document, office and everyday utility tools from DSUTILITY." />
 <meta property="og:url" content="https://dsutility.pages.dev/tools/" />
 <meta property="og:image" content="https://dsutility.pages.dev/images/logo.svg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../css/style.css" />
 
 <script type="application/ld+json">
@@ -31,7 +28,7 @@
 <style>
 .pdf-handoff-banner{margin:18px auto;padding:14px 16px;border:1px solid var(--accent);border-radius:12px;background:var(--bg-card);display:none;align-items:center;justify-content:space-between;gap:14px}.pdf-handoff-banner.is-visible{display:flex}.pdf-handoff-banner strong{display:block}.pdf-handoff-banner span{color:var(--text-muted);font-size:.9rem}@media(max-width:640px){.pdf-handoff-banner{align-items:flex-start;flex-direction:column}}
 </style>
-</head>
+<link rel="manifest" href="../manifest.json"><meta name="theme-color" content="#0A1929"></head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
@@ -57,6 +54,7 @@
 <main id="main" class="section">
   <div class="container"><div id="pdf-handoff" class="pdf-handoff-banner" role="status"><div><strong>Your PDF is ready</strong><span>Choose a tool below. You will not need to upload the PDF again.</span></div><button class="btn btn-ghost btn-sm" id="pdf-handoff-clear" type="button">Clear</button></div></div>
   <div class="container">
+    <div class="tool-directory-search" role="search"><label for="toolDirectorySearch">Search all tools</label><div><input id="toolDirectorySearch" type="search" placeholder="Try: OCR, DA, image, PDF editor…" autocomplete="off"><button class="btn btn-primary" id="toolDirectoryClear" type="button">Clear</button></div><p id="toolDirectoryStatus" class="text-muted" aria-live="polite"></p></div>
     <nav aria-label="Breadcrumb">
       <ol class="breadcrumb">
         <li><a href="../index.html">Home</a></li>
@@ -64,12 +62,12 @@
       </ol>
     </nav>
 
-    <h1>All PDF Tools</h1>
-    <p class="lead mb-6">Every tool runs entirely in your browser. No uploads, no accounts, no waiting.</p>
+    <h1>All Tools</h1>
+    <p class="lead mb-6">Explore useful PDF, image, document, government, office and everyday utilities. Supported browser-based tools process your files locally.</p>
 
-    <section class="tools-intro-copy mb-6" aria-labelledby="choose-pdf-task">
-      <h2 id="choose-pdf-task">Choose a PDF task</h2>
-      <p>DSUTILITY groups common PDF jobs by what you are trying to accomplish: organize pages, convert files, edit and annotate documents, improve scans, protect PDFs, or run OCR. Open any tool to see its instructions, practical limitations, privacy details, FAQs, and related workflows before processing your file.</p>
+    <section class="tools-intro-copy mb-6" aria-labelledby="choose-tool-task">
+      <h2 id="choose-tool-task">Choose what you want to do</h2>
+      <p>DSUTILITY groups practical tools by the task you need to complete: government and office calculations, PDF work, conversions, editing, OCR, image preparation and other useful utilities. Open a tool to read its instructions, limitations, privacy details, FAQs and related workflows before using it.</p>
     </section>
 
     <section id="organize" class="mb-6">
@@ -100,7 +98,7 @@
         <a class="tool-card" href="pdf-to-webp/index.html"><span class="tool-card__icon">🌐</span><h3 class="tool-card__title">PDF to WebP</h3><p class="tool-card__desc">Convert PDF pages to compact WebP images.</p></a>
         <a class="tool-card" href="html-to-pdf/index.html"><span class="tool-card__icon">🌐</span><h3 class="tool-card__title">HTML to PDF</h3><p class="tool-card__desc">Basic HTML → PDF. Limited CSS support.</p></a>
         <a class="tool-card" href="text-to-pdf/index.html"><span class="tool-card__icon">T→PDF</span><h3 class="tool-card__title">Text to PDF</h3><p class="tool-card__desc">Create a simple PDF from plain text with page and font controls.</p></a>
-        <a class="tool-card" href="pdf-to-markdown/index.html"><span class="tool-card__icon">MD</span><h3 class="tool-card__title">PDF to Markdown</h3><p class="tool-card__desc">Extract PDF text into a simple Markdown document.</p></a>
+        <a class="tool-card" href="krutidev-unicode-converter/index.html"><span class="tool-card__icon">अ</span><h3 class="tool-card__title">Krutidev ↔ Unicode</h3><p class="tool-card__desc">Convert legacy Hindi text and Unicode locally.</p></a><a class="tool-card" href="pdf-to-markdown/index.html"><span class="tool-card__icon">MD</span><h3 class="tool-card__title">PDF to Markdown</h3><p class="tool-card__desc">Extract PDF text into a simple Markdown document.</p></a>
       </div>
     </section>
 
@@ -145,10 +143,13 @@
       <div class="grid grid--3">
         <a class="tool-card" href="da-arrears-calculator/index.html"><span class="tool-card__icon">₹</span><h3 class="tool-card__title">DA Arrears Calculator</h3><p class="tool-card__desc">Estimate DA differences across multiple pay and rate periods.</p></a>
         <a class="tool-card" href="nps-calculator/index.html"><span class="tool-card__icon">NPS</span><h3 class="tool-card__title">NPS Calculator</h3><p class="tool-card__desc">Estimate NPS contributions and a projected retirement corpus.</p></a>
+        <a class="tool-card" href="gpf-calculator/index.html"><span class="tool-card__icon">GPF</span><h3 class="tool-card__title">GPF Calculator</h3><p class="tool-card__desc">Prepare a month-wise GPF statement with interest-rate changes, DA arrears, bonus and withdrawals.</p></a>
         <a class="tool-card" href="leave-encashment-calculator/index.html"><span class="tool-card__icon">📅</span><h3 class="tool-card__title">Leave Encashment Calculator</h3><p class="tool-card__desc">Estimate earned-leave cash equivalent from Basic Pay, DA and eligible days.</p></a>
+      <a class="tool-card" href="gratuity-calculator/index.html"><span class="tool-card__icon">₹</span><h3 class="tool-card__title">Gratuity Calculator</h3><p class="tool-card__desc">Estimate gratuity from salary and qualifying service.</p></a>
       </div>
     </section>
 
+    <section id="financial" class="mb-6"><h2>Financial Calculators</h2><div class="grid grid--3"><a class="tool-card" href="sip-calculator/index.html"><span class="tool-card__icon">SIP</span><h3 class="tool-card__title">SIP Calculator</h3><p class="tool-card__desc">Estimate SIP value and assumed gains.</p></a><a class="tool-card" href="swp-calculator/index.html"><span class="tool-card__icon">SWP</span><h3 class="tool-card__title">SWP Calculator</h3><p class="tool-card__desc">Estimate remaining corpus after withdrawals.</p></a><a class="tool-card" href="fd-calculator/index.html"><span class="tool-card__icon">FD</span><h3 class="tool-card__title">FD Calculator</h3><p class="tool-card__desc">Estimate fixed-deposit maturity.</p></a><a class="tool-card" href="rd-calculator/index.html"><span class="tool-card__icon">RD</span><h3 class="tool-card__title">RD Calculator</h3><p class="tool-card__desc">Estimate recurring-deposit maturity.</p></a></div></section><section id="documents" class="mb-6"><h2>Document Makers</h2><div class="grid grid--3"><a class="tool-card" href="resume-maker/index.html"><span class="tool-card__icon">CV</span><h3 class="tool-card__title">Advanced Resume Maker</h3><p class="tool-card__desc">Build a printable resume with custom sections.</p></a><a class="tool-card" href="marriage-biodata-maker/index.html"><span class="tool-card__icon">♥</span><h3 class="tool-card__title">Marriage Biodata Maker</h3><p class="tool-card__desc">Prepare a simple editable biodata.</p></a></div></section>
 
     <section id="images" class="mb-6">
       <h2>Image Tools</h2>
@@ -157,6 +158,7 @@
         <a class="tool-card" href="image-resize-compress/index.html"><span class="tool-card__icon">🖼</span><h3 class="tool-card__title">Image Resize &amp; Compress</h3><p class="tool-card__desc">Resize JPG, PNG and WebP images and adjust quality locally.</p></a>
         <a class="tool-card" href="passport-photo/index.html"><span class="tool-card__icon">🪪</span><h3 class="tool-card__title">Passport Photo &amp; ID Photo</h3><p class="tool-card__desc">Prepare common passport-style and ID photo ratios locally in your browser.</p></a>
         <a class="tool-card" href="image-to-text/index.html"><span class="tool-card__icon">OCR</span><h3 class="tool-card__title">Image to Text OCR</h3><p class="tool-card__desc">Extract printed text from JPG, PNG and WebP images in your browser.</p></a>
+      <a class="tool-card" href="photo-enhancer/index.html"><span class="tool-card__icon">✨</span><h3 class="tool-card__title">Photo Enhancer</h3><p class="tool-card__desc">Adjust brightness and contrast locally.</p></a><a class="tool-card" href="image-watermark-signature/index.html"><span class="tool-card__icon">✍</span><h3 class="tool-card__title">Image Watermark &amp; Signature</h3><p class="tool-card__desc">Add text and a signature image to photos.</p></a><a class="tool-card" href="background-remover/index.html"><span class="tool-card__icon">✂</span><h3 class="tool-card__title">Background Remover</h3><p class="tool-card__desc">Remove plain connected backgrounds locally.</p></a><a class="tool-card" href="collage-maker/index.html"><span class="tool-card__icon">▦</span><h3 class="tool-card__title">Collage Maker</h3><p class="tool-card__desc">Combine photos into one grid.</p></a>
       </div>
     </section>
 
@@ -169,7 +171,7 @@
 
     <div class="alert alert-info mt-6">
       <strong>🔒</strong>
-      <div>Every tool processes your files on your device. Nothing is uploaded. Read our <a href="../privacy-policy/index.html">privacy policy</a> for the full story.</div>
+      <div>Supported file-processing tools work locally in your browser. The calculators and other non-file utilities process the information you enter locally. Read our <a href="../privacy-policy/index.html">privacy policy</a> for the full story.</div>
     </div>
   </div>
 </main>
@@ -184,7 +186,7 @@
 </footer>
 
 <script src="../js/config.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/main.js"></script><script src="../js/tool-search.js"></script>
 
 <script>
 (function(){if(!/[?&]pdfReady=1(?:&|$)/.test(location.search))return;var b=document.getElementById("pdf-handoff");if(b)b.classList.add("is-visible");document.querySelectorAll("a[href*='index.html']").forEach(function(a){var h=a.getAttribute("href");if(!h||h.indexOf("tools/")===0){} if(/\/index\.html$/.test(h)&&h.indexOf("pdfReady")<0)a.href=h+(h.indexOf("?")>=0?"&":"?")+"pdfReady=1";});var c=document.getElementById("pdf-handoff-clear");if(c)c.onclick=function(){try{var r=indexedDB.open("dspdf-local",1);r.onsuccess=function(){var db=r.result,tx=db.transaction("handoff","readwrite");tx.objectStore("handoff").delete("pdf");tx.oncomplete=function(){db.close();location.href="index.html";};};}catch(e){location.href="index.html";}};})();
