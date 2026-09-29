@@ -1,0 +1,33 @@
+DSUTILITY v59 — Development Gate Audit
+
+Base: v58 working build; existing architecture preserved.
+
+Fixed in this pass:
+- Financial calculators: corrected SIP effective monthly rate model, SWP withdrawal-before-growth sequence, FD quarterly compound model, RD quarterly-compounding formula; redesigned responsive calculator UI.
+- Financial pages: expanded human-written explanations, assumptions, limitations, FAQs, related calculators and guide links.
+- Homepage search: corrected tool-index URL resolution and added search aliases for common queries.
+- Text to PDF: added .txt upload and edit workflow; existing local PDF generation retained.
+- Krutidev/Unicode: corrected Copy to copy the last conversion direction's result; redesigned responsive two-pane UI; expanded content/FAQ.
+- Image Resize & Compress: fixed undefined crop/target variables that could stop the tool; target-size best-effort loop retained and preview works.
+- Photo Enhancer: added Auto Enhance, Grayscale and Black & White controls; expanded guidance and limitations.
+- Image Watermark & Signature: added text position controls, nudge buttons, signature position and resize controls; expanded content.
+- Passport Photo: removed misleading white-background promise; added best-effort connected background removal and crop zoom; focus controls remain live; limitations explain when a dedicated remover is preferable.
+- Resume Maker: improved form layout/content; added print isolation so site header/navigation do not print; dynamic sections remain deletable.
+- Marriage Biodata Maker: improved form/preview; candidate photo; Add Field/Delete field; print isolation; expanded content and FAQ.
+- Collage Maker: expanded useful instructions, privacy, workflow and FAQ.
+- New blog articles: constrained article width to match existing blog reading layout; expanded content; added related/internal links.
+- PWA install prompt: Install button is hidden until the browser provides a real beforeinstallprompt event; iOS shows Add to Home Screen guidance; unsupported browsers no longer present a misleading always-active install action.
+- Service worker cache version bumped to v59.
+
+Validation performed:
+- All JS files pass node --check.
+- Financial formula spot checks: SIP and RD; SWP sequence matches the documented withdrawal-before-growth model.
+- New tool pages have title, meta description and internal links.
+- Blog article word counts for the newly improved guides are substantial and contain internal links.
+- Relative-link scan: remaining root-absolute links on 404.html and fragment-only homepage category links are intentional; newly added blog-to-tool links were corrected.
+
+Not declared as complete without browser/device QA:
+- Real mobile touch/drag behavior across the entire legacy PDF editor.
+- Real PWA install prompt on HTTPS in Chrome/Edge/Android/iOS.
+- Large-file memory/performance measurements.
+- Actual print dialog rendering on multiple browsers.

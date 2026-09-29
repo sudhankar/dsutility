@@ -1,0 +1,9 @@
+HTML pages: 104
+Metadata/heading missing checks: 1
+  ('404.html', 'canonical')
+Relative local links broken: 0
+Sitemap URLs: 103
+External script references: 74 (performance review remains a release gate)
+Footer pages without shared main.js: 0
+Duplicate title values: 0
+Duplicate description values: 1

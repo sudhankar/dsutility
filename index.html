@@ -28,10 +28,6 @@
 <link rel="apple-touch-icon" href="images/logo.svg" />
 <link rel="manifest" href="manifest.json" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
 <link rel="stylesheet" href="css/style.css" />
 
 <!-- Structured Data: WebSite + Organization -->
@@ -103,19 +99,21 @@
         <label class="sr-only" for="homeToolSearch">Search DSUTILITY tools</label>
         <div class="home-tool-search__box">
           <span aria-hidden="true">⌕</span>
-          <input id="homeToolSearch" type="search" placeholder="What do you want to do? Search tools…" autocomplete="off" />
-          <a class="btn btn-primary" href="tools/index.html" id="homeToolSearchBtn">Browse Tools</a>
+          <input id="homeToolSearch" type="search" placeholder="What do you want to do? Search tools…" autocomplete="off" aria-controls="homeSearchResults" aria-expanded="false" />
+          <button class="btn btn-primary" type="button" id="homeToolSearchBtn">Search</button>
         </div>
+        <div id="homeSearchResults" class="home-search-results" role="listbox" hidden></div>
         <div class="home-tool-search__quick" aria-label="Popular categories">
           <a href="tools/index.html#government">Government &amp; Office</a>
-          <a href="tools/index.html#pdf">PDF Tools</a>
           <a href="tools/index.html#convert">Convert</a>
-          <a href="tools/index.html#images">Image Tools</a>
+          <a href="tools/index.html#edit">Edit &amp; Annotate</a>
+          <a href="tools/index.html#ocr">OCR</a>
+          <a href="tools/index.html#images">Image Tools</a><a href="tools/index.html#financial">Financial</a><a href="tools/index.html#documents">Document Makers</a>
         </div>
       </div>
 
       <ul class="trust-badges">
-        <li><span class="dot" aria-hidden="true"></span> No file uploads</li>
+        <li><span class="dot" aria-hidden="true"></span> Supported file processing stays on your device</li>
         <li><span class="dot" aria-hidden="true"></span> No sign-up</li>
         <li><span class="dot" aria-hidden="true"></span> Open-source libraries</li>
       </ul>
@@ -223,19 +221,18 @@
       <span class="eyebrow">Browse by Category</span>
       <h2>Useful Utilities, One Place</h2>
 
-      <ul class="category-chips mt-4">
-        <li><a class="category-chip is-active" href="tools/index.html#organize">Organize</a></li>
-        <li><a class="category-chip" href="tools/index.html#convert">Convert</a></li>
-        <li><a class="category-chip" href="tools/index.html#edit">Edit &amp; Annotate</a></li>
-        <li><a class="category-chip" href="tools/index.html#security">Security</a></li>
-        <li><a class="category-chip" href="tools/index.html#optimize">Optimize</a></li>
-        <li><a class="category-chip" href="tools/index.html#ocr">OCR</a></li>
-        <li><a class="category-chip" href="tools/index.html#government">Government &amp; Office</a></li>
-        <li><a class="category-chip" href="tools/index.html#images">Image Tools</a></li>
-      </ul>
+      <div class="category-grid" aria-label="Tool categories">
+        <a class="category-card category-card--office" href="tools/index.html#government"><span class="category-card__icon">₹</span><span><strong>Government &amp; Office</strong><small>DA, NPS, leave &amp; practical office utilities</small></span></a>
+        <a class="category-card category-card--pdf" href="tools/index.html#organize"><span class="category-card__icon">PDF</span><span><strong>PDF Tools</strong><small>Organize, edit, convert and manage PDFs</small></span></a>
+        <a class="category-card category-card--convert" href="tools/index.html#convert"><span class="category-card__icon">↔</span><span><strong>Convert</strong><small>Move between PDF, text and image formats</small></span></a>
+        <a class="category-card category-card--edit" href="tools/index.html#edit"><span class="category-card__icon">✎</span><span><strong>Edit &amp; Annotate</strong><small>Text, signatures, highlights and document markup</small></span></a>
+        <a class="category-card category-card--ocr" href="tools/index.html#ocr"><span class="category-card__icon">OCR</span><span><strong>OCR &amp; Text</strong><small>Extract and recognize text from documents</small></span></a>
+        <a class="category-card category-card--image" href="tools/index.html#images"><span class="category-card__icon">🖼</span><span><strong>Image Tools</strong><small>Resize, compress and prepare images</small></span></a>
+      </div>
 
       <div class="grid grid--4">
         <a class="tool-card" href="tools/da-arrears-calculator/index.html"><span class="tool-card__icon">₹</span><h3 class="tool-card__title">DA Arrears Calculator</h3><p class="tool-card__desc">Estimate DA differences using your own pay and rate periods.</p></a>
+        <a class="tool-card" href="tools/gpf-calculator/index.html"><span class="tool-card__icon">GPF</span><h3 class="tool-card__title">GPF Calculator</h3><p class="tool-card__desc">Prepare a month-wise GPF statement with interest-rate changes, DA arrears, bonus and withdrawals.</p></a>
         <a class="tool-card" href="tools/nps-calculator/index.html"><span class="tool-card__icon">NPS</span><h3 class="tool-card__title">NPS Calculator</h3><p class="tool-card__desc">Estimate NPS contributions and a projected retirement corpus.</p></a>
         <a class="tool-card" href="tools/leave-encashment-calculator/index.html"><span class="tool-card__icon">📅</span><h3 class="tool-card__title">Leave Encashment Calculator</h3><p class="tool-card__desc">Estimate earned-leave cash equivalent from Basic Pay, DA and eligible days.</p></a>
         <a class="tool-card" href="tools/image-resize-compress/index.html"><span class="tool-card__icon">🖼</span><h3 class="tool-card__title">Image Resize &amp; Compress</h3><p class="tool-card__desc">Resize JPG, PNG and WebP images and reduce file size in your browser.</p></a>
@@ -447,7 +444,7 @@
       <div>
         <a class="navbar__brand" href="index.html" aria-label="DSUTILITY home"><img src="images/logo.svg" alt="DSUTILITY logo" class="dspdf-shared-logo" /></a>
         <p class="mt-4" style="font-size: 0.9rem; max-width: 34ch;">
-          Practical PDF, image and utility tools designed for simple browser-based use, with local processing for supported file tools.
+          Practical PDF, image, document and utility tools designed for simple browser-based use, with local processing for supported file tools.
         </p>
       </div>
 
@@ -495,23 +492,11 @@
 </footer>
 
 <script src="js/config.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js"></script><script src="js/tool-search.js"></script>
 
 
 
-<script>
-(function(){
-  var input=document.getElementById('homeToolSearch');
-  if(!input)return;
-  var cards=[].slice.call(document.querySelectorAll('.grid .tool-card'));
-  input.addEventListener('input',function(){
-    var q=input.value.trim().toLowerCase();
-    if(!q){cards.forEach(function(c){c.hidden=false});return;}
-    cards.forEach(function(c){c.hidden=c.textContent.toLowerCase().indexOf(q)===-1;});
-  });
-  input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();var first=cards.find(function(c){return !c.hidden});if(first)first.click();else window.location.href='tools/index.html';}});
-})();
-</script>
+
 
 </body>
 </html>
