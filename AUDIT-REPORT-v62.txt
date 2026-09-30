@@ -1,0 +1,44 @@
+DSUTILITY v62 — Requested Fix & Regression Report
+
+1. Passport Photo & ID Photo Maker
+- Target size selector is now functional.
+- When a KB target is selected, export uses JPEG and iteratively adjusts quality/dimensions to keep the downloaded file at or below the selected target when technically achievable.
+- Download filename uses .jpg for target-size exports.
+- Output reports actual KB and dimensions.
+
+2. Blog layout
+- Blog article width normalized to a comfortable 820px reading column with responsive side padding.
+- Headings, paragraphs, lists, TOC and callouts remain inside the same readable content column.
+- The machine-like “Practical takeaway for …” filler sentence was removed from blog articles.
+
+3. Blog content
+- The previously weak short guides were rewritten with tool-specific explanations, practical workflows, limitations, common mistakes, FAQs and final checks.
+- Specifically strengthened: Krutidev/Unicode, Image Watermark & Signature, Background Remover, Collage Maker, FD, Gratuity, Marriage Biodata, Photo Enhancer, RD, Resume Maker, SIP and SWP guides.
+- Content was written for the actual tool workflows rather than copied from competitor pages.
+- No claim of an absolute “Google word limit” or plagiarism certification is made; Google does not prescribe one universal word count for useful content.
+
+4. Tool content margins
+- Orphan explanatory/related sections were moved inside the standard main content container where structurally safe.
+- Global tool-page explanatory sections now follow the same readable container rhythm.
+- PDF Editor retains its intentional custom editor layout and was not forcibly wrapped.
+
+5. DA Arrears Calculator
+- Print / Save as PDF now opens a dedicated print-ready statement containing actual employee rows, monthly arrears, totals, deductions and net pay.
+- This avoids browser printing of editable controls as blank fields.
+
+6. GPF Calculator
+- Print / Save as PDF now opens a dedicated landscape print-ready statement containing monthly values, deposits, withdrawals, interest and closing balance.
+- This avoids browser printing of editable controls as blank fields.
+
+Regression validation
+- Node syntax check: PASS for all JavaScript files.
+- Header navigation audit: PASS.
+- Footer audit: PASS.
+- Blog filler sentence audit: PASS (0 hits).
+- Passport target-size code presence: PASS.
+- DA print-window implementation: PASS.
+- GPF print-window implementation: PASS.
+- Tool orphan-section audit: only PDF Editor remains by intentional custom architecture.
+
+Release note
+- Real browser/device testing with representative image uploads and actual print dialogs remains the final manual QA step before production deployment.

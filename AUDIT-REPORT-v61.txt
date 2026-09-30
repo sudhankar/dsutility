@@ -1,0 +1,120 @@
+DSUTILITY v61 — Master Development & Quality Gate Audit
+=============================================================
+
+Audit scope
+-----------
+HTML pages audited: 128
+Tool landing pages: 57
+Blog pages: 59
+Shared JavaScript files syntax-checked: 63
+
+1. SITE-WIDE STRUCTURE
+----------------------
+Header navigation required items (All Tools, PDF Editor, Blog, FAQ, About, Contact): PASS — 128/128 pages.
+Footer presence: PASS — 128/128 pages.
+Basic HTML structure: PASS.
+Local CSS references: PASS — 0 unresolved CSS references.
+Tool-page local links: PASS — 0 unresolved local links.
+
+2. SEO / DISCOVERABILITY
+------------------------
+Title, meta description, canonical, Open Graph and Twitter metadata: PASS after normalization.
+Tool/blog breadcrumb coverage: normalized where missing.
+Related-tool discovery: added to tool pages that lacked a related-tools section.
+Requested major-tool guide links: ensured for the requested major tools.
+Duplicate title values: 0.
+Duplicate description values: 0.
+
+3. CONTENT / READING WIDTH
+--------------------------
+Blog pages retain an article wrapper and constrained reading width.
+The previous full-width article override in polish.css was corrected from max-width:100% to max-width:760px.
+Topic relevance heuristic: all blog titles had meaningful keyword overlap with their page content.
+Short blog pages in the sampled audit set were above ~800 words.
+No automated detector can reliably certify that prose is "not AI-generated"; the audit checks topic relevance,
+repetition, structure, originality intent and absence of obvious placeholder text.
+
+4. FINANCIAL CALCULATORS
+------------------------
+SIP:
+- SIP/Lumpsum mode present.
+- Total invested = contribution × months for SIP, or principal for Lumpsum.
+- Projected value and gain calculated from the selected mode.
+
+SWP:
+- "Total withdrawal" label is explicit.
+- Starting corpus is exposed as "Total invested".
+- Withdrawal is accumulated from the simulated monthly withdrawals.
+- Effective monthly growth is applied before the scheduled withdrawal.
+
+FD:
+- Maturity, interest earned and principal outputs are calculated.
+
+RD:
+- Total invested = monthly contribution × number of months.
+- Estimated interest = maturity − total invested.
+- Monthly instalments are treated separately using the quarterly rate over each instalment's remaining time.
+
+Default sample spot-checks:
+- SIP: projected ₹11,20,179.45; invested ₹6,00,000; gain ₹5,20,179.45.
+- SWP: final corpus ₹8,44,897.70; invested ₹10,00,000; withdrawals ₹6,00,000.
+- FD: maturity ₹1,41,477.82; interest ₹41,477.82.
+- RD: maturity ₹62,305.41; invested ₹60,000; estimated interest ₹2,305.41.
+
+5. RESUME / BIODATA
+-------------------
+Resume Maker:
+- Print mode isolates the resume preview.
+- Site header/footer/editor controls are hidden in print mode.
+- Dynamic sections remain editable/deletable.
+
+Marriage Biodata Maker:
+- Print mode isolates the biodata preview.
+- Transparent SVG emblem gallery: Hindu, Muslim, Sikh, Christian, Buddhist, Jain and Floral/Neutral.
+- Emblem centered above the biodata heading.
+- Border choices: Classic, Double line, Ornate corners and Minimal.
+- Existing candidate-photo and custom-field workflow preserved.
+
+6. IMAGE TOOLS
+--------------
+Image Resize & Compress: visual polish retained.
+Passport Photo & ID Photo Maker: visual polish and optional 15/20/25/50 KB JPEG target output added.
+Passport background removal uses the same connected-edge colour/tolerance approach as the dedicated remover.
+Photo Enhancer: Revert to Original retained.
+Image Watermark & Signature: student photo + signature strip and 15/20/25/50 KB targets retained; compression can
+also reduce dimensions when quality reduction alone is insufficient.
+Collage Maker: frame width, JPEG quality and shuffle controls added while existing layout controls remain.
+Image to Text OCR: visual polish applied without changing the core OCR engine.
+
+7. GOVERNMENT / OFFICE TOOLS
+----------------------------
+DA Arrears, NPS, GPF, Leave Encashment and Gratuity retain their calculation architecture and received shared
+visual polish/metadata/navigation consistency improvements.
+
+8. PERFORMANCE / PRIVACY
+------------------------
+Tool-specific JavaScript architecture preserved.
+Client-side processing model preserved.
+Service-worker cache bumped to v61; polish.css added to the small precache set.
+
+9. VALIDATION
+-------------
+Node syntax checks: PASS — all 63 JavaScript files.
+HTML structure: PASS.
+Header/footer: PASS.
+CSS references: PASS.
+Tool local links: PASS.
+Requested feature presence: PASS.
+
+10. REMAINING RELEASE GATES
+---------------------------
+A real interactive browser/device pass remains authoritative for:
+- mobile touch/gesture behaviour;
+- large PDF/image memory pressure;
+- browser-specific PDF export/print rendering;
+- iPhone/Android rendering;
+- PWA installation;
+- OCR runtime on representative images;
+- exact visual appearance across Chrome/Edge/Firefox.
+
+No guarantee of Google ranking or AdSense approval is made.

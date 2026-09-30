@@ -1,45 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DA Arrears Calculator for Government Employees | GPF, NPS & UPS | DSUTILITY</title>
-<meta name="description" content="Prepare a government-style DA arrears statement month by month for multiple employees. Supports GPF, NPS and UPS deductions, editable deductions, Excel-compatible export and print-to-PDF.">
-<link rel="canonical" href="https://dsutility.pages.dev/tools/da-arrears-calculator/">
-<meta property="og:type" content="website"><meta property="og:title" content="DA Arrears Calculator — GPF, NPS & UPS | DSUTILITY"><meta property="og:description" content="Create a month-wise DA arrears statement for multiple employees with editable GPF, NPS and UPS deductions."><meta property="og:url" content="https://dsutility.pages.dev/tools/da-arrears-calculator/"><meta property="og:image" content="https://dsutility.pages.dev/images/logo.svg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="../../images/logo.svg">
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/tools.css">
-<link rel="stylesheet" href="../../css/da-arrear.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>DA Arrears Calculator for Government Employees | GPF, NPS &amp; UPS | DSUTILITY</title>
+<meta content="Prepare a government-style DA arrears statement month by month for multiple employees. Supports GPF, NPS and UPS deductions, editable deductions, Excel-compatible export and print-to-PDF." name="description"/>
+<link href="https://dsutility.pages.dev/tools/da-arrears-calculator/" rel="canonical"/>
+<meta content="website" property="og:type"/><meta content="DA Arrears Calculator — GPF, NPS &amp; UPS | DSUTILITY" property="og:title"/><meta content="Create a month-wise DA arrears statement for multiple employees with editable GPF, NPS and UPS deductions." property="og:description"/><meta content="https://dsutility.pages.dev/tools/da-arrears-calculator/" property="og:url"/><meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/tools.css" rel="stylesheet"/>
+<link href="../../css/da-arrear.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"DA Arrears Calculator — DSUTILITY","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/da-arrears-calculator/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"DA Arrears Calculator","item":"https://dsutility.pages.dev/tools/da-arrears-calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I calculate arrears for several employees?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add as many employee rows as required. Each employee can be marked as GPF, NPS or UPS and has an editable deduction amount."}},{"@type":"Question","name":"How are the monthly DA arrears calculated?","acceptedAnswer":{"@type":"Answer","text":"For each month, the calculator multiplies Basic Pay by the difference between Due DA and Drawn DA. The monthly results are then added to the employee's total arrear."}},{"@type":"Question","name":"Can GPF, NPS and UPS deductions be edited?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator applies a default deduction based on the selected type, but the deduction amount can be edited before calculation."}},{"@type":"Question","name":"Is this an official government calculator?","acceptedAnswer":{"@type":"Answer","text":"No. It is an independent calculation aid. Verify the applicable government order, employee category, contribution rules, rounding and departmental instructions before using a statement for official payment or recovery."}}]}</script>
-<link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#0A1929"></head>
-<body>
+<link href="../../manifest.json" rel="manifest"/><meta content="#0A1929" name="theme-color"/><link href="../../css/polish.css" rel="stylesheet"/><link href="https://dsutility.pages.dev/tools/da-arrears-calculator/" rel="canonical"/><meta content="DA Arrears Calculator for Government Employees | GPF, NPS &amp; UPS | DSUTILITY" name="twitter:title"/><meta content="Prepare a government-style DA arrears statement month by month for multiple employees. Supports GPF, NPS and UPS deductions, editable deductions, Excel-compatible export and print-to-PDF." name="twitter:description"/><meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/></head>
+<body data-tool="da-arrears-calculator">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="navbar"><div class="container navbar__inner"><a class="navbar__brand" href="../../index.html" aria-label="DSUTILITY home"><img class="dspdf-shared-logo" src="../../images/logo.svg" alt="DSUTILITY logo"></a><button class="navbar__toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">☰</button><nav aria-label="Primary"><ul class="navbar__menu" id="primary-nav" data-nav-menu><li><a href="../index.html">All Tools</a></li><li><a href="../pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button class="theme-toggle" data-theme-toggle aria-label="Switch theme">☀️</button></div></div></header>
-<main id="main" class="section">
+<header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header>
+<main class="section" id="main">
 <div class="container">
 <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span aria-current="page">DA Arrears Calculator</span></li></ol></nav>
 <div class="da-page-head"><div><span class="eyebrow">Government &amp; Office Utility</span><h1>DA Arrears Calculator</h1><p class="lead">Prepare a month-wise, government-style DA arrears statement for multiple employees, with GPF, NPS and UPS deduction options.</p></div><span class="privacy-badge">🔒 Calculated locally in your browser</span></div>
-
-<section class="tool-panel da-calculator" aria-labelledby="calc-heading">
-<h2 id="calc-heading" class="sr-only">DA arrears statement calculator</h2>
-
+<section aria-labelledby="calc-heading" class="tool-panel da-calculator">
+<h2 class="sr-only" id="calc-heading">DA arrears statement calculator</h2>
 <div class="da-settings">
-  <div class="da-setting"><label>From Month</label><div class="month-year-picker" aria-label="From month and year"><select id="fromMonth" aria-label="From month"></select><select id="fromYear" aria-label="From year"></select></div></div>
-  <div class="da-setting"><label>To Month</label><div class="month-year-picker" aria-label="To month and year"><select id="toMonth" aria-label="To month"></select><select id="toYear" aria-label="To year"></select></div></div>
-  <div class="da-setting"><label for="dueDA">Due DA %</label><div class="input-suffix"><input id="dueDA" type="number" min="0" max="200" step="0.01" value="60"><span>%</span></div></div>
-  <div class="da-setting"><label for="drawnDA">Drawn DA %</label><div class="input-suffix"><input id="drawnDA" type="number" min="0" max="200" step="0.01" value="58"><span>%</span></div></div>
+<div class="da-setting"><label>From Month</label><div aria-label="From month and year" class="month-year-picker"><select aria-label="From month" id="fromMonth"></select><select aria-label="From year" id="fromYear"></select></div></div>
+<div class="da-setting"><label>To Month</label><div aria-label="To month and year" class="month-year-picker"><select aria-label="To month" id="toMonth"></select><select aria-label="To year" id="toYear"></select></div></div>
+<div class="da-setting"><label for="dueDA">Due DA %</label><div class="input-suffix"><input id="dueDA" max="200" min="0" step="0.01" type="number" value="60"/><span>%</span></div></div>
+<div class="da-setting"><label for="drawnDA">Drawn DA %</label><div class="input-suffix"><input id="drawnDA" max="200" min="0" step="0.01" type="number" value="58"/><span>%</span></div></div>
 </div>
-
 <div class="da-rate-note" id="rateNote"><span id="periodHelp">Month picker allows older arrear periods as well.</span> · DA difference: <strong>2.00%</strong> · 7 months selected · Monthly amount = Basic Pay × DA difference.</div>
-
 <div class="statement-toolbar">
-  <div><strong>Employee Arrear Statement</strong><span class="toolbar-sub">Add employees below. Deduction defaults are editable.</span></div>
-  <button class="btn btn-secondary" id="addEmployee" type="button">＋ Add Employee</button>
+<div><strong>Employee Arrear Statement</strong><span class="toolbar-sub">Add employees below. Deduction defaults are editable.</span></div>
+<button class="btn btn-secondary" id="addEmployee" type="button">＋ Add Employee</button>
 </div>
-
 <div class="table-wrap" id="tableWrap">
 <table class="da-table" id="daTable">
 <thead><tr id="headRow"></tr></thead>
@@ -47,41 +43,35 @@
 <tfoot><tr id="totalRow"></tr></tfoot>
 </table>
 </div>
-
 <div class="mobile-table-hint">↔ Swipe horizontally to view all month and amount columns.</div>
-
 <div class="calc-actions">
-  <button class="btn btn-primary btn-lg" id="calculateBtn" type="button">Calculate Arrear</button>
-  <button class="btn btn-secondary btn-lg" id="resetBtn" type="button">Reset</button>
-  <span class="calc-status" id="calcStatus" role="status" aria-live="polite"></span>
+<button class="btn btn-primary btn-lg" id="calculateBtn" type="button">Calculate Arrear</button>
+<button class="btn btn-secondary btn-lg" id="resetBtn" type="button">Reset</button>
+<span aria-live="polite" class="calc-status" id="calcStatus" role="status"></span>
 </div>
-
-<div class="export-actions" id="exportActions" hidden>
-  <button class="btn btn-secondary" id="excelBtn" type="button">↓ Download Excel</button>
-  <button class="btn btn-secondary" id="pdfBtn" type="button">▣ Print / Save as PDF</button>
-  <button class="btn btn-secondary" id="printBtn" type="button">🖨 Print Statement</button>
+<div class="export-actions" hidden="" id="exportActions">
+<button class="btn btn-secondary" id="excelBtn" type="button">↓ Download Excel</button>
+<button class="btn btn-secondary" id="pdfBtn" type="button">▣ Print / Save as PDF</button>
+<button class="btn btn-secondary" id="printBtn" type="button">🖨 Print Statement</button>
 </div>
-
 <div class="summary-box" id="summaryBox">
-  <div class="summary-title">Arrear Summary</div>
-  <div class="summary-grid">
-    <div><span>Total DA Arrear</span><strong id="sumArrear">₹0.00</strong></div>
-    <div><span>Total GPF Deduction</span><strong id="sumGPF">₹0.00</strong></div>
-    <div><span>Total NPS Deduction</span><strong id="sumNPS">₹0.00</strong></div>
-    <div><span>Total UPS Deduction</span><strong id="sumUPS">₹0.00</strong></div>
-    <div class="summary-net"><span>Total Net Payable</span><strong id="sumNet">₹0.00</strong></div>
-  </div>
+<div class="summary-title">Arrear Summary</div>
+<div class="summary-grid">
+<div><span>Total DA Arrear</span><strong id="sumArrear">₹0.00</strong></div>
+<div><span>Total GPF Deduction</span><strong id="sumGPF">₹0.00</strong></div>
+<div><span>Total NPS Deduction</span><strong id="sumNPS">₹0.00</strong></div>
+<div><span>Total UPS Deduction</span><strong id="sumUPS">₹0.00</strong></div>
+<div class="summary-net"><span>Total Net Payable</span><strong id="sumNet">₹0.00</strong></div>
 </div>
-
+</div>
 <div class="da-disclaimer"><strong>Important:</strong> This is an independent calculation aid, not an official government payment order. Default GPF/NPS/UPS deductions are editable. Verify the applicable government/department rules, contribution basis, effective dates, rounding and any other recoveries before using the result for an official statement.</div>
 </section>
-
 <section class="mt-6"><h2>How this DA arrears calculator works</h2><p>Select the first and last month, enter the Due DA percentage and Drawn DA percentage, then add employees. For each employee, the calculator creates one column for every selected month and calculates the DA difference from the entered Basic Pay.</p><p><strong>Monthly DA arrear = Basic Pay × (Due DA − Drawn DA) ÷ 100.</strong> The employee's monthly amounts are added to Total Arrear. A default deduction is then applied according to the selected GPF, NPS or UPS type, but the amount remains editable.</p></section>
 <section class="mt-6"><h2>GPF, NPS and UPS deduction handling</h2><div class="info-grid"><div class="info-card"><h3>GPF</h3><p>Default deduction is 100% of the calculated arrear. This is editable because departmental practice may provide for a different amount to be credited to GPF.</p></div><div class="info-card"><h3>NPS</h3><p>Default deduction is 10% of the calculated arrear in this calculator, following the requested office-calculation workflow. The deduction amount is editable.</p></div><div class="info-card"><h3>UPS</h3><p>Default deduction is 10% of the calculated arrear in this calculator. Applicable UPS/departmental rules should be verified before an official payment statement is issued.</p></div></div></section>
 <section class="mt-6"><h2>Useful for office arrear statements</h2><p>The table is intentionally designed like a departmental statement: employee identity columns stay at the left, month-wise amounts follow the selected period, and Total Arrear, Deduction and Net Payable appear at the right. On smaller screens the table remains horizontally scrollable rather than shrinking the figures into an unusable layout.</p></section>
 <section class="mt-6"><h2>Frequently asked questions</h2><div class="faq-accordion"><details><summary>Can I add many employees?</summary><p>Yes. Use Add Employee to create additional rows. Each employee has an independent GPF/NPS/UPS selection and editable deduction.</p></details><details><summary>Can I change the deduction amount?</summary><p>Yes. The default amount is only a starting value. You can edit it directly in the table before pressing Calculate Arrear.</p></details><details><summary>What if Basic Pay changes during the selected period?</summary><p>This version uses one Basic Pay per employee for the selected period. For an official calculation where Basic Pay changes, split the calculation into separate periods or use a future advanced pay-change mode rather than silently applying the wrong pay to every month.</p></details><details><summary>Can I save the result as PDF?</summary><p>Yes. Print / Save as PDF opens the browser's print dialog with a print-optimized statement. You can choose “Save as PDF” in the browser.</p></details></div></section>
-</div>
+<section class="mt-6"><h2>Related tools</h2><div class="related-grid"><a class="tool-card" href="../gpf-calculator/index.html"><h3 class="tool-card__title">Gpf Calculator</h3><p class="tool-card__desc">Open Gpf Calculator.</p></a><a class="tool-card" href="../rd-calculator/index.html"><h3 class="tool-card__title">Rd Calculator</h3><p class="tool-card__desc">Open Rd Calculator.</p></a><a class="tool-card" href="../fd-calculator/index.html"><h3 class="tool-card__title">Fd Calculator</h3><p class="tool-card__desc">Open Fd Calculator.</p></a><a class="tool-card" href="../sip-calculator/index.html"><h3 class="tool-card__title">Sip Calculator</h3><p class="tool-card__desc">Open Sip Calculator.</p></a></div></section><section class="mt-6"><h2>Related guide</h2><a class="tool-card" href="../../blog/da-arrears-calculator-guide/index.html"><h3 class="tool-card__title">Da Arrears Calculator Guide</h3><p class="tool-card__desc">Read the practical guide before using this tool.</p></a></section></div>
 </main>
-<footer class="footer"><div class="container"><div class="footer__bottom"><span>© <span data-year>2026</span> DSUTILITY.</span><span class="footer__badge">🔒 Browser-based calculation.</span></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer>
 <script src="../../js/config.js"></script><script src="../../js/main.js"></script><script src="../../js/tools/da-arrear-calculator.js"></script>
 </body></html>
