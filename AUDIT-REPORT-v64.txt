@@ -1,0 +1,8 @@
+DSUTILITY v64 Regression Fix Report
+
+1. Blog headings/lead/article content normalized to a consistent 820px readable column matching the Merge PDF guide.
+2. PDF Editor: removed the long SEO/guide content block beneath the canvas; the editor page now points users to the dedicated PDF Editor Guide.
+3. Duplicate visible FAQ accordions merged on affected tool pages and duplicate questions removed.
+4. Repeated generic blog FAQ set replaced with tool/topic-specific questions and answers across affected guides.
+5. FAQ heading is ensured before visible FAQ accordions where needed.
+6. PDF Editor core implementation preserved from v59/v63 restoration.

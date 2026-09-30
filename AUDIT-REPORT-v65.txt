@@ -1,0 +1,7 @@
+DSUTILITY v65 change log
+
+- Replaced generic blog FAQ questions with tool-specific questions/answers on affected calculator and utility guides.
+- Preserved legitimate topic-specific questions that happen to mention downloading.
+- Restored the PDF Editor guide material removed from the tool page into the dedicated PDF Editor guide blog, while keeping the tool page focused on the editor UI.
+- Existing editor blog FAQ retained as a single FAQ section; no second FAQ block added.
+- JavaScript syntax validation: 0 errors.
