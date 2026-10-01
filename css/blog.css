@@ -220,3 +220,64 @@ main.section > .container > .lead { margin-top:0; }
 @media (max-width:700px){
   main.section > .container > h1, main.section > .container > .lead, main.section > .container > .eyebrow, main.section > .container > .article__meta, main.section > .container > .article__byline { padding-left:16px; padding-right:16px; }
 }
+
+/* v74: universal blog-title alignment normalization.
+   Blog pages use several historical HTML shells. Keep every H1 in the same
+   centered reading column, regardless of whether it is direct under <main>,
+   inside a section, or inside the article container. */
+main#main > h1,
+main.blog-main > h1,
+main#main > .container > h1,
+main.blog-main > .container > h1,
+main#main > .section > .container > h1,
+main.blog-main > .section > .container > h1,
+main.section > .container > h1,
+main > .article > h1,
+main#main .article > h1,
+main.section .article > h1 {
+  max-width: 820px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+main#main > .lead,
+main.blog-main > .lead,
+main#main > .container > .lead,
+main.blog-main > .container > .lead,
+main#main > .section > .container > .lead,
+main.blog-main > .section > .container > .lead {
+  max-width: 820px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width:700px) {
+  main#main > h1,
+  main.blog-main > h1,
+  main#main > .container > h1,
+  main.blog-main > .container > h1,
+  main#main > .section > .container > h1,
+  main.blog-main > .section > .container > h1,
+  main.section > .container > h1,
+  main > .article > h1,
+  main#main .article > h1,
+  main.section .article > h1,
+  main#main > .lead,
+  main.blog-main > .lead,
+  main#main > .container > .lead,
+  main.blog-main > .container > .lead,
+  main#main > .section > .container > .lead,
+  main.blog-main > .section > .container > .lead {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

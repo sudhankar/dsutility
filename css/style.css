@@ -786,3 +786,12 @@ p  { margin: 0 0 var(--space-4); color: var(--text-primary); }
 .install-app-btn{border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);border-radius:999px;padding:7px 12px;font-weight:700;cursor:pointer}
 
 .install-app-btn{border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);border-radius:999px;padding:7px 12px;font-weight:700;cursor:pointer}
+
+/* v69: global fixed share strip; PDF Editor excluded to protect canvas */
+.site-share{position:fixed!important;right:12px!important;top:50%!important;bottom:auto!important;left:auto!important;transform:translateY(-50%)!important;z-index:10000!important;display:flex!important;flex-direction:column!important;gap:8px!important;margin:0!important;padding:7px!important;border:1px solid var(--border-soft)!important;border-radius:16px!important;background:var(--bg-card)!important;box-shadow:var(--shadow-md)!important}
+body[data-tool="pdf-editor"] .site-share{display:none!important}
+@media(max-width:640px){.site-share{left:0!important;right:0!important;top:auto!important;bottom:0!important;transform:none!important;width:100%!important;box-sizing:border-box!important;flex-direction:row!important;justify-content:center!important;gap:8px!important;margin:0!important;padding:7px calc(8px + env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) calc(8px + env(safe-area-inset-left))!important;border-radius:14px 14px 0 0!important;border-bottom:0!important}.site-share__label{display:none!important}.site-share__icon{width:36px!important;height:36px!important}}
+@media print{.site-share{display:none!important}}
+
+/* v69: allow the Home tool-search result panel to extend outside the hero section */
+.hero{overflow:visible!important}
