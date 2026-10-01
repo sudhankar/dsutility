@@ -1,2 +1,436 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><title>PDF Version Checker Online — Check PDF Version | DSUTILITY</title><meta content="Check the PDF specification version recorded in a PDF file, plus basic file details. Free, private and processed locally in your browser." name="description"/><link href="https://dsutility.pages.dev/tools/pdf-version-checker/" rel="canonical"/><meta content="website" property="og:type"/><meta content="PDF Version Checker — DSUTILITY" property="og:title"/><meta content="Identify the PDF version from the file header and review basic file details in your browser." property="og:description"/><meta content="https://dsutility.pages.dev/tools/pdf-version-checker/" property="og:url"/><meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/><link href="../../css/style.css" rel="stylesheet"/><link href="../../css/tools.css" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"PDF Version Checker — DSUTILITY","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/pdf-version-checker/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"PDF Version Checker","item":"https://dsutility.pages.dev/tools/pdf-version-checker/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does a PDF version mean?","acceptedAnswer":{"@type":"Answer","text":"It identifies the PDF specification version declared by the file header, such as PDF 1.4 or PDF 1.7."}},{"@type":"Question","name":"Does checking the version modify my PDF?","acceptedAnswer":{"@type":"Answer","text":"No. The checker only reads the file header and basic file information."}},{"@type":"Question","name":"Does a newer PDF version always mean a better PDF?","acceptedAnswer":{"@type":"Answer","text":"No. Compatibility depends on the software and workflow receiving the file. A newer version can include features that older software may not handle."}}]}</script><link href="../../manifest.json" rel="manifest"/><meta content="#0A1929" name="theme-color"/><link href="../../css/polish.css" rel="stylesheet"/><link rel="canonical" href="https://dsutility.pages.dev/tools/pdf-version-checker/"/><meta name="twitter:title" content="PDF Version Checker Online — Check PDF Version | DSUTILITY"/><meta name="twitter:description" content="Check the PDF specification version recorded in a PDF file, plus basic file details. Free, private and processed locally in your browser."/><meta name="twitter:image" content="https://dsutility.pages.dev/images/icon-512.png"/></head><body><a class="skip-link" href="#main">Skip to content</a><header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header><main class="section" id="main"><div class="container"><nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span aria-current="page">PDF Version Checker</span></li></ol></nav><h1>PDF Version Checker</h1><p class="lead">Identify the PDF specification version recorded in a file and review a few basic file details before sharing or processing it.</p><p class="privacy-badge">🔒 Processed locally in your browser.</p><section class="tool-panel mt-6"><div aria-label="Add a PDF" class="upload-zone" id="uz-version" role="button" tabindex="0"><p class="upload-zone__title">Drop a PDF here or click to select</p><p class="upload-zone__hint">The checker reads the PDF header in your browser.</p><input accept="application/pdf,.pdf" hidden="" type="file"/></div><div class="alert alert-error mt-4" hidden="" id="version-alert" role="alert"></div><div class="mt-6" hidden="" id="version-panel"><h2 class="sr-only">PDF version details</h2><div id="version-results"></div></div></section><section class="mt-6"><h2>What this tool does</h2><p>The PDF Version Checker reads the standard PDF header and reports the declared specification version, such as PDF 1.4 or PDF 1.7. It also shows the selected file name and approximate file size. This can be useful when an older document-management system, printer workflow or PDF application has compatibility requirements.</p></section><section class="mt-6"><h2>How to check a PDF version</h2><ol class="how-to"><li>Select the PDF you want to inspect.</li><li>Let the browser read the beginning of the file.</li><li>Review the reported PDF version and file details.</li><li>If compatibility matters, compare the result with the requirements of the software or submission system you will use.</li></ol></section><section class="mt-6"><h2>Limitations and honest expectations</h2><ul><li>The tool reports the version declared in the PDF header; it is not a full PDF conformance validator.</li><li>A PDF's version number alone does not prove that every object, font, annotation or feature inside the file is valid.</li><li>Some applications can rewrite a PDF and change its declared version during export or save operations.</li></ul></section><section class="mt-6"><h2>Privacy</h2><p>The selected file is read in your browser. This inspection does not require uploading the PDF to a DSUTILITY processing server.</p></section><section class="mt-6"><h2>Frequently asked questions</h2><div class="faq-accordion"><details><summary>What does PDF 1.7 mean?</summary><p>It is a declared version of the PDF specification. The number helps software understand the feature set and compatibility expectations of the document.</p></details><details><summary>Is the PDF version the same as the software version?</summary><p>No. PDF 1.7 is a document-format specification version, while Acrobat, browser and other application versions are software releases.</p></details><details><summary>Can I use this to repair a PDF?</summary><p>No. This tool only inspects the header. Use a dedicated repair or validation workflow when a PDF is damaged or structurally invalid.</p></details></div></section><section class="mt-6"><h2>Related tools</h2><div class="related-grid"><a class="tool-card" href="../pdf-page-size-checker/index.html"><h3 class="tool-card__title">PDF Page Size Checker</h3><p class="tool-card__desc">Inspect page dimensions and orientation.</p></a><a class="tool-card" href="../metadata-editor/index.html"><h3 class="tool-card__title">PDF Metadata Editor</h3><p class="tool-card__desc">Review and edit common document metadata.</p></a><a class="tool-card" href="../pdf-editor/index.html"><h3 class="tool-card__title">PDF Editor</h3><p class="tool-card__desc">Add text, images and annotations.</p></a></div></section><section class="mt-6"><h2>Related reading</h2><div class="related-grid"><a class="tool-card" href="../../blog/pdf-version-checker/index.html"><h3 class="tool-card__title">PDF Version Explained: What the Number Means</h3><p class="tool-card__desc">A practical guide to compatibility and PDF specification versions.</p></a></div></section></div></main><footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer><script src="../../js/config.js"></script><script src="../../js/main.js"></script><script src="../../js/tools-engine.js"></script><script src="../../js/tools/pdf-version-checker.js"></script></body></html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <title>
+   PDF Version Checker Online — Check PDF Version | DSUTILITY
+  </title>
+  <meta content="Check the PDF specification version recorded in a PDF file, plus basic file details. Free, private and processed locally in your browser." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/pdf-version-checker/" rel="canonical"/>
+  <meta content="website" property="og:type"/>
+  <meta content="PDF Version Checker — DSUTILITY" property="og:title"/>
+  <meta content="Identify the PDF version from the file header and review basic file details in your browser." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/pdf-version-checker/" property="og:url"/>
+  <meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"PDF Version Checker — DSUTILITY","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/pdf-version-checker/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"PDF Version Checker","item":"https://dsutility.pages.dev/tools/pdf-version-checker/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does a PDF version mean?","acceptedAnswer":{"@type":"Answer","text":"It identifies the PDF specification version declared by the file header, such as PDF 1.4 or PDF 1.7."}},{"@type":"Question","name":"Does checking the version modify my PDF?","acceptedAnswer":{"@type":"Answer","text":"No. The checker only reads the file header and basic file information."}},{"@type":"Question","name":"Does a newer PDF version always mean a better PDF?","acceptedAnswer":{"@type":"Answer","text":"No. Compatibility depends on the software and workflow receiving the file. A newer version can include features that older software may not handle."}}]}
+  </script>
+  <link href="../../manifest.json" rel="manifest"/>
+  <meta content="#0A1929" name="theme-color"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/pdf-version-checker/" rel="canonical"/>
+  <meta content="PDF Version Checker Online — Check PDF Version | DSUTILITY" name="twitter:title"/>
+  <meta content="Check the PDF specification version recorded in a PDF file, plus basic file details. Free, private and processed locally in your browser." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <div class="container">
+    <nav aria-label="Breadcrumb">
+     <ol class="breadcrumb">
+      <li>
+       <a href="../../index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="../index.html">
+        Tools
+       </a>
+      </li>
+      <li>
+       <span aria-current="page">
+        PDF Version Checker
+       </span>
+      </li>
+     </ol>
+    </nav>
+    <h1>
+     PDF Version Checker
+    </h1>
+    <p class="lead">
+     Identify the PDF specification version recorded in a file and review a few basic file details before sharing or processing it.
+    </p>
+    <p class="privacy-badge">
+     🔒 Processed locally in your browser.
+    </p>
+    <section class="tool-panel mt-6">
+     <div aria-label="Add a PDF" class="upload-zone" id="uz-version" role="button" tabindex="0">
+      <p class="upload-zone__title">
+       Drop a PDF here or click to select
+      </p>
+      <p class="upload-zone__hint">
+       The checker reads the PDF header in your browser.
+      </p>
+      <input accept="application/pdf,.pdf" hidden="" type="file"/>
+     </div>
+     <div class="alert alert-error mt-4" hidden="" id="version-alert" role="alert">
+     </div>
+     <div class="mt-6" hidden="" id="version-panel">
+      <h2 class="sr-only">
+       PDF version details
+      </h2>
+      <div id="version-results">
+      </div>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About PDF Version Checker
+     </h2>
+     <p>
+      PDF Version Checker identifies the PDF specification version recorded in a document. This is useful when a receiving application, archive, workflow, or older PDF system expects a particular compatibility level.
+     </p>
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final pdf version checker result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
+     </p>
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for pdf version checker, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use PDF Version Checker
+     </h2>
+     <ol class="how-to">
+      <li>
+       Upload the PDF
+      </li>
+      <li>
+       let the tool inspect the document header
+      </li>
+      <li>
+       read the reported PDF version
+      </li>
+      <li>
+       compare it with the requirements of the target system
+      </li>
+      <li>
+       use an appropriate conversion workflow only if a different version is actually required.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       PDF version is not the same thing as the application that created the file.
+      </li>
+      <li>
+       A compatible version number does not guarantee that every advanced feature will work in an older viewer.
+      </li>
+      <li>
+       The checker does not automatically downgrade or upgrade the PDF.
+      </li>
+      <li>
+       Modified files should be rechecked after any conversion or editing operation.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        What does a PDF version number mean?
+       </summary>
+       <p>
+        It identifies the PDF specification level recorded by the file.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Does a newer version always work everywhere?
+       </summary>
+       <p>
+        Not necessarily. Older software may not support newer features.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can this tool change the PDF version?
+       </summary>
+       <p>
+        No. It is a checker; use a suitable conversion process when compatibility must be changed.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Why check after editing?
+       </summary>
+       <p>
+        A PDF-producing application may write the output using a different version than the source.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../pdf-page-size-checker/index.html">
+       <h3 class="tool-card__title">
+        PDF Page Size Checker
+       </h3>
+       <p class="tool-card__desc">
+        Inspect physical page dimensions.
+       </p>
+      </a>
+      <a class="tool-card" href="../metadata-editor/index.html">
+       <h3 class="tool-card__title">
+        PDF Metadata Editor
+       </h3>
+       <p class="tool-card__desc">
+        Review and change document metadata.
+       </p>
+      </a>
+      <a class="tool-card" href="../pdf-editor/index.html">
+       <h3 class="tool-card__title">
+        PDF Editor
+       </h3>
+       <p class="tool-card__desc">
+        Edit the PDF when version compatibility is not the only concern.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/pdf-version-checker/index.html">
+       <h3 class="tool-card__title">
+        PDF Version Explained: What the Number Means
+       </h3>
+       <p class="tool-card__desc">
+        Understand PDF compatibility.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/pdf-metadata-explained/index.html">
+       <h3 class="tool-card__title">
+        PDF Metadata Explained
+       </h3>
+       <p class="tool-card__desc">
+        Learn about other file-level properties.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      Version inspection is performed locally in the browser for supported PDFs. The source file does not need to be uploaded to a DSUTILITY analysis server. The checker reads the document and does not intentionally modify it.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/config.js">
+  </script>
+  <script src="../../js/main.js">
+  </script>
+  <script src="../../js/tools-engine.js">
+  </script>
+  <script src="../../js/tools/pdf-version-checker.js">
+  </script>
+ </body>
+</html>

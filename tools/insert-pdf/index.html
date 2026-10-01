@@ -1,22 +1,481 @@
-<!doctype html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-<title>Insert PDF into PDF Online — Add Pages Anywhere | DSUTILITY</title>
-<meta content="Insert all pages from one PDF into another PDF before a chosen page. Preview the insertion point and process files locally in your browser." name="description"/>
-<link href="https://dsutility.pages.dev/tools/insert-pdf/" rel="canonical"/>
-<meta content="website" property="og:type"/><meta content="Insert PDF into PDF Online — DSUTILITY" property="og:title"/><meta content="Add pages from one PDF into another at the position you choose, with a visual insertion preview and browser-side processing." property="og:description"/><meta content="https://dsutility.pages.dev/tools/insert-pdf/" property="og:url"/><meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/>
-<link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/><link href="../../css/style.css" rel="stylesheet"/><link href="../../css/tools.css" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Insert PDF into PDF — DSUTILITY","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/insert-pdf/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Insert PDF into PDF","item":"https://dsutility.pages.dev/tools/insert-pdf/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I choose where the second PDF is inserted?","acceptedAnswer":{"@type":"Answer","text":"Yes. Select the insertion point before any page of the main PDF, or choose after the last page."}},{"@type":"Question","name":"Are the original PDFs uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. The files are read and processed in your browser. The site does not need a PDF-processing server for this operation."}},{"@type":"Question","name":"Can I insert only some pages from the second PDF?","acceptedAnswer":{"@type":"Answer","text":"This lightweight version inserts the complete second PDF. Use Extract Pages first if you need only selected pages."}}]}</script>
-<link href="../../manifest.json" rel="manifest"/><meta content="#0A1929" name="theme-color"/><link href="../../css/polish.css" rel="stylesheet"/><link rel="canonical" href="https://dsutility.pages.dev/tools/insert-pdf/"/><meta name="twitter:title" content="Insert PDF into PDF Online — Add Pages Anywhere | DSUTILITY"/><meta name="twitter:description" content="Insert all pages from one PDF into another PDF before a chosen page. Preview the insertion point and process files locally in your browser."/><meta name="twitter:image" content="https://dsutility.pages.dev/images/icon-512.png"/></head>
-<body><a class="skip-link" href="#main">Skip to content</a><header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header>
-<main class="section" id="main"><div class="container"><nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span aria-current="page">Insert PDF into PDF</span></li></ol></nav><h1>Insert PDF into PDF</h1><p class="lead">Add every page from one PDF into another at the position you choose, without rebuilding the documents manually.</p><p class="privacy-badge">🔒 Processed locally in your browser.</p>
-<section class="tool-panel mt-6"><h2 class="visually-hidden">Choose PDFs</h2><div class="opt-row"><div aria-label="Choose main PDF" class="upload-zone" id="uz-base" role="button" tabindex="0"><p class="upload-zone__title">1. Choose the main PDF</p><p class="upload-zone__hint">This document keeps its pages before and after the insertion.</p><input accept="application/pdf,.pdf" hidden="" type="file"/></div><div aria-label="Choose PDF to insert" class="upload-zone" id="uz-insert" role="button" tabindex="0"><p class="upload-zone__title">2. Choose the PDF to insert</p><p class="upload-zone__hint">All pages from this PDF will be inserted together.</p><input accept="application/pdf,.pdf" hidden="" type="file"/></div></div><div class="alert alert-error mt-4" hidden="" id="insert-alert" role="alert"></div><div class="mt-6" hidden="" id="insert-panel"><p class="text-muted" id="insert-status"></p><label class="mt-4">Insertion position<select class="input" id="insert-position"></select></label><div class="tool-preview mt-4" hidden="" id="insert-preview"><p class="text-muted">Preview: click a page to insert the second PDF before that page.</p><div class="preview-pdf-strip" id="insert-preview-strip"></div></div><div class="progress-panel mt-4" hidden="" id="insert-progress"><div class="progress"><div class="progress__bar" style="width:100%"></div></div><p class="text-muted">Preparing your PDF…</p></div><div class="tool-actions mt-6"><button class="btn btn-primary btn-lg" id="insert-apply" type="button">Insert PDF &amp; Download</button></div></div></section>
-<section class="mt-6"><h2>What this tool does</h2><p>Insert PDF into PDF is useful when a separate appendix, signed section, cover document, form, or set of pages needs to be placed inside an existing PDF. Instead of manually rebuilding the document, choose a main PDF, choose the PDF you want to add, and select the point where the second document should begin.</p></section>
-<section class="mt-6"><h2>How to insert one PDF into another</h2><ol class="how-to"><li>Choose the main PDF.</li><li>Choose the PDF whose pages should be inserted.</li><li>Wait for the main PDF page preview to load.</li><li>Click a page thumbnail to insert the second PDF before that page, or choose the last-page position.</li><li>Click <strong>Insert PDF &amp; Download</strong> and verify the resulting page order.</li></ol></section>
-<section class="mt-6"><h2>Limitations and honest expectations</h2><ul><li>This version inserts the complete second PDF as one block; it does not select individual pages from that file.</li><li>If you need only a few pages, use <a href="../extract-pages/index.html">Extract Pages</a> first.</li><li>Password-protected PDFs may need to be unlocked before processing.</li><li>Large PDFs can use significant browser memory and may be slower on mobile devices.</li><li>Rewriting a PDF can affect some advanced features such as digital signatures, interactive form structures, or unusual embedded objects.</li></ul></section>
-<section class="mt-6"><h2>Privacy</h2><p>The selected PDFs are handled in your browser rather than uploaded to a DSUTILITY PDF-processing server. Public libraries required for the tool may be loaded by your browser. Your device controls processing speed and memory usage.</p></section>
-<section class="mt-6"><h2>Frequently asked questions</h2><div class="faq-accordion"><details><summary>Where can I insert the second PDF?</summary><p>You can insert it before any existing page or after the last page.</p></details><details><summary>Does this change my original files?</summary><p>No. A new PDF is created for download. The source files on your device are not overwritten.</p></details><details><summary>Can I insert only page 3 from the second PDF?</summary><p>Not directly in this version. Extract the required page or pages first, then insert the resulting PDF.</p></details></div></section>
-<section class="mt-6"><h2>Related tools</h2><div class="related-grid"><a class="tool-card" href="../extract-pages/index.html"><h3 class="tool-card__title">Extract Pages</h3><p class="tool-card__desc">Create a PDF containing only selected pages.</p></a><a class="tool-card" href="../merge-pdf/index.html"><h3 class="tool-card__title">Merge PDF</h3><p class="tool-card__desc">Combine complete PDFs into one document.</p></a><a class="tool-card" href="../reorder-pages/index.html"><h3 class="tool-card__title">Reorder PDF Pages</h3><p class="tool-card__desc">Change the final page sequence.</p></a></div></section>
-<section class="mt-6"><h2>Related reading</h2><div class="related-grid"><a class="tool-card" href="../../blog/insert-pdf-into-pdf/index.html"><h3 class="tool-card__title">How to Insert One PDF into Another</h3><p class="tool-card__desc">A practical guide to adding pages at the right point.</p></a></div></section></div></main><footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer>
-<script src="../../js/config.js"></script><script src="../../js/main.js"></script><script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script><script src="../../js/tools-engine.js"></script><script src="../../js/tools/insert-pdf.js"></script></body></html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <title>
+   Insert PDF into PDF Online — Add Pages Anywhere | DSUTILITY
+  </title>
+  <meta content="Insert all pages from one PDF into another PDF before a chosen page. Preview the insertion point and process files locally in your browser." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/insert-pdf/" rel="canonical"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Insert PDF into PDF Online — DSUTILITY" property="og:title"/>
+  <meta content="Add pages from one PDF into another at the position you choose, with a visual insertion preview and browser-side processing." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/insert-pdf/" property="og:url"/>
+  <meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Insert PDF into PDF — DSUTILITY","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/insert-pdf/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Insert PDF into PDF","item":"https://dsutility.pages.dev/tools/insert-pdf/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I choose where the second PDF is inserted?","acceptedAnswer":{"@type":"Answer","text":"Yes. Select the insertion point before any page of the main PDF, or choose after the last page."}},{"@type":"Question","name":"Are the original PDFs uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. The files are read and processed in your browser. The site does not need a PDF-processing server for this operation."}},{"@type":"Question","name":"Can I insert only some pages from the second PDF?","acceptedAnswer":{"@type":"Answer","text":"This lightweight version inserts the complete second PDF. Use Extract Pages first if you need only selected pages."}}]}
+  </script>
+  <link href="../../manifest.json" rel="manifest"/>
+  <meta content="#0A1929" name="theme-color"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/insert-pdf/" rel="canonical"/>
+  <meta content="Insert PDF into PDF Online — Add Pages Anywhere | DSUTILITY" name="twitter:title"/>
+  <meta content="Insert all pages from one PDF into another PDF before a chosen page. Preview the insertion point and process files locally in your browser." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <div class="container">
+    <nav aria-label="Breadcrumb">
+     <ol class="breadcrumb">
+      <li>
+       <a href="../../index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="../index.html">
+        Tools
+       </a>
+      </li>
+      <li>
+       <span aria-current="page">
+        Insert PDF into PDF
+       </span>
+      </li>
+     </ol>
+    </nav>
+    <h1>
+     Insert PDF into PDF
+    </h1>
+    <p class="lead">
+     Add every page from one PDF into another at the position you choose, without rebuilding the documents manually.
+    </p>
+    <p class="privacy-badge">
+     🔒 Processed locally in your browser.
+    </p>
+    <section class="tool-panel mt-6">
+     <h2 class="visually-hidden">
+      Choose PDFs
+     </h2>
+     <div class="opt-row">
+      <div aria-label="Choose main PDF" class="upload-zone" id="uz-base" role="button" tabindex="0">
+       <p class="upload-zone__title">
+        1. Choose the main PDF
+       </p>
+       <p class="upload-zone__hint">
+        This document keeps its pages before and after the insertion.
+       </p>
+       <input accept="application/pdf,.pdf" hidden="" type="file"/>
+      </div>
+      <div aria-label="Choose PDF to insert" class="upload-zone" id="uz-insert" role="button" tabindex="0">
+       <p class="upload-zone__title">
+        2. Choose the PDF to insert
+       </p>
+       <p class="upload-zone__hint">
+        All pages from this PDF will be inserted together.
+       </p>
+       <input accept="application/pdf,.pdf" hidden="" type="file"/>
+      </div>
+     </div>
+     <div class="alert alert-error mt-4" hidden="" id="insert-alert" role="alert">
+     </div>
+     <div class="mt-6" hidden="" id="insert-panel">
+      <p class="text-muted" id="insert-status">
+      </p>
+      <label class="mt-4">
+       Insertion position
+       <select class="input" id="insert-position">
+       </select>
+      </label>
+      <div class="tool-preview mt-4" hidden="" id="insert-preview">
+       <p class="text-muted">
+        Preview: click a page to insert the second PDF before that page.
+       </p>
+       <div class="preview-pdf-strip" id="insert-preview-strip">
+       </div>
+      </div>
+      <div class="progress-panel mt-4" hidden="" id="insert-progress">
+       <div class="progress">
+        <div class="progress__bar" style="width:100%">
+        </div>
+       </div>
+       <p class="text-muted">
+        Preparing your PDF…
+       </p>
+      </div>
+      <div class="tool-actions mt-6">
+       <button class="btn btn-primary btn-lg" id="insert-apply" type="button">
+        Insert PDF &amp; Download
+       </button>
+      </div>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About Insert One PDF into Another PDF
+     </h2>
+     <p>
+      Insert PDF into PDF places pages from one PDF inside another document at a chosen point. It is useful for adding an annexure, certificate, supporting document, or appendix without manually rebuilding the complete file.
+     </p>
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final insert one pdf into another pdf result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
+     </p>
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for insert one pdf into another pdf, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use Insert One PDF into Another PDF
+     </h2>
+     <ol class="how-to">
+      <li>
+       Open the base PDF
+      </li>
+      <li>
+       choose the PDF to insert
+      </li>
+      <li>
+       select the insertion position
+      </li>
+      <li>
+       review the combined page order
+      </li>
+      <li>
+       run the insertion
+      </li>
+      <li>
+       download the new document
+      </li>
+      <li>
+       verify the inserted pages.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       Both source files need to be readable by the browser-side PDF engine.
+      </li>
+      <li>
+       Encrypted PDFs may need to be unlocked first.
+      </li>
+      <li>
+       Large source documents can require substantial memory.
+      </li>
+      <li>
+       Interactive forms, bookmarks, and advanced PDF features may not transfer perfectly.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        Can I insert several pages at once?
+       </summary>
+       <p>
+        Yes. The inserted PDF contributes its pages as a group.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can I insert the PDF in the middle?
+       </summary>
+       <p>
+        Yes. Choose the page position where the second document should begin.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Will the original files change?
+       </summary>
+       <p>
+        No. The tool creates a new output document.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can I insert a scanned PDF?
+       </summary>
+       <p>
+        Yes, as long as the PDF can be opened by the tool.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../merge-pdf/index.html">
+       <h3 class="tool-card__title">
+        Merge PDF
+       </h3>
+       <p class="tool-card__desc">
+        Combine complete PDFs when no mid-document insertion is needed.
+       </p>
+      </a>
+      <a class="tool-card" href="../extract-pages/index.html">
+       <h3 class="tool-card__title">
+        Extract Pages
+       </h3>
+       <p class="tool-card__desc">
+        Prepare only the pages you want to insert.
+       </p>
+      </a>
+      <a class="tool-card" href="../reorder-pages/index.html">
+       <h3 class="tool-card__title">
+        Reorder PDF Pages
+       </h3>
+       <p class="tool-card__desc">
+        Fine-tune the final sequence afterward.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/insert-pdf-into-pdf/index.html">
+       <h3 class="tool-card__title">
+        Insert a PDF into Another PDF
+       </h3>
+       <p class="tool-card__desc">
+        A focused workflow for annexures and attachments.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/how-to-merge-pdf-files/index.html">
+       <h3 class="tool-card__title">
+        How to Merge PDF Files
+       </h3>
+       <p class="tool-card__desc">
+        Compare full-document merging with insertion.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      The PDFs are processed in the browser for the supported local workflow. The source documents do not need to be uploaded to a DSUTILITY PDF server. Browser memory and local temporary data remain relevant to processing.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/config.js">
+  </script>
+  <script src="../../js/main.js">
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js">
+  </script>
+  <script src="../../js/tools-engine.js">
+  </script>
+  <script src="../../js/tools/insert-pdf.js">
+  </script>
+ </body>
+</html>

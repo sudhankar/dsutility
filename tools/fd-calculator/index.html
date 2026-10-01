@@ -1,2 +1,466 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>FD Calculator — Fixed Deposit Maturity Estimate | DSUTILITY</title><meta content="Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding." name="description"/><link href="https://dsutility.pages.dev/tools/fd-calculator/" rel="canonical"/><link href="../../manifest.json" rel="manifest"/><link href="../../css/style.css" rel="stylesheet"/><link href="../../css/tools.css" rel="stylesheet"/><link href="../../css/polish.css" rel="stylesheet"/><link rel="canonical" href="https://dsutility.pages.dev/tools/fd-calculator/"/><meta property="og:title" content="FD Calculator — Fixed Deposit Maturity Estimate | DSUTILITY"/><meta property="og:description" content="Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding."/><meta property="og:url" content="https://dsutility.pages.dev/tools/fd-calculator/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://dsutility.pages.dev/images/icon-512.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="FD Calculator — Fixed Deposit Maturity Estimate | DSUTILITY"/><meta name="twitter:description" content="Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding."/><meta name="twitter:image" content="https://dsutility.pages.dev/images/icon-512.png"/></head><body data-tool="fd-calculator"><a class="skip-link" href="#main">Skip to content</a><header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header><main class="section" id="main"><div class="container fin-shell"><nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span>Fd Calculator</span></li></ol></nav><h1>FD Calculator</h1><p class="lead">Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding.</p><section class="fin-card mt-6"><div class="fin-grid"><div class="fin-field"><label for="fdP">Principal</label><input class="fin-input" id="fdP" min="0" step="0.01" type="number" value="100000"/></div><div class="fin-field"><label for="fdR">Annual interest rate (%)</label><input class="fin-input" id="fdR" min="0" step="0.01" type="number" value="7"/></div><div class="fin-field"><label for="fdY">Tenure (years)</label><input class="fin-input" id="fdY" min="0" step="0.01" type="number" value="5"/></div></div><div class="fin-actions"><button class="btn btn-primary" id="calculate">Calculate</button><button class="btn btn-secondary" id="rst">Reset</button></div><div class="fin-results"><div class="fin-result"><span>Maturity value</span><strong id="fdX">₹0</strong></div><div class="fin-result"><span>Interest earned</span><strong id="fdInterest">₹0</strong></div><div class="fin-result"><span>Principal</span><strong id="fdPrincipal">₹0</strong></div></div></section><section class="mt-6"><div class="fin-note"><strong>Planning note:</strong> This is an estimate based on the stated assumptions. It is not investment advice and does not guarantee a return.</div></section><section class="mt-6"><h2>How to use this calculator</h2><ol class="how-to"><li>Enter the values shown above.</li><li>Click Calculate or change an input.</li><li>Compare the result with the actual product's current terms.</li></ol></section><section class="mt-6"><h2>Fixed-deposit maturity estimate</h2><p>This calculator models a cumulative fixed deposit using principal, annual interest rate and tenure. The default model uses quarterly compounding.</p><h2>Formula</h2><div class="fin-formula">M = P × (1 + r/n)^(n × t)</div><p>P is principal, r is annual rate in decimal form, n is four quarterly periods per year and t is tenure.</p><h2>What to verify</h2><ul><li>Cumulative or periodic interest payout.</li><li>Actual compounding frequency.</li><li>Premature-closure rules.</li><li>Applicable tax or TDS treatment.</li><li>Special rates and product terms.</li></ul><h2>FAQ</h2><div class="faq-accordion"><details><summary>Is this an official bank calculator?</summary><p>No. It is a general mathematical estimate.</p></details><details><summary>Why might a bank statement differ?</summary><p>Product rules, payout timing, taxes and rounding can change the actual amount.</p></details></div></section><section class="mt-6"><h2>Related calculators</h2><div class="related-grid"><a class="tool-card" href="../sip-calculator/index.html"><h3 class="tool-card__title">SIP Calculator</h3><p class="tool-card__desc">Monthly investment projection.</p></a><a class="tool-card" href="../swp-calculator/index.html"><h3 class="tool-card__title">SWP Calculator</h3><p class="tool-card__desc">Withdrawal scenario estimate.</p></a><a class="tool-card" href="../fd-calculator/index.html"><h3 class="tool-card__title">FD Calculator</h3><p class="tool-card__desc">Fixed-deposit estimate.</p></a><a class="tool-card" href="../rd-calculator/index.html"><h3 class="tool-card__title">RD Calculator</h3><p class="tool-card__desc">Recurring-deposit estimate.</p></a></div></section><section class="mt-6"><h2>Related guide</h2><a class="tool-card" href="../../blog/fd-calculator-guide/index.html"><h3 class="tool-card__title">Fd Calculator Guide</h3><p class="tool-card__desc">Detailed explanation of assumptions and limitations.</p></a></section></div></main><footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer><script src="../../js/main.js"></script><script>document.body.dataset.m="fd";</script><script src="../../js/tools/financial-calculators.js"></script></body></html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   FD Calculator — Fixed Deposit Maturity Estimate | DSUTILITY
+  </title>
+  <meta content="Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/fd-calculator/" rel="canonical"/>
+  <link href="../../manifest.json" rel="manifest"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/fd-calculator/" rel="canonical"/>
+  <meta content="FD Calculator — Fixed Deposit Maturity Estimate | DSUTILITY" property="og:title"/>
+  <meta content="Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/fd-calculator/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="FD Calculator — Fixed Deposit Maturity Estimate | DSUTILITY" name="twitter:title"/>
+  <meta content="Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body data-tool="fd-calculator">
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <div class="container fin-shell">
+    <nav aria-label="Breadcrumb">
+     <ol class="breadcrumb">
+      <li>
+       <a href="../../index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="../index.html">
+        Tools
+       </a>
+      </li>
+      <li>
+       <span>
+        Fd Calculator
+       </span>
+      </li>
+     </ol>
+    </nav>
+    <h1>
+     FD Calculator
+    </h1>
+    <p class="lead">
+     Estimate fixed-deposit maturity and interest from principal, annual rate and tenure using quarterly compounding.
+    </p>
+    <section class="fin-card mt-6">
+     <div class="fin-grid">
+      <div class="fin-field">
+       <label for="fdP">
+        Principal
+       </label>
+       <input class="fin-input" id="fdP" min="0" step="0.01" type="number" value="100000"/>
+      </div>
+      <div class="fin-field">
+       <label for="fdR">
+        Annual interest rate (%)
+       </label>
+       <input class="fin-input" id="fdR" min="0" step="0.01" type="number" value="7"/>
+      </div>
+      <div class="fin-field">
+       <label for="fdY">
+        Tenure (years)
+       </label>
+       <input class="fin-input" id="fdY" min="0" step="0.01" type="number" value="5"/>
+      </div>
+     </div>
+     <div class="fin-actions">
+      <button class="btn btn-primary" id="calculate">
+       Calculate
+      </button>
+      <button class="btn btn-secondary" id="rst">
+       Reset
+      </button>
+     </div>
+     <div class="fin-results">
+      <div class="fin-result">
+       <span>
+        Maturity value
+       </span>
+       <strong id="fdX">
+        ₹0
+       </strong>
+      </div>
+      <div class="fin-result">
+       <span>
+        Interest earned
+       </span>
+       <strong id="fdInterest">
+        ₹0
+       </strong>
+      </div>
+      <div class="fin-result">
+       <span>
+        Principal
+       </span>
+       <strong id="fdPrincipal">
+        ₹0
+       </strong>
+      </div>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About FD Calculator
+     </h2>
+     <p>
+      FD Calculator estimates fixed-deposit maturity and interest from the principal, rate, tenure, and compounding assumptions entered by the user. It is useful for comparing deposit scenarios and understanding the relationship between principal, interest, and maturity value.
+     </p>
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final fd calculator result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
+     </p>
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for fd calculator, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use FD Calculator
+     </h2>
+     <ol class="how-to">
+      <li>
+       Enter the deposit amount
+      </li>
+      <li>
+       enter the interest rate
+      </li>
+      <li>
+       choose the tenure and compounding option
+      </li>
+      <li>
+       calculate
+      </li>
+      <li>
+       review principal, estimated interest, and maturity value
+      </li>
+      <li>
+       compare another rate or tenure if needed.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       Banks can use different compounding conventions, payout schedules, and rate rules.
+      </li>
+      <li>
+       Actual maturity can differ when tax, premature withdrawal, or special customer rates apply.
+      </li>
+      <li>
+       The calculator is not connected to a bank account or current bank rate feed.
+      </li>
+      <li>
+       Use the bank’s official terms for a final maturity figure.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        What is interest earned?
+       </summary>
+       <p>
+        It is the estimated interest generated by the entered deposit under the selected calculation method.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can I compare different tenures?
+       </summary>
+       <p>
+        Yes. Change the tenure and compare the resulting maturity value.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Does it include tax deducted at source?
+       </summary>
+       <p>
+        Only if the calculator explicitly provides such an input; otherwise check tax separately.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Is the result guaranteed?
+       </summary>
+       <p>
+        No. It is an estimate based on the rate and compounding assumptions entered.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../rd-calculator/index.html">
+       <h3 class="tool-card__title">
+        RD Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Estimate recurring-deposit maturity.
+       </p>
+      </a>
+      <a class="tool-card" href="../sip-calculator/index.html">
+       <h3 class="tool-card__title">
+        SIP Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Compare with a market-linked periodic investment scenario.
+       </p>
+      </a>
+      <a class="tool-card" href="../swp-calculator/index.html">
+       <h3 class="tool-card__title">
+        SWP Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Model withdrawals from a starting corpus.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/fd-calculator-guide/index.html">
+       <h3 class="tool-card__title">
+        FD Calculator Guide
+       </h3>
+       <p class="tool-card__desc">
+        Check the assumptions behind maturity estimates.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/rd-calculator-guide/index.html">
+       <h3 class="tool-card__title">
+        RD Calculator Guide
+       </h3>
+       <p class="tool-card__desc">
+        Compare fixed deposits with recurring deposits.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      The FD calculation is performed locally in the browser. The tool does not retrieve your bank account information or submit the entered figures to a bank. Treat rates as user-supplied assumptions and verify the final maturity against the bank’s official schedule.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/main.js">
+  </script>
+  <script>
+   document.body.dataset.m="fd";
+  </script>
+  <script src="../../js/tools/financial-calculators.js">
+  </script>
+ </body>
+</html>

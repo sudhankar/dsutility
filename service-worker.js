@@ -1,5 +1,5 @@
 /* DSUTILITY — lightweight service worker. Tool-specific libraries are NOT precached. */
-var CACHE_VERSION = "dsutility-v62";
+var CACHE_VERSION = "dsutility-v75";
 var PRECACHE_URLS = ["./","./index.html","./404.html","./css/style.css","./css/tools.css","./css/blog.css","./css/polish.css","./js/config.js","./js/main.js","./images/logo.svg","./images/favicon.svg"];
 self.addEventListener("install", function(event){event.waitUntil(caches.open(CACHE_VERSION).then(function(cache){return Promise.all(PRECACHE_URLS.map(function(url){return cache.add(url).catch(function(){});}));}).then(function(){return self.skipWaiting();}));});
 self.addEventListener("activate", function(event){event.waitUntil(caches.keys().then(function(keys){return Promise.all(keys.map(function(key){if(key!==CACHE_VERSION)return caches.delete(key);}));}).then(function(){return self.clients.claim();}));});

@@ -1,3 +1,466 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>NPS Calculator — Contribution &amp; Retirement Corpus Estimator | DSUTILITY</title><meta content="Estimate monthly NPS contributions and a projected retirement corpus from salary, contribution rates, years and an assumed return. Browser-based and privacy-friendly." name="description"/><link href="https://dsutility.pages.dev/tools/nps-calculator/" rel="canonical"/><meta content="website" property="og:type"/><meta content="NPS Calculator — DSUTILITY" property="og:title"/><meta content="Estimate NPS contributions and projected corpus using your own salary, rates, years and return assumptions." property="og:description"/><meta content="https://dsutility.pages.dev/tools/nps-calculator/" property="og:url"/><meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/><link href="../../css/style.css" rel="stylesheet"/><link href="../../css/tools.css" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"NPS Calculator — DSUTILITY","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/nps-calculator/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"NPS Calculator","item":"https://dsutility.pages.dev/tools/nps-calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this NPS calculator estimate?","acceptedAnswer":{"@type":"Answer","text":"It estimates employee and employer contributions and a projected corpus using the salary, contribution rates, time period and assumed annual return entered by the user."}},{"@type":"Question","name":"Are the default contribution rates universal?","acceptedAnswer":{"@type":"Answer","text":"No. The defaults are based on the Central Government employee NPS contribution structure shown by PFRDA; state governments and other sectors can have different rules."}},{"@type":"Question","name":"Is the projected NPS corpus guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. The projection is a mathematical estimate based on an assumed return and contribution pattern. Actual NPS returns, contributions, service rules and exit conditions can differ."}}]}]}</script><style>.calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.calc-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--bg-card)}.calc-card label{display:block;font-weight:600;margin-bottom:6px}.calc-card input{width:100%;box-sizing:border-box}.result-box{padding:20px;border-radius:14px;background:var(--bg-card);border:1px solid var(--border)}.result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.metric{padding:14px;border:1px solid var(--border);border-radius:12px}.metric strong{display:block;font-size:1.25rem;margin-top:4px}@media(max-width:700px){.calc-grid,.result-grid{grid-template-columns:1fr}}</style><link href="../../manifest.json" rel="manifest"/><meta content="#0A1929" name="theme-color"/><link href="../../css/polish.css" rel="stylesheet"/><link href="https://dsutility.pages.dev/tools/nps-calculator/" rel="canonical"/><meta content="NPS Calculator — Contribution &amp; Retirement Corpus Estimator | DSUTILITY" name="twitter:title"/><meta content="Estimate monthly NPS contributions and a projected retirement corpus from salary, contribution rates, years and an assumed return. Browser-based and privacy-friendly." name="twitter:description"/><meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/></head><body data-tool="nps-calculator"><a class="skip-link" href="#main">Skip to content</a><header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header><main class="section" id="main"><div class="container"><nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span aria-current="page">NPS Calculator</span></li></ol></nav><h1>NPS Calculator</h1><p class="lead">Estimate NPS contributions and a projected retirement corpus from your salary, contribution rates, investment period and assumed annual return.</p><p class="privacy-badge">🔒 Calculated locally in your browser.</p><section class="tool-panel mt-6"><div class="calc-grid"><div class="calc-card"><label for="basic">Basic Pay + DA (₹/month)</label><input id="basic" min="0" step="100" type="number" value="50000"/></div><div class="calc-card"><label for="years">Years of contribution</label><input id="years" max="60" min="1" step="1" type="number" value="25"/></div><div class="calc-card"><label for="employee">Employee contribution (%)</label><input id="employee" max="100" min="0" step="0.1" type="number" value="10"/></div><div class="calc-card"><label for="employer">Employer contribution (%)</label><input id="employer" max="100" min="0" step="0.1" type="number" value="14"/></div><div class="calc-card"><label for="return">Assumed annual return (%)</label><input id="return" max="50" min="0" step="0.1" type="number" value="8"/></div><div class="calc-card"><label for="growth">Annual salary growth (%)</label><input id="growth" max="30" min="0" step="0.1" type="number" value="0"/></div></div><button class="btn btn-primary mt-4" id="calculate" type="button">Calculate NPS Estimate</button><div class="result-box mt-4" hidden="" id="result"></div></section><section class="mt-6"><h2>What this calculator does</h2><p>This calculator gives a mathematical estimate of NPS contributions and a possible future corpus. It combines the employee and employer contribution percentages you enter, applies them to the monthly Basic Pay + DA, and compounds the contribution stream using your assumed annual return. You can also model a simple annual salary-growth assumption.</p></section><section class="mt-6"><h2>Central Government contribution context</h2><p>For Central Government employees covered by NPS, PFRDA currently describes a monthly employee contribution of 10% of salary (Basic plus DA) and a Government contribution of 14% of salary (Basic plus DA). These defaults are prefilled only as a starting point. They are not universal: State Government and other sector rules can differ, so change the inputs when your applicable rules are different.</p></section><section class="mt-6"><h2>How to use it</h2><ol class="how-to"><li>Enter the monthly Basic Pay plus DA that you want to use as the starting salary base.</li><li>Enter the number of years you expect contributions to continue.</li><li>Check or change the employee and employer contribution percentages.</li><li>Enter an assumed annual return. This is an assumption, not a promised NPS return.</li><li>Optionally enter annual salary growth to model a gradually increasing contribution base.</li><li>Click Calculate NPS Estimate and review the contribution and projected corpus figures.</li></ol></section><section class="mt-6"><h2>Limitations and honest expectations</h2><ul><li>This is an estimate, not an NPS account statement or a retirement benefit guarantee.</li><li>Investment returns vary and are not fixed by this calculator.</li><li>The calculation does not model every NPS investment choice, charges, taxation, exit/withdrawal rules, annuity purchase, partial withdrawals or future regulatory changes.</li><li>Salary growth is represented as a simple annual percentage; real pay changes can occur at different dates.</li><li>For State Government employees, Autonomous Bodies and other sectors, applicable contribution rules may differ.</li></ul></section><section class="mt-6"><h2>Privacy</h2><p>Your salary and assumptions are processed in your browser for this calculation. The tool does not need to upload those figures to a DSUTILITY processing server.</p></section><section class="mt-6"><h2>Frequently asked questions</h2><div class="faq-accordion"><details><summary>Does the calculator use the current Central Government NPS rates?</summary><p>The default inputs are 10% employee and 14% employer contribution because PFRDA describes those rates for Central Government employees. You should verify the rules applicable to your own service or State before relying on the result.</p></details><details><summary>Can I use it for a State Government employee?</summary><p>Yes, as a mathematical estimator, but you should change the contribution inputs to match the applicable State rules and verify them from the relevant notification.</p></details><details><summary>Does the result show the pension I will receive?</summary><p>No. It estimates the accumulated corpus under the assumptions you enter. Actual retirement benefits depend on NPS rules, investment performance and the applicable exit and annuity arrangements.</p></details></div></section><section class="mt-6"><h2>Related tools and reading</h2><div class="related-grid"><a class="tool-card" href="../da-arrears-calculator/index.html"><h3 class="tool-card__title">DA Arrears Calculator</h3><p class="tool-card__desc">Estimate DA differences for separate pay and rate periods.</p></a><a class="tool-card" href="../../blog/nps-calculator-guide/index.html"><h3 class="tool-card__title">NPS Calculator Guide</h3><p class="tool-card__desc">Read about contribution assumptions, projected corpus and common calculation mistakes.</p></a></div></section><section class="mt-6"><h2>Related tools</h2><div class="related-grid"><a class="tool-card" href="../gpf-calculator/index.html"><h3 class="tool-card__title">Gpf Calculator</h3><p class="tool-card__desc">Open Gpf Calculator.</p></a><a class="tool-card" href="../da-arrears-calculator/index.html"><h3 class="tool-card__title">Da Arrears Calculator</h3><p class="tool-card__desc">Open Da Arrears Calculator.</p></a><a class="tool-card" href="../rd-calculator/index.html"><h3 class="tool-card__title">Rd Calculator</h3><p class="tool-card__desc">Open Rd Calculator.</p></a><a class="tool-card" href="../fd-calculator/index.html"><h3 class="tool-card__title">Fd Calculator</h3><p class="tool-card__desc">Open Fd Calculator.</p></a></div></section><section class="mt-6"><h2>Related guide</h2><a class="tool-card" href="../../blog/nps-calculator-guide/index.html"><h3 class="tool-card__title">Nps Calculator Guide</h3><p class="tool-card__desc">Read the practical guide before using this tool.</p></a></section></div></main><footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer><script src="../../js/config.js"></script><script src="../../js/main.js"></script><script>(function(){const b=document.getElementById('basic'),y=document.getElementById('years'),e=document.getElementById('employee'),er=document.getElementById('employer'),r=document.getElementById('return'),g=document.getElementById('growth'),btn=document.getElementById('calculate'),out=document.getElementById('result');function money(n){return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n||0)}function calc(){const basic=Math.max(0,+b.value||0),years=Math.max(1,Math.min(60,+y.value||1)),ep=Math.max(0,+e.value||0)/100,erp=Math.max(0,+er.value||0)/100,annual=Math.max(0,+r.value||0)/100,growth=Math.max(0,+g.value||0)/100;let corpus=0,employeeTotal=0,employerTotal=0;const monthlyRate=Math.pow(1+annual,1/12)-1;for(let m=0;m<years*12;m++){const salary=basic*Math.pow(1+growth,m/12);const employee=salary*ep;const employer=salary*erp;employeeTotal+=employee;employerTotal+=employer;corpus=(corpus+employee+employer)*(1+monthlyRate)}out.hidden=false;out.innerHTML='<div class="text-muted">Estimated result</div><div class="result-grid"><div class="metric">Employee contributions<strong>'+money(employeeTotal)+'</strong></div><div class="metric">Employer contributions<strong>'+money(employerTotal)+'</strong></div><div class="metric">Projected corpus<strong>'+money(corpus)+'</strong></div></div><p class="text-muted mt-4">Projection assumes monthly contributions and monthly compounding at the annual return you entered. Actual NPS outcomes can differ.</p>'}btn.addEventListener('click',calc);[b,y,e,er,r,g].forEach(x=>x.addEventListener('input',calc));calc()})();</script></body></html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   NPS Calculator — Contribution &amp; Retirement Corpus Estimator | DSUTILITY
+  </title>
+  <meta content="Estimate monthly NPS contributions and a projected retirement corpus from salary, contribution rates, years and an assumed return. Browser-based and privacy-friendly." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/nps-calculator/" rel="canonical"/>
+  <meta content="website" property="og:type"/>
+  <meta content="NPS Calculator — DSUTILITY" property="og:title"/>
+  <meta content="Estimate NPS contributions and projected corpus using your own salary, rates, years and return assumptions." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/nps-calculator/" property="og:url"/>
+  <meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"NPS Calculator — DSUTILITY","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/nps-calculator/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"NPS Calculator","item":"https://dsutility.pages.dev/tools/nps-calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this NPS calculator estimate?","acceptedAnswer":{"@type":"Answer","text":"It estimates employee and employer contributions and a projected corpus using the salary, contribution rates, time period and assumed annual return entered by the user."}},{"@type":"Question","name":"Are the default contribution rates universal?","acceptedAnswer":{"@type":"Answer","text":"No. The defaults are based on the Central Government employee NPS contribution structure shown by PFRDA; state governments and other sectors can have different rules."}},{"@type":"Question","name":"Is the projected NPS corpus guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. The projection is a mathematical estimate based on an assumed return and contribution pattern. Actual NPS returns, contributions, service rules and exit conditions can differ."}}]}]}
+  </script>
+  <style>
+   .calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.calc-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--bg-card)}.calc-card label{display:block;font-weight:600;margin-bottom:6px}.calc-card input{width:100%;box-sizing:border-box}.result-box{padding:20px;border-radius:14px;background:var(--bg-card);border:1px solid var(--border)}.result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.metric{padding:14px;border:1px solid var(--border);border-radius:12px}.metric strong{display:block;font-size:1.25rem;margin-top:4px}@media(max-width:700px){.calc-grid,.result-grid{grid-template-columns:1fr}}
+  </style>
+  <link href="../../manifest.json" rel="manifest"/>
+  <meta content="#0A1929" name="theme-color"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/nps-calculator/" rel="canonical"/>
+  <meta content="NPS Calculator — Contribution &amp; Retirement Corpus Estimator | DSUTILITY" name="twitter:title"/>
+  <meta content="Estimate monthly NPS contributions and a projected retirement corpus from salary, contribution rates, years and an assumed return. Browser-based and privacy-friendly." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body data-tool="nps-calculator">
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <div class="container">
+    <nav aria-label="Breadcrumb">
+     <ol class="breadcrumb">
+      <li>
+       <a href="../../index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="../index.html">
+        Tools
+       </a>
+      </li>
+      <li>
+       <span aria-current="page">
+        NPS Calculator
+       </span>
+      </li>
+     </ol>
+    </nav>
+    <h1>
+     NPS Calculator
+    </h1>
+    <p class="lead">
+     Estimate NPS contributions and a projected retirement corpus from your salary, contribution rates, investment period and assumed annual return.
+    </p>
+    <p class="privacy-badge">
+     🔒 Calculated locally in your browser.
+    </p>
+    <section class="tool-panel mt-6">
+     <div class="calc-grid">
+      <div class="calc-card">
+       <label for="basic">
+        Basic Pay + DA (₹/month)
+       </label>
+       <input id="basic" min="0" step="100" type="number" value="50000"/>
+      </div>
+      <div class="calc-card">
+       <label for="years">
+        Years of contribution
+       </label>
+       <input id="years" max="60" min="1" step="1" type="number" value="25"/>
+      </div>
+      <div class="calc-card">
+       <label for="employee">
+        Employee contribution (%)
+       </label>
+       <input id="employee" max="100" min="0" step="0.1" type="number" value="10"/>
+      </div>
+      <div class="calc-card">
+       <label for="employer">
+        Employer contribution (%)
+       </label>
+       <input id="employer" max="100" min="0" step="0.1" type="number" value="14"/>
+      </div>
+      <div class="calc-card">
+       <label for="return">
+        Assumed annual return (%)
+       </label>
+       <input id="return" max="50" min="0" step="0.1" type="number" value="8"/>
+      </div>
+      <div class="calc-card">
+       <label for="growth">
+        Annual salary growth (%)
+       </label>
+       <input id="growth" max="30" min="0" step="0.1" type="number" value="0"/>
+      </div>
+     </div>
+     <button class="btn btn-primary mt-4" id="calculate" type="button">
+      Calculate NPS Estimate
+     </button>
+     <div class="result-box mt-4" hidden="" id="result">
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About NPS Calculator
+     </h2>
+     <p>
+      NPS Calculator estimates retirement-related outcomes using the contribution, return, tenure, and withdrawal assumptions entered by the user. It is intended for planning and comparison, not as an official account statement.
+     </p>
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final nps calculator result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
+     </p>
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for nps calculator, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use NPS Calculator
+     </h2>
+     <ol class="how-to">
+      <li>
+       Enter the contribution or salary-related inputs
+      </li>
+      <li>
+       choose the investment/return assumptions
+      </li>
+      <li>
+       set the investment period or retirement age
+      </li>
+      <li>
+       calculate
+      </li>
+      <li>
+       review the accumulated value and other displayed figures
+      </li>
+      <li>
+       change one assumption at a time to compare scenarios.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       Actual NPS outcomes depend on market returns, charges, contribution history, and scheme rules.
+      </li>
+      <li>
+       The calculator uses assumptions rather than live NPS account data.
+      </li>
+      <li>
+       Tax, annuity, and withdrawal rules can change and should be verified separately.
+      </li>
+      <li>
+       A projection should not be treated as a guaranteed return.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        Does it show my real NPS balance?
+       </summary>
+       <p>
+        No. It calculates a projection from the inputs you provide.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can I change the expected return?
+       </summary>
+       <p>
+        Use the available assumption controls to test different scenarios.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Is the result guaranteed?
+       </summary>
+       <p>
+        No. Market-linked returns and future rules are uncertain.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Should I use it for an official claim?
+       </summary>
+       <p>
+        No. Verify official figures against your NPS statement and applicable rules.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../gpf-calculator/index.html">
+       <h3 class="tool-card__title">
+        GPF Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Estimate a government savings balance using a different contribution model.
+       </p>
+      </a>
+      <a class="tool-card" href="../da-arrears-calculator/index.html">
+       <h3 class="tool-card__title">
+        DA Arrears Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Handle month-wise DA arrears calculations.
+       </p>
+      </a>
+      <a class="tool-card" href="../sip-calculator/index.html">
+       <h3 class="tool-card__title">
+        SIP Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Compare a market-linked periodic investment projection.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/nps-calculator-guide/index.html">
+       <h3 class="tool-card__title">
+        NPS Calculator Guide
+       </h3>
+       <p class="tool-card__desc">
+        Understand assumptions behind retirement projections.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/gpf-calculator-guide/index.html">
+       <h3 class="tool-card__title">
+        GPF Calculator Guide
+       </h3>
+       <p class="tool-card__desc">
+        Compare with a provident-fund style calculation.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      NPS calculations are performed locally from the values entered into the calculator. The tool does not connect to an individual NPS account or retrieve live contribution records. Treat the displayed figures as estimates and protect any personal financial inputs on the device you use.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/config.js">
+  </script>
+  <script src="../../js/main.js">
+  </script>
+  <script>
+   (function(){const b=document.getElementById('basic'),y=document.getElementById('years'),e=document.getElementById('employee'),er=document.getElementById('employer'),r=document.getElementById('return'),g=document.getElementById('growth'),btn=document.getElementById('calculate'),out=document.getElementById('result');function money(n){return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n||0)}function calc(){const basic=Math.max(0,+b.value||0),years=Math.max(1,Math.min(60,+y.value||1)),ep=Math.max(0,+e.value||0)/100,erp=Math.max(0,+er.value||0)/100,annual=Math.max(0,+r.value||0)/100,growth=Math.max(0,+g.value||0)/100;let corpus=0,employeeTotal=0,employerTotal=0;const monthlyRate=Math.pow(1+annual,1/12)-1;for(let m=0;m<years*12;m++){const salary=basic*Math.pow(1+growth,m/12);const employee=salary*ep;const employer=salary*erp;employeeTotal+=employee;employerTotal+=employer;corpus=(corpus+employee+employer)*(1+monthlyRate)}out.hidden=false;out.innerHTML='<div class="text-muted">Estimated result</div><div class="result-grid"><div class="metric">Employee contributions<strong>'+money(employeeTotal)+'</strong></div><div class="metric">Employer contributions<strong>'+money(employerTotal)+'</strong></div><div class="metric">Projected corpus<strong>'+money(corpus)+'</strong></div></div><p class="text-muted mt-4">Projection assumes monthly contributions and monthly compounding at the annual return you entered. Actual NPS outcomes can differ.</p>'}btn.addEventListener('click',calc);[b,y,e,er,r,g].forEach(x=>x.addEventListener('input',calc));calc()})();
+  </script>
+ </body>
+</html>

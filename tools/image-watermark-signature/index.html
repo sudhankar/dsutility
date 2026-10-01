@@ -1,237 +1,554 @@
 <!DOCTYPE html>
-
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
    Image Watermark &amp; Signature Overlay | DSUTILITY
   </title>
-<meta content="Add text, a name or a signature image to a photo locally in your browser. Useful for student forms, office images and document scans." name="description"/>
-<link href="https://dsutility.pages.dev/tools/image-watermark-signature/" rel="canonical"/>
-<link href="../../manifest.json" rel="manifest"/>
-<link href="../../css/style.css" rel="stylesheet"/>
-<link href="../../css/tools.css" rel="stylesheet"/>
-<link href="../../css/polish.css" rel="stylesheet"/>
-<link href="https://dsutility.pages.dev/tools/image-watermark-signature/" rel="canonical"/><meta content="Image Watermark &amp; Signature Overlay | DSUTILITY" property="og:title"/><meta content="Add text, a name or a signature image to a photo locally in your browser. Useful for student forms, office images and document scans." property="og:description"/><meta content="https://dsutility.pages.dev/tools/image-watermark-signature/" property="og:url"/><meta content="website" property="og:type"/><meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Image Watermark &amp; Signature Overlay | DSUTILITY" name="twitter:title"/><meta content="Add text, a name or a signature image to a photo locally in your browser. Useful for student forms, office images and document scans." name="twitter:description"/><meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/></head>
-<body data-tool="image-watermark-signature">
-<header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header>
-<main class="section" id="main">
-<nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span aria-current="page">Image Watermark &amp; Signature Overlay</span></li></ol></nav><div class="container">
-<h1>
+  <meta content="Add text, a name or a signature image to a photo locally in your browser. Useful for student forms, office images and document scans." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/image-watermark-signature/" rel="canonical"/>
+  <link href="../../manifest.json" rel="manifest"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/image-watermark-signature/" rel="canonical"/>
+  <meta content="Image Watermark &amp; Signature Overlay | DSUTILITY" property="og:title"/>
+  <meta content="Add text, a name or a signature image to a photo locally in your browser. Useful for student forms, office images and document scans." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/image-watermark-signature/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Image Watermark &amp; Signature Overlay | DSUTILITY" name="twitter:title"/>
+  <meta content="Add text, a name or a signature image to a photo locally in your browser. Useful for student forms, office images and document scans." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body data-tool="image-watermark-signature">
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+     <li>
+      <a href="../../index.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="../index.html">
+       Tools
+      </a>
+     </li>
+     <li>
+      <span aria-current="page">
+       Image Watermark &amp; Signature Overlay
+      </span>
+     </li>
+    </ol>
+   </nav>
+   <div class="container">
+    <h1>
      Image Watermark &amp; Signature Overlay
     </h1>
-<p class="lead">
+    <p class="lead">
      Add a text label and optional signature image to a photo or scanned document without uploading it.
     </p>
-<section class="tool-panel mt-6 wm-shell">
-<div class="wm-grid">
-<div>
-<label for="f">
-<strong>
+    <section class="tool-panel mt-6 wm-shell">
+     <div class="wm-grid">
+      <div>
+       <label for="f">
+        <strong>
          Choose base image
         </strong>
-</label>
-<input accept="image/*" id="f" type="file"/>
-<label class="mt-3" for="sig">
-<strong>
+       </label>
+       <input accept="image/*" id="f" type="file"/>
+       <label class="mt-3" for="sig">
+        <strong>
          Signature image (optional)
         </strong>
-</label>
-<input accept="image/png,image/jpeg" id="sig" type="file"/>
-<div class="wm-preview mt-4">
-<canvas id="c">
-</canvas>
-</div>
-<p aria-live="polite" class="text-muted" id="wmStatus">
+       </label>
+       <input accept="image/png,image/jpeg" id="sig" type="file"/>
+       <div class="wm-preview mt-4">
+        <canvas id="c">
+        </canvas>
+       </div>
+       <p aria-live="polite" class="text-muted" id="wmStatus">
         Choose an image to begin.
        </p>
-</div>
-<div>
-<div class="form-grid">
-<div>
-<label for="txt">
+      </div>
+      <div>
+       <div class="form-grid">
+        <div>
+         <label for="txt">
           Text watermark
          </label>
-<input id="txt" placeholder="Name, office, reference…"/>
-</div>
-<div>
-<label for="op">
+         <input id="txt" placeholder="Name, office, reference…"/>
+        </div>
+        <div>
+         <label for="op">
           Opacity
          </label>
-<input id="op" max="100" min="10" type="range" value="70"/>
-</div>
-<div>
-<label for="size">
+         <input id="op" max="100" min="10" type="range" value="70"/>
+        </div>
+        <div>
+         <label for="size">
           Text size
          </label>
-<input id="size" max="180" min="10" type="number" value="36"/>
-</div>
-<div>
-<label for="color">
+         <input id="size" max="180" min="10" type="number" value="36"/>
+        </div>
+        <div>
+         <label for="color">
           Text colour
          </label>
-<input id="color" type="color" value="#2563eb"/>
-</div>
-<div>
-<label for="tx">
+         <input id="color" type="color" value="#2563eb"/>
+        </div>
+        <div>
+         <label for="tx">
           Text horizontal position
          </label>
-<input id="tx" max="100" min="0" type="range" value="50"/>
-</div>
-<div>
-<label for="ty">
+         <input id="tx" max="100" min="0" type="range" value="50"/>
+        </div>
+        <div>
+         <label for="ty">
           Text vertical position
          </label>
-<input id="ty" max="100" min="0" type="range" value="90"/>
-</div>
-<div>
-<label for="sw">
+         <input id="ty" max="100" min="0" type="range" value="90"/>
+        </div>
+        <div>
+         <label for="sw">
           Signature width
          </label>
-<input id="sw" max="80" min="5" type="range" value="35"/>
-</div>
-<div>
-<label for="sx">
+         <input id="sw" max="80" min="5" type="range" value="35"/>
+        </div>
+        <div>
+         <label for="sx">
           Signature horizontal position
          </label>
-<input id="sx" max="100" min="0" type="range" value="20"/>
-</div>
-<div>
-<label for="sy">
+         <input id="sx" max="100" min="0" type="range" value="20"/>
+        </div>
+        <div>
+         <label for="sy">
           Signature vertical position
          </label>
-<input id="sy" max="100" min="0" type="range" value="85"/>
-</div>
-<div class="full">
-<label for="studentMode">
+         <input id="sy" max="100" min="0" type="range" value="85"/>
+        </div>
+        <div class="full">
+         <label for="studentMode">
           Student photo + signature strip
          </label>
-<select id="studentMode">
-<option value="normal">
+         <select id="studentMode">
+          <option value="normal">
            Normal overlay
           </option>
-<option value="student">
+          <option value="student">
            Photo with signature strip below
           </option>
-</select>
-</div>
-<div class="full" hidden="" id="studentControls">
-<label for="studentTarget">
+         </select>
+        </div>
+        <div class="full" hidden="" id="studentControls">
+         <label for="studentTarget">
           Target file size
          </label>
-<select id="studentTarget">
-<option value="0">
+         <select id="studentTarget">
+          <option value="0">
            No target
           </option>
-<option value="15">
+          <option value="15">
            15 KB
           </option>
-<option value="20">
+          <option value="20">
            20 KB
           </option>
-<option value="25">
+          <option value="25">
            25 KB
           </option>
-<option value="50">
+          <option value="50">
            50 KB
           </option>
-</select>
-<label for="studentSigHeight">
+         </select>
+         <label for="studentSigHeight">
           Signature strip height
          </label>
-<input id="studentSigHeight" max="35" min="8" type="range" value="18"/>
-<output id="studentSigHeightVal">
+         <input id="studentSigHeight" max="35" min="8" type="range" value="18"/>
+         <output id="studentSigHeightVal">
           18%
          </output>
-</div>
-</div>
-<div class="wm-nudge">
-<strong>
+        </div>
+       </div>
+       <div class="wm-nudge">
+        <strong>
          Move text
         </strong>
-<button class="btn btn-ghost" data-nudge="0,-2" type="button">
+        <button class="btn btn-ghost" data-nudge="0,-2" type="button">
          ↑
         </button>
-<button class="btn btn-ghost" data-nudge="-2,0" type="button">
+        <button class="btn btn-ghost" data-nudge="-2,0" type="button">
          ←
         </button>
-<button class="btn btn-ghost" data-nudge="2,0" type="button">
+        <button class="btn btn-ghost" data-nudge="2,0" type="button">
          →
         </button>
-<button class="btn btn-ghost" data-nudge="0,2" type="button">
+        <button class="btn btn-ghost" data-nudge="0,2" type="button">
          ↓
         </button>
-</div>
-<div class="maker-actions">
-<button class="btn btn-primary" id="d" type="button">
+       </div>
+       <div class="maker-actions">
+        <button class="btn btn-primary" id="d" type="button">
          Download Image
         </button>
-</div>
-</div>
-</div>
-</section>
-<section class="mt-6">
-<h2>
-      What this tool is for
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About Image Watermark &amp; Signature Overlay
      </h2>
-<p>
-      Add a name, office label, reference note or visible signature to an image or scan before sharing it. Unlike a fixed-position watermark, the overlay can be moved and resized through the controls.
+     <p>
+      Image Watermark &amp; Signature Overlay places a watermark, signature, or related visual element onto an image. It is useful for document photographs, student or ID-photo workflows, proof images, and branded graphics that need a visible ownership or signature mark.
      </p>
-<h2>
-      How to use it
-     </h2>
-<ol class="how-to">
-<li>
-       Select the base image.
-      </li>
-<li>
-       Enter a text watermark and adjust opacity, size and colour.
-      </li>
-<li>
-       Use horizontal/vertical controls or the nudge buttons to move the text.
-      </li>
-<li>
-       Add a signature image and adjust its position and width.
-      </li>
-<li>
-       Review the preview and download the final image.
-      </li>
-</ol>
-<h2>
-      Privacy and limitations
-     </h2>
-<p>
-      Processing happens locally in the browser. The visible signature is an image overlay; it is not a cryptographic or legally certified digital signature.
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final image watermark &amp; signature overlay result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
      </p>
-<h2>
-      FAQ
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for image watermark &amp; signature overlay, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use Image Watermark &amp; Signature Overlay
      </h2>
-<div class="faq-accordion">
-<details>
-<summary>
-        Can I move the text?
+     <ol class="how-to">
+      <li>
+       Upload the base image
+      </li>
+      <li>
+       add the watermark or signature
+      </li>
+      <li>
+       position and resize it
+      </li>
+      <li>
+       adjust opacity when available
+      </li>
+      <li>
+       check the full image at normal size
+      </li>
+      <li>
+       export the final image
+      </li>
+      <li>
+       verify that the mark is visible without covering important information.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       A watermark is not a security mechanism and can be removed by editing.
+      </li>
+      <li>
+       Large or opaque signatures can hide important image content.
+      </li>
+      <li>
+       Output dimensions and file size depend on the base image and added graphics.
+      </li>
+      <li>
+       For official documents, use the exact size and signature placement requirements of the receiving organization.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        Can I add a signature image?
        </summary>
-<p>
-        Yes. Use the position controls or the arrow nudge buttons.
+       <p>
+        Yes, use the signature input when available and position it over the target image.
        </p>
-</details>
-<details>
-<summary>
-        Can I resize the signature?
+      </details>
+      <details>
+       <summary>
+        Can I change the watermark opacity?
        </summary>
-<p>
-        Yes. Signature width and position are adjustable.
+       <p>
+        Use the available opacity control to keep the mark readable but not overpowering.
        </p>
-</details>
-</div>
-</section>
-<section class="mt-6"><h2>Related tools</h2><div class="related-grid"><a class="tool-card" href="../background-remover/index.html"><h3 class="tool-card__title">Background Remover</h3><p class="tool-card__desc">Open Background Remover.</p></a><a class="tool-card" href="../image-resize-compress/index.html"><h3 class="tool-card__title">Image Resize Compress</h3><p class="tool-card__desc">Open Image Resize Compress.</p></a><a class="tool-card" href="../photo-enhancer/index.html"><h3 class="tool-card__title">Photo Enhancer</h3><p class="tool-card__desc">Open Photo Enhancer.</p></a><a class="tool-card" href="../image-to-text/index.html"><h3 class="tool-card__title">Image To Text</h3><p class="tool-card__desc">Open Image To Text.</p></a></div></section><section class="mt-6"><h2>Related guide</h2><a class="tool-card" href="../../blog/image-watermark-signature-guide/index.html"><h3 class="tool-card__title">Image Watermark Signature Guide</h3><p class="tool-card__desc">Read the practical guide before using this tool.</p></a></section></div>
-</main>
-<footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer>
-<script src="../../js/main.js">
-</script>
-<script src="../../js/tools/image-watermark-signature.js">
-</script>
-</body>
+      </details>
+      <details>
+       <summary>
+        Can I prepare student photo/signature layouts?
+       </summary>
+       <p>
+        Yes, use the available layout and target-size controls, then verify the actual exported file.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Will the original image be changed?
+       </summary>
+       <p>
+        No. The tool creates a processed copy for download.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../background-remover/index.html">
+       <h3 class="tool-card__title">
+        Background Remover
+       </h3>
+       <p class="tool-card__desc">
+        Clean the background before adding a mark.
+       </p>
+      </a>
+      <a class="tool-card" href="../image-resize-compress/index.html">
+       <h3 class="tool-card__title">
+        Image Resize &amp; Compress
+       </h3>
+       <p class="tool-card__desc">
+        Meet size or dimension requirements.
+       </p>
+      </a>
+      <a class="tool-card" href="../photo-enhancer/index.html">
+       <h3 class="tool-card__title">
+        Photo Enhancer
+       </h3>
+       <p class="tool-card__desc">
+        Improve the source image before overlaying a mark.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/image-watermark-signature-guide/index.html">
+       <h3 class="tool-card__title">
+        Image Watermark &amp; Signature Guide
+       </h3>
+       <p class="tool-card__desc">
+        Plan size, position, and opacity.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/passport-photo-guide/index.html">
+       <h3 class="tool-card__title">
+        Passport Photo Guide
+       </h3>
+       <p class="tool-card__desc">
+        Useful when the base image is an ID-style photograph.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      The image and overlay are composited in the browser for the supported workflow. The files do not need to be uploaded to a DSUTILITY image server. Treat signature artwork and identity photographs as sensitive files and store the final image carefully.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/main.js">
+  </script>
+  <script src="../../js/tools/image-watermark-signature.js">
+  </script>
+ </body>
 </html>

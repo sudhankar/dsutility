@@ -1,3 +1,421 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Background Remover | DSUTILITY</title><meta content="Remove a plain or fairly uniform photo background locally and download a transparent PNG." name="description"/><link href="https://dsutility.pages.dev/tools/background-remover/" rel="canonical"/><link href="../../manifest.json" rel="manifest"/><link href="../../css/style.css" rel="stylesheet"/><link href="../../css/tools.css" rel="stylesheet"/><link href="../../css/polish.css" rel="stylesheet"/><link href="https://dsutility.pages.dev/tools/background-remover/" rel="canonical"/><meta content="Background Remover | DSUTILITY" property="og:title"/><meta content="Remove a plain or fairly uniform photo background locally and download a transparent PNG." property="og:description"/><meta content="https://dsutility.pages.dev/tools/background-remover/" property="og:url"/><meta content="website" property="og:type"/><meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Background Remover | DSUTILITY" name="twitter:title"/><meta content="Remove a plain or fairly uniform photo background locally and download a transparent PNG." name="twitter:description"/><meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/></head><body data-tool="background-remover"><header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header><main class="section" id="main"><div class="container"><nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span>Background Remover</span></li></ol></nav><h1>Background Remover</h1><p class="lead">Remove a plain or fairly uniform photo background locally and download a transparent PNG.</p><section class="tool-panel mt-6"><input accept="image/jpeg,image/png,image/webp" id="f" type="file"/><label class="mt-4">Tolerance</label><input id="t" max="90" min="5" type="range" value="35"/><p class="text-muted" id="s">Choose an image.</p><div style="background:#eee;padding:16px;overflow:auto"><canvas id="c" style="max-width:100%"></canvas></div><button class="btn btn-primary mt-4" id="d">Download transparent PNG</button></section><section class="mt-6"><h2>Honest limitation</h2><p>This lightweight client-side remover is designed for plain or fairly uniform backgrounds. It is not an AI portrait-segmentation model, so hair, shadows and complex backgrounds may need another workflow.</p></section><section class="mt-6"><h2>FAQ</h2><div class="faq-accordion"><details><summary>Does the image leave my device?</summary><p>No server upload is needed by this tool.</p></details></div></section><section class="mt-6"><h2>Related guide</h2><a class="tool-card" href="../../blog/background-remover-guide/index.html"><h3 class="tool-card__title">Background Remover Guide</h3><p class="tool-card__desc">Learn where simple background removal works well and where it does not.</p></a></section><section class="mt-6"><h2>How the browser-based removal works</h2><p>The tool samples colours from the image edges and follows connected pixels that are close to those edge colours. Pixels classified as background become transparent while the central subject is retained. The tolerance slider controls how broadly similar edge colours are treated as background.</p><h2>When this method works well</h2><p>It is most useful for portraits, signatures, product shots and scanned images photographed against a fairly even background. It is less reliable when the subject touches the edge, the background contains strong patterns, or the subject and background have very similar colours.</p><h2>Before you download</h2><ol class="how-to"><li>Choose a high-resolution image with a clear background boundary.</li><li>Start with a low tolerance and increase it gradually.</li><li>Inspect hair, clothing edges and fine details at the preview.</li><li>If the subject is damaged, lower the tolerance or use a different source image.</li><li>Download PNG when you need transparency.</li></ol><h2>Privacy and limitations</h2><p>The image is processed in the browser. This lightweight method is not a replacement for a machine-learning segmentation model, so it should not be described as professional studio background extraction.</p></section><section class="mt-6"><h2>Related tools</h2><div class="related-grid"><a class="tool-card" href="../image-resize-compress/index.html"><h3 class="tool-card__title">Image Resize Compress</h3><p class="tool-card__desc">Open Image Resize Compress.</p></a><a class="tool-card" href="../photo-enhancer/index.html"><h3 class="tool-card__title">Photo Enhancer</h3><p class="tool-card__desc">Open Photo Enhancer.</p></a><a class="tool-card" href="../image-watermark-signature/index.html"><h3 class="tool-card__title">Image Watermark Signature</h3><p class="tool-card__desc">Open Image Watermark Signature.</p></a><a class="tool-card" href="../image-to-text/index.html"><h3 class="tool-card__title">Image To Text</h3><p class="tool-card__desc">Open Image To Text.</p></a></div></section></div></main><footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer><script src="../../js/main.js"></script><script src="../../js/tools/background-remover.js"></script></body></html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Background Remover | DSUTILITY
+  </title>
+  <meta content="Remove a plain or fairly uniform photo background locally and download a transparent PNG." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/background-remover/" rel="canonical"/>
+  <link href="../../manifest.json" rel="manifest"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/background-remover/" rel="canonical"/>
+  <meta content="Background Remover | DSUTILITY" property="og:title"/>
+  <meta content="Remove a plain or fairly uniform photo background locally and download a transparent PNG." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/background-remover/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Background Remover | DSUTILITY" name="twitter:title"/>
+  <meta content="Remove a plain or fairly uniform photo background locally and download a transparent PNG." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body data-tool="background-remover">
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <div class="container">
+    <nav aria-label="Breadcrumb">
+     <ol class="breadcrumb">
+      <li>
+       <a href="../../index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="../index.html">
+        Tools
+       </a>
+      </li>
+      <li>
+       <span>
+        Background Remover
+       </span>
+      </li>
+     </ol>
+    </nav>
+    <h1>
+     Background Remover
+    </h1>
+    <p class="lead">
+     Remove a plain or fairly uniform photo background locally and download a transparent PNG.
+    </p>
+    <section class="tool-panel mt-6">
+     <input accept="image/jpeg,image/png,image/webp" id="f" type="file"/>
+     <label class="mt-4">
+      Tolerance
+     </label>
+     <input id="t" max="90" min="5" type="range" value="35"/>
+     <p class="text-muted" id="s">
+      Choose an image.
+     </p>
+     <div style="background:#eee;padding:16px;overflow:auto">
+      <canvas id="c" style="max-width:100%">
+      </canvas>
+     </div>
+     <button class="btn btn-primary mt-4" id="d">
+      Download transparent PNG
+     </button>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About Background Remover
+     </h2>
+     <p>
+      Background Remover removes or makes the background transparent using browser-side image segmentation/tolerance controls. It is useful for simple portraits, product-like subjects, signatures, and graphics where the foreground is clearly separated from the background.
+     </p>
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final background remover result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
+     </p>
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for background remover, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use Background Remover
+     </h2>
+     <ol class="how-to">
+      <li>
+       Upload the image
+      </li>
+      <li>
+       choose the background/removal controls
+      </li>
+      <li>
+       adjust the tolerance or related setting
+      </li>
+      <li>
+       preview the transparent result
+      </li>
+      <li>
+       inspect hair, edges, and small details
+      </li>
+      <li>
+       download the PNG or supported output.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       Simple, high-contrast backgrounds are easier to remove than complex scenes.
+      </li>
+      <li>
+       Hair, transparent objects, shadows, and similar-coloured foreground/background areas can require manual checking.
+      </li>
+      <li>
+       Background removal does not automatically create a perfect professional cutout for every image.
+      </li>
+      <li>
+       JPEG output cannot preserve transparency; use a transparency-capable format when required.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        Can I change the tolerance?
+       </summary>
+       <p>
+        Yes, where the tool exposes tolerance control; use small changes and inspect the edge.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Why did part of my subject disappear?
+       </summary>
+       <p>
+        The subject and background may share similar colours, so the removal threshold can affect both.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Should I use PNG for transparent output?
+       </summary>
+       <p>
+        Yes. PNG is commonly used when the transparent background must be retained.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can I remove a complex photographic background perfectly?
+       </summary>
+       <p>
+        Not always. The browser method works best when the foreground and background are visually distinct.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../image-resize-compress/index.html">
+       <h3 class="tool-card__title">
+        Image Resize &amp; Compress
+       </h3>
+       <p class="tool-card__desc">
+        Resize the cleaned image.
+       </p>
+      </a>
+      <a class="tool-card" href="../photo-enhancer/index.html">
+       <h3 class="tool-card__title">
+        Photo Enhancer
+       </h3>
+       <p class="tool-card__desc">
+        Improve the source before background removal.
+       </p>
+      </a>
+      <a class="tool-card" href="../image-watermark-signature/index.html">
+       <h3 class="tool-card__title">
+        Image Watermark &amp; Signature Overlay
+       </h3>
+       <p class="tool-card__desc">
+        Add a signature or watermark to the cleaned image.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/background-remover-guide/index.html">
+       <h3 class="tool-card__title">
+        Background Remover Guide
+       </h3>
+       <p class="tool-card__desc">
+        Understand tolerance and edge quality.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/passport-photo-guide/index.html">
+       <h3 class="tool-card__title">
+        Passport Photo Guide
+       </h3>
+       <p class="tool-card__desc">
+        Use background cleanup carefully for ID photos.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      Background removal is performed in the browser for the supported workflow. The uploaded image does not need to be sent to a DSUTILITY image server. Because portraits and signatures can be sensitive, keep both the original and generated image under your control.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/main.js">
+  </script>
+  <script src="../../js/tools/background-remover.js">
+  </script>
+ </body>
+</html>

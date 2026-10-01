@@ -1,2 +1,475 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>SWP Calculator — Systematic Withdrawal Plan Estimate | DSUTILITY</title><meta content="Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations." name="description"/><link href="https://dsutility.pages.dev/tools/swp-calculator/" rel="canonical"/><link href="../../manifest.json" rel="manifest"/><link href="../../css/style.css" rel="stylesheet"/><link href="../../css/tools.css" rel="stylesheet"/><link href="../../css/polish.css" rel="stylesheet"/><link rel="canonical" href="https://dsutility.pages.dev/tools/swp-calculator/"/><meta property="og:title" content="SWP Calculator — Systematic Withdrawal Plan Estimate | DSUTILITY"/><meta property="og:description" content="Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations."/><meta property="og:url" content="https://dsutility.pages.dev/tools/swp-calculator/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://dsutility.pages.dev/images/icon-512.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="SWP Calculator — Systematic Withdrawal Plan Estimate | DSUTILITY"/><meta name="twitter:description" content="Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations."/><meta name="twitter:image" content="https://dsutility.pages.dev/images/icon-512.png"/></head><body data-tool="swp-calculator"><a class="skip-link" href="#main">Skip to content</a><header class="navbar"><div class="container navbar__inner"><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">☰</button><nav aria-label="Primary"><ul class="navbar__menu" data-nav-menu="" id="primary-nav"><li><a href="../../tools/index.html">All Tools</a></li><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a class="navbar__contact-link" href="../../contact/index.html">Contact</a></li></ul></nav><div class="navbar__actions"><button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">☀️</button></div></div></header><main class="section" id="main"><div class="container fin-shell"><nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../../index.html">Home</a></li><li><a href="../index.html">Tools</a></li><li><span>Swp Calculator</span></li></ol></nav><h1>SWP Calculator</h1><p class="lead">Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations.</p><section class="fin-card mt-6"><div class="fin-grid"><div class="fin-field"><label for="swpP">Starting corpus</label><input class="fin-input" id="swpP" min="0" step="0.01" type="number" value="1000000"/></div><div class="fin-field"><label for="swpR">Expected annual return (%)</label><input class="fin-input" id="swpR" min="0" step="0.01" type="number" value="10"/></div><div class="fin-field"><label for="swpW">Monthly withdrawal</label><input class="fin-input" id="swpW" min="0" step="0.01" type="number" value="10000"/></div><div class="fin-field"><label for="swpY">Investment period (years)</label><input class="fin-input" id="swpYears" min="0" step="0.01" type="number" value="5"/></div></div><div class="fin-actions"><button class="btn btn-primary" id="calculate">Calculate</button><button class="btn btn-secondary" id="rst">Reset</button></div><div class="fin-results"><div class="fin-result"><span>Final corpus</span><strong id="swpX">₹0</strong></div><div class="fin-result"><span>Total withdrawal</span><strong id="swpWithdrawals">₹0</strong></div><div class="fin-result"><span>Total invested</span><strong id="swpInvested">₹0</strong></div></div></section><section class="mt-6"><div class="fin-note"><strong>Planning note:</strong> This is an estimate based on the stated assumptions. It is not investment advice and does not guarantee a return.</div></section><section class="mt-6"><h2>How to use this calculator</h2><ol class="how-to"><li>Enter the values shown above.</li><li>Click Calculate or change an input.</li><li>Compare the result with the actual product's current terms.</li></ol></section><section class="mt-6"><h2>What an SWP calculator does</h2><p>An SWP calculator models regular withdrawals from an invested lump-sum corpus. Each withdrawal reduces the balance and the remaining balance continues under the assumed return.</p><h2>Calculation method</h2><p>This calculator uses a monthly nominal rate and applies each scheduled withdrawal before that month's assumed growth.</p><div class="fin-formula">B = B − W<br/>B = B × (1 + annual rate/12)</div><h2>Limitations</h2><ul><li>Actual market returns fluctuate.</li><li>Taxes, fees and transaction dates are not included.</li><li>If the corpus reaches zero, the model stops further withdrawals.</li></ul><h2>FAQ</h2><div class="faq-accordion"><details><summary>Is SWP income guaranteed?</summary><p>No. The withdrawal schedule is fixed in the model, but investment value can change.</p></details><details><summary>Why can calculators differ?</summary><p>They may use different return-rate conventions, withdrawal timing and rounding.</p></details></div></section><section class="mt-6"><h2>Related calculators</h2><div class="related-grid"><a class="tool-card" href="../sip-calculator/index.html"><h3 class="tool-card__title">SIP Calculator</h3><p class="tool-card__desc">Monthly investment projection.</p></a><a class="tool-card" href="../swp-calculator/index.html"><h3 class="tool-card__title">SWP Calculator</h3><p class="tool-card__desc">Withdrawal scenario estimate.</p></a><a class="tool-card" href="../fd-calculator/index.html"><h3 class="tool-card__title">FD Calculator</h3><p class="tool-card__desc">Fixed-deposit estimate.</p></a><a class="tool-card" href="../rd-calculator/index.html"><h3 class="tool-card__title">RD Calculator</h3><p class="tool-card__desc">Recurring-deposit estimate.</p></a></div></section><section class="mt-6"><h2>Related guide</h2><a class="tool-card" href="../../blog/swp-calculator-guide/index.html"><h3 class="tool-card__title">Swp Calculator Guide</h3><p class="tool-card__desc">Detailed explanation of assumptions and limitations.</p></a></section></div></main><footer class="footer"><div class="container"><div class="footer__grid"><div><a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html"><img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/></a><p class="mt-4 footer-intro">Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.</p></div><div><h4>Tools</h4><ul><li><a href="../../tools/pdf-editor/index.html">PDF Editor</a></li><li><a href="../../tools/merge-pdf/index.html">Merge PDF</a></li><li><a href="../../tools/split-pdf/index.html">Split PDF</a></li><li><a href="../../tools/compress-pdf/index.html">Compress PDF</a></li><li><a href="../../tools/da-arrears-calculator/index.html">DA Arrears Calculator</a></li><li><a href="../../tools/gpf-calculator/index.html">GPF Calculator</a></li><li><a href="../../tools/index.html">All Tools</a></li></ul></div><div><h4>Learn</h4><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../faq/index.html">FAQ</a></li><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="../../privacy-policy/index.html">Privacy Policy</a></li><li><a href="../../terms/index.html">Terms of Service</a></li><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../cookie-policy/index.html">Cookie Policy</a></li><li><a href="../../dmca/index.html">DMCA</a></li></ul></div></div><div class="footer__bottom"><span>© <span data-year="">2026</span> DSUTILITY. All rights reserved.</span><span class="footer__badge">🔒 Supported file processing happens in your browser.</span></div></div></footer><script src="../../js/main.js"></script><script>document.body.dataset.m="swp";</script><script src="../../js/tools/financial-calculators.js"></script></body></html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   SWP Calculator — Systematic Withdrawal Plan Estimate | DSUTILITY
+  </title>
+  <meta content="Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations." name="description"/>
+  <link href="https://dsutility.pages.dev/tools/swp-calculator/" rel="canonical"/>
+  <link href="../../manifest.json" rel="manifest"/>
+  <link href="../../css/style.css" rel="stylesheet"/>
+  <link href="../../css/tools.css" rel="stylesheet"/>
+  <link href="../../css/polish.css" rel="stylesheet"/>
+  <link href="https://dsutility.pages.dev/tools/swp-calculator/" rel="canonical"/>
+  <meta content="SWP Calculator — Systematic Withdrawal Plan Estimate | DSUTILITY" property="og:title"/>
+  <meta content="Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations." property="og:description"/>
+  <meta content="https://dsutility.pages.dev/tools/swp-calculator/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="SWP Calculator — Systematic Withdrawal Plan Estimate | DSUTILITY" name="twitter:title"/>
+  <meta content="Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations." name="twitter:description"/>
+  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+ </head>
+ <body data-tool="swp-calculator">
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="navbar">
+   <div class="container navbar__inner">
+    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+     ☰
+    </button>
+    <nav aria-label="Primary">
+     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+      <li>
+       <a href="../../tools/index.html">
+        All Tools
+       </a>
+      </li>
+      <li>
+       <a href="../../tools/pdf-editor/index.html">
+        PDF Editor
+       </a>
+      </li>
+      <li>
+       <a href="../../blog/index.html">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="../../faq/index.html">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a href="../../about/index.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="navbar__contact-link" href="../../contact/index.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="navbar__actions">
+     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+      ☀️
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="section" id="main">
+   <div class="container fin-shell">
+    <nav aria-label="Breadcrumb">
+     <ol class="breadcrumb">
+      <li>
+       <a href="../../index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="../index.html">
+        Tools
+       </a>
+      </li>
+      <li>
+       <span>
+        Swp Calculator
+       </span>
+      </li>
+     </ol>
+    </nav>
+    <h1>
+     SWP Calculator
+    </h1>
+    <p class="lead">
+     Estimate remaining corpus, total withdrawals and projected balance for a monthly SWP using browser-based calculations.
+    </p>
+    <section class="fin-card mt-6">
+     <div class="fin-grid">
+      <div class="fin-field">
+       <label for="swpP">
+        Starting corpus
+       </label>
+       <input class="fin-input" id="swpP" min="0" step="0.01" type="number" value="1000000"/>
+      </div>
+      <div class="fin-field">
+       <label for="swpR">
+        Expected annual return (%)
+       </label>
+       <input class="fin-input" id="swpR" min="0" step="0.01" type="number" value="10"/>
+      </div>
+      <div class="fin-field">
+       <label for="swpW">
+        Monthly withdrawal
+       </label>
+       <input class="fin-input" id="swpW" min="0" step="0.01" type="number" value="10000"/>
+      </div>
+      <div class="fin-field">
+       <label for="swpY">
+        Investment period (years)
+       </label>
+       <input class="fin-input" id="swpYears" min="0" step="0.01" type="number" value="5"/>
+      </div>
+     </div>
+     <div class="fin-actions">
+      <button class="btn btn-primary" id="calculate">
+       Calculate
+      </button>
+      <button class="btn btn-secondary" id="rst">
+       Reset
+      </button>
+     </div>
+     <div class="fin-results">
+      <div class="fin-result">
+       <span>
+        Final corpus
+       </span>
+       <strong id="swpX">
+        ₹0
+       </strong>
+      </div>
+      <div class="fin-result">
+       <span>
+        Total withdrawal
+       </span>
+       <strong id="swpWithdrawals">
+        ₹0
+       </strong>
+      </div>
+      <div class="fin-result">
+       <span>
+        Total invested
+       </span>
+       <strong id="swpInvested">
+        ₹0
+       </strong>
+      </div>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      About SWP Calculator
+     </h2>
+     <p>
+      SWP Calculator estimates how a systematic withdrawal plan could affect an invested corpus over time. It can show withdrawals, remaining value, and related totals under the return and withdrawal assumptions entered by the user.
+     </p>
+     <p>
+      <strong>
+       Good practice:
+      </strong>
+      Before creating the final swp calculator result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
+     </p>
+    </section>
+    <section class="mt-6">
+     <p>
+      <strong>
+       Before you finish:
+      </strong>
+      Treat the preview as a review stage, not just a download step. Check the parts that matter most for swp calculator, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
+     </p>
+     <h2>
+      How to use SWP Calculator
+     </h2>
+     <ol class="how-to">
+      <li>
+       Enter the starting corpus
+      </li>
+      <li>
+       set the expected return assumption
+      </li>
+      <li>
+       enter the periodic withdrawal
+      </li>
+      <li>
+       choose the duration
+      </li>
+      <li>
+       calculate
+      </li>
+      <li>
+       review total withdrawals and the remaining corpus
+      </li>
+      <li>
+       change one assumption at a time to compare scenarios.
+      </li>
+     </ol>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Technical limitations
+     </h2>
+     <ul>
+      <li>
+       Market returns fluctuate, while the calculator normally uses an assumed rate.
+      </li>
+      <li>
+       Taxes, fund expenses, exit loads, and actual cash-flow timing may not be included unless specifically shown.
+      </li>
+      <li>
+       A projected remaining balance is not guaranteed.
+      </li>
+      <li>
+       The result is not connected to an investment account or live market data.
+      </li>
+     </ul>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Frequently asked
+     </h2>
+     <div class="faq-accordion">
+      <details>
+       <summary>
+        What is total withdrawal?
+       </summary>
+       <p>
+        It is the sum of the withdrawals represented by the selected scenario.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Can the corpus reach zero?
+       </summary>
+       <p>
+        Yes, depending on the withdrawal amount, duration, and assumed return.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Does it account for market volatility?
+       </summary>
+       <p>
+        A simple projection generally uses an assumed return rather than simulating every market movement.
+       </p>
+      </details>
+      <details>
+       <summary>
+        Is the result investment advice?
+       </summary>
+       <p>
+        No. It is a mathematical scenario tool.
+       </p>
+      </details>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related tools
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../sip-calculator/index.html">
+       <h3 class="tool-card__title">
+        SIP Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Estimate regular contributions before withdrawals.
+       </p>
+      </a>
+      <a class="tool-card" href="../fd-calculator/index.html">
+       <h3 class="tool-card__title">
+        FD Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Compare with a fixed-interest scenario.
+       </p>
+      </a>
+      <a class="tool-card" href="../rd-calculator/index.html">
+       <h3 class="tool-card__title">
+        RD Calculator
+       </h3>
+       <p class="tool-card__desc">
+        Estimate recurring savings growth.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Related reading
+     </h2>
+     <div class="related-grid">
+      <a class="tool-card" href="../../blog/swp-calculator-guide/index.html">
+       <h3 class="tool-card__title">
+        SWP Calculator Guide
+       </h3>
+       <p class="tool-card__desc">
+        Understand withdrawal assumptions and outputs.
+       </p>
+      </a>
+      <a class="tool-card" href="../../blog/sip-calculator-guide/index.html">
+       <h3 class="tool-card__title">
+        SIP Calculator Guide
+       </h3>
+       <p class="tool-card__desc">
+        Compare accumulation before a withdrawal plan.
+       </p>
+      </a>
+     </div>
+    </section>
+    <section class="mt-6">
+     <h2>
+      Privacy
+     </h2>
+     <p>
+      SWP calculations are performed locally from the values entered. The tool does not connect to an investment account or fetch live prices. Keep financial inputs private and treat the result as an estimate based on assumptions.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__grid">
+     <div>
+      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+      </a>
+      <p class="mt-4 footer-intro">
+       Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Tools
+      </h4>
+      <ul>
+       <li>
+        <a href="../../tools/pdf-editor/index.html">
+         PDF Editor
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/merge-pdf/index.html">
+         Merge PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/split-pdf/index.html">
+         Split PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/compress-pdf/index.html">
+         Compress PDF
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/da-arrears-calculator/index.html">
+         DA Arrears Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/gpf-calculator/index.html">
+         GPF Calculator
+        </a>
+       </li>
+       <li>
+        <a href="../../tools/index.html">
+         All Tools
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Learn
+      </h4>
+      <ul>
+       <li>
+        <a href="../../blog/index.html">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="../../faq/index.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="../../about/index.html">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="../../contact/index.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4>
+       Legal
+      </h4>
+      <ul>
+       <li>
+        <a href="../../privacy-policy/index.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../terms/index.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a href="../../disclaimer/index.html">
+         Disclaimer
+        </a>
+       </li>
+       <li>
+        <a href="../../cookie-policy/index.html">
+         Cookie Policy
+        </a>
+       </li>
+       <li>
+        <a href="../../dmca/index.html">
+         DMCA
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer__bottom">
+     <span>
+      ©
+      <span data-year="">
+       2026
+      </span>
+      DSUTILITY. All rights reserved.
+     </span>
+     <span class="footer__badge">
+      🔒 Supported file processing happens in your browser.
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script src="../../js/main.js">
+  </script>
+  <script>
+   document.body.dataset.m="swp";
+  </script>
+  <script src="../../js/tools/financial-calculators.js">
+  </script>
+ </body>
+</html>
