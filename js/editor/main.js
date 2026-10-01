@@ -547,16 +547,20 @@
     });
 
     // Mark props
-    ["mark-color", "mark-opacity"].forEach(function (id) {
+    ["mark-color", "mark-opacity", "mark-width"].forEach(function (id) {
       document.getElementById(id).addEventListener("input", function () {
         if (id === "mark-opacity") {
           document.getElementById("mark-opacity-val").textContent = this.value + "%";
         }
+        if (id === "mark-width") {
+          document.getElementById("mark-width-val").textContent = this.value + " px";
+        }
         var sel = Ed.getSelected();
-        if (!sel || (sel.type !== "highlight" && sel.type !== "redact")) return;
+        if (!sel || (sel.type !== "highlight" && sel.type !== "redact" && sel.type !== "draw")) return;
         var patch = {};
         if (id === "mark-color" && sel.type === "highlight") patch.color = document.getElementById("mark-color").value;
         if (id === "mark-opacity") patch.opacity = parseInt(document.getElementById("mark-opacity").value, 10) / 100;
+        if (id === "mark-width") patch.strokeWidth = parseInt(document.getElementById("mark-width").value, 10);
         Ed.updateElement(sel.id, patch);
       });
     });

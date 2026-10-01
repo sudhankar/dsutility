@@ -75,7 +75,7 @@
     var footer=document.querySelector(".footer .footer__bottom");
     if(!footer || footer.querySelector(".creator-brand")) return;
     var b=document.createElement("span");b.className="creator-brand";
-    b.innerHTML='<span class="creator-brand__dot"></span><strong>Sudhakar Creations</strong>';
+    b.innerHTML='<span class="creator-brand__dot"></span><strong>Sudhakar</strong>';
     footer.insertBefore(b, footer.firstChild);
   }
 

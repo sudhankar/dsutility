@@ -280,9 +280,9 @@
       ? '<defs><marker id="arw-' + el.id + '" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="' + (el.stroke || "#2563EB") + '"/></marker></defs>'
       : "";
     var arrowAttr = el.type === "arrow" ? ' marker-end="url(#arw-' + el.id + ')"' : "";
-    return '<svg width="100%" height="100%" viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="pointer-events:none;">' +
+    return '<svg width="100%" height="100%" viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="pointer-events:none;overflow:visible;">' +
       marker +
-      '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="' + (el.stroke || "#2563EB") + '" stroke-width="' + (el.strokeWidth || 2) + '"' + arrowAttr + '/>' +
+      '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="' + (el.stroke || "#2563EB") + '" stroke-width="' + (el.strokeWidth || 2) + '" vector-effect="non-scaling-stroke"' + arrowAttr + '/>' +
       '</svg>';
   }
 
@@ -293,8 +293,8 @@
       var x = p[0] * wPx, y = p[1] * hPx;
       d += (i === 0 ? " " : " L ") + x + " " + y;
     });
-    return '<svg width="100%" height="100%" viewBox="0 0 ' + wPx + ' ' + hPx + '" preserveAspectRatio="none" style="pointer-events:none;">' +
-      '<path d="' + d + '" fill="none" stroke="' + (el.color || "#EF4444") + '" stroke-width="' + (el.strokeWidth || 3) + '" stroke-opacity="' + (el.opacity != null ? el.opacity : 1) + '" stroke-linecap="round" stroke-linejoin="round"/>' +
+    return '<svg width="100%" height="100%" viewBox="0 0 ' + wPx + ' ' + hPx + '" preserveAspectRatio="none" style="pointer-events:none;overflow:visible;">' +
+      '<path d="' + d + '" fill="none" stroke="' + (el.color || "#EF4444") + '" stroke-width="' + (el.strokeWidth || 3) + '" vector-effect="non-scaling-stroke" stroke-opacity="' + (el.opacity != null ? el.opacity : 1) + '" stroke-linecap="round" stroke-linejoin="round"/>' +
       '</svg>';
   }
 

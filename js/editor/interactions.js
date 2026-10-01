@@ -323,8 +323,7 @@
 
     if (tool === "highlight" || tool === "redact") {
       var pts = points && points.length ? points : [[a.x,a.y],[b.x,b.y]], rr=document.createElementNS("http://www.w3.org/2000/svg","svg"), path=document.createElementNS("http://www.w3.org/2000/svg","polyline"), wr=wrap.getBoundingClientRect();
-      rr.setAttribute("width","100%");rr.setAttribute("height","100%");path.setAttribute("points",pts.map(function(q){return (q[0]*wr.width)+","+(q[1]*wr.height)}).join(" "));path.setAttribute("fill","none");path.setAttribute("stroke",tool==="redact"?"#000":document.getElementById("mark-color").value);path.setAttribute("stroke-width",String(Math.max(8,(parseInt(document.getElementById("mark-opacity").value,10)||45)/3)));path.setAttribute("stroke-linecap","round");path.setAttribute("stroke-linejoin","round");path.setAttribute("stroke-opacity",tool==="redact"?"1":".45");rr.appendChild(path);previewNode.style.left="0";previewNode.style.top="0";previewNode.style.width="100%";previewNode.style.height="100%";previewNode.appendChild(rr);
-    } else if (tool === "ellipse") {
+      rr.setAttribute("width","100%");rr.setAttribute("height","100%");path.setAttribute("points",pts.map(function(q){return (q[0]*wr.width)+","+(q[1]*wr.height)}).join(" "));path.setAttribute("fill","none");path.setAttribute("stroke",tool==="redact"?"#000":document.getElementById("mark-color").value);path.setAttribute("stroke-width",String(parseInt(document.getElementById("mark-width").value,10)||8));path.setAttribute("stroke-linecap","round");path.setAttribute("stroke-linejoin","round");path.setAttribute("stroke-opacity",tool==="redact"?"1":".45");rr.appendChild(path);previewNode.style.left="0";previewNode.style.top="0";previewNode.style.width="100%";previewNode.style.height="100%";previewNode.appendChild(rr);
     } else if (tool === "ellipse") {
       previewNode.style.border = "2px dashed #2563EB";
       previewNode.style.borderRadius = "50%";
@@ -391,7 +390,11 @@
         strokeWidth: parseInt(document.getElementById("shape-width").value, 10)
       });
     } else if (tool === "highlight" || tool === "redact") {
-      T.makeDraw(drag.points || [[a.x,a.y],[b.x,b.y]], {color: tool === "redact" ? "#000000" : document.getElementById("mark-color").value, opacity: tool === "redact" ? 1 : parseInt(document.getElementById("mark-opacity").value,10)/100, strokeWidth: Math.max(8,(parseInt(document.getElementById("mark-opacity").value,10)||45)/3)});
+      T.makeDraw(drag.points || [[a.x,a.y],[b.x,b.y]], {
+        color: tool === "redact" ? "#000000" : document.getElementById("mark-color").value,
+        opacity: tool === "redact" ? 1 : parseInt(document.getElementById("mark-opacity").value,10)/100,
+        strokeWidth: parseInt(document.getElementById("mark-width").value,10) || 8
+      });
     } else if (tool === "draw") {
       if (drag.points && drag.points.length > 1) T.makeDraw(drag.points,{color:document.getElementById("draw-color").value,strokeWidth:parseInt(document.getElementById("draw-width").value,10)||3});
     }
