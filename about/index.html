@@ -52,7 +52,7 @@
 <ul>
 <li>Your browser loads HTML, CSS, and JavaScript files (the same ones every visitor loads).</li>
 <li>You pick a file from your device. The browser reads it into memory using the <code>FileReader</code> API — no network activity.</li>
-<li>Processing happens using JavaScript libraries like <a href="https://github.com/Hopding/pdf-lib" rel="noopener">pdf-lib</a> and <a href="https://mozilla.github.io/pdf.js/" rel="noopener">pdf.js</a>, running on your CPU.</li>
+<li>Processing happens using JavaScript libraries like pdf-lib and pdf.js, running on your CPU.</li>
 <li>The result is created as a Blob in memory and saved to your disk via the browser's download mechanism.</li>
 </ul>
 <p>Throughout this sequence, no file content is sent over the network. This is provable: open your browser's DevTools, clear the Network tab, and use any tool. You'll see no outgoing requests carrying your file.</p>
