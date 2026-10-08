@@ -244,17 +244,8 @@ main.section > section.mt-6 > .related-grid, main.section > section.mt-6 > .tool
 
 .grammar-list{display:grid;gap:12px}.grammar-item{padding:14px 16px;border:1px solid var(--border-soft);border-radius:12px;background:var(--bg-elevated)}.grammar-item p{margin:.45rem 0 0;color:var(--text-muted)}
 
-/* Grammar Checker: inline error highlighting and synchronized editor overlay. */
-.grammar-editor{position:relative;min-height:280px;overflow:hidden;border:1px solid var(--border-soft);border-radius:12px;background:var(--bg-elevated)}
-.grammar-editor textarea,.grammar-highlight{box-sizing:border-box;width:100%;min-height:280px;padding:16px;font:inherit;line-height:1.65;letter-spacing:inherit;white-space:pre-wrap;overflow:auto;word-wrap:break-word}
-.grammar-editor textarea{position:relative;z-index:2;display:block;resize:vertical;border:0;outline:0;background:transparent;color:transparent;-webkit-text-fill-color:transparent;caret-color:var(--text)}
-.grammar-highlight{position:absolute;inset:0;z-index:1;color:var(--text);pointer-events:none}
-.grammar-mark{background:rgba(245,158,11,.28);border-bottom:2px solid #f59e0b;border-radius:2px}
-.grammar-mark--error{background:rgba(239,68,68,.22);border-bottom-color:#ef4444}
-.grammar-editor-note{margin:.55rem 0 0;color:var(--text-muted);font-size:.9rem}
-.grammar-summary{display:flex;gap:16px;flex-wrap:wrap;margin:.6rem 0 1rem;color:var(--text-muted);font-size:.9rem}
-.grammar-legend{display:inline-flex;align-items:center;gap:7px}.grammar-dot{width:10px;height:10px;border-radius:50%;background:#f59e0b;display:inline-block}.grammar-dot--error{background:#ef4444}
-.grammar-item{width:100%;text-align:left;display:grid;gap:5px;padding:14px 16px;border:1px solid var(--border-soft);border-radius:12px;background:var(--bg-elevated);cursor:pointer;color:inherit}
-.grammar-item:hover,.grammar-item:focus-visible{border-color:var(--primary,#6366f1);outline:2px solid transparent}
-.grammar-item__type{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
-@media(max-width:700px){.grammar-editor textarea,.grammar-highlight{padding:12px}.grammar-editor,.grammar-editor textarea,.grammar-highlight{min-height:240px}}
+/* v90: keep the native textarea text and caret visible; the overlay only paints error backgrounds. */
+.grammar-editor textarea{color:var(--text)!important;-webkit-text-fill-color:var(--text)!important;text-shadow:none!important;caret-color:var(--text)!important;background:transparent!important}
+.grammar-highlight{color:transparent!important;background:transparent!important}
+.grammar-overlay-text{color:transparent!important;-webkit-text-fill-color:transparent!important}
+.grammar-mark{color:transparent!important;-webkit-text-fill-color:transparent!important}
