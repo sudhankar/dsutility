@@ -1,6 +1,6 @@
 # ads.txt — Authorized Digital Sellers
 #
-# 👉 OWNER: Replace this entire file's contents after AdSense approval.
+# AdSense publisher details are added only after approval.
 # Google will give you an exact line to paste here, in this format:
 #
 #   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

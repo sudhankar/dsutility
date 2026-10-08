@@ -1,0 +1,68 @@
+DSUTILITY v92 — RELEASE AUDIT
+=============================
+Baseline: DSUTILITY-v91-FINAL.zip
+Scope: defect remediation only; no new tool added; Advanced Grammar Checker remains removed from source.
+
+REMEDIATIONS
+------------
+1. Service Worker cache bumped from dsutility-v83 to dsutility-v92 to invalidate stale cached HTML/assets after deployment.
+2. Normalized every HTML page to exactly one <!DOCTYPE html>.
+3. Normalized every HTML page to exactly one canonical URL.
+4. Added/normalized JSON-LD structured data and BreadcrumbList coverage across the site; repaired malformed legacy JSON-LD blocks.
+5. Added visible breadcrumbs to pages that lacked them.
+6. Added accessible names to previously unlabeled form controls without replacing existing explicit labels.
+7. Standardized PDF Editor with the same primary DSUTILITY site navigation as the rest of the site while retaining its editor toolbar and save workflow.
+8. Added PDF Editor related-tools/related-reading content where the live audit had exposed an empty section state.
+9. Added static security headers via _headers: X-Content-Type-Options, Referrer-Policy, Permissions-Policy, HSTS.
+10. Corrected privacy wording so claims describe local processing for supported workflows rather than implying that the entire site makes no network requests.
+11. Removed production-facing legal-page OWNER placeholders without inventing a legal entity, address or jurisdiction.
+12. Replaced the Resume Maker and Marriage Biodata Maker print-based PDF action with actual client-side PDF generation using html2canvas + jsPDF, including multi-page slicing for long previews.
+13. Unified Home Search and All Tools search matching around the same scoring/alias logic; removed an accidental sparse-array hole from the fallback tool catalogue.
+14. Reworked the “Why Your PDFs Should Never Leave Your Device” article to remove unnatural keyword-led sentences and make the privacy explanation technically precise and human-readable.
+15. Reduced repeated generic paragraphs in affected guides where the same long text appeared across multiple pages.
+16. Grammar Checker was NOT reintroduced; source residual scan remains clean.
+
+RELEASE GATE TESTS
+------------------
+HTML pages: 131
+Tools: 59
+Blogs: 61
+Advanced Removed writing/grammar checker residuals from production source: 0
+Duplicate doctype pages: 0
+Duplicate canonical pages: 0
+Pages with title: 131/131
+Pages with exactly one H1: 131/131
+Pages with JSON-LD: 131/131
+Non-home pages with visible breadcrumbs: 130/130
+Non-home pages with BreadcrumbList schema: 130/130
+Pages with unlabeled form controls after remediation: 0
+Missing meaningful image alt text (excluding intentional aria-hidden images): 0
+Broken local links: 0
+Malformed JSON-LD blocks: 0
+External target=_blank links missing noopener/noreferrer: 0
+JavaScript syntax errors (node --check): 0
+Service Worker cache version: dsutility-v92
+
+KNOWN CALCULATOR REGRESSION VALUES
+----------------------------------
+SIP: ₹5,000/month, 12%, 10 years → projected value ₹11,20,179.45; invested ₹6,00,000; gain ₹5,20,179.45.
+SIP lump sum: ₹1,00,000, 12%, 10 years → projected value ₹3,10,584.82; invested ₹1,00,000.
+SWP: ₹10,00,000 start, 10%, ₹10,000/month, 5 years → remaining corpus ₹8,44,897.70; total withdrawals ₹6,00,000; invested/start corpus ₹10,00,000.
+FD: ₹1,00,000, 7%, 5 years, quarterly compounding → maturity ₹1,41,477.82; interest ₹41,477.82.
+RD: ₹5,000/month, 8.25%, 1 year → invested ₹60,000; estimated maturity ₹62,305.41; interest ₹2,305.41.
+PPF benchmark: ₹1,50,000 annual contribution, April 1, 15 years, 7.1% → ₹40,68,209 in the implemented Apr–Mar model.
+
+MAKER PDF REGRESSION
+--------------------
+Resume Maker: actual client-side PDF export handler present; html2canvas + jsPDF loaded only on the maker page.
+Marriage Biodata Maker: actual client-side PDF export handler present; html2canvas + jsPDF loaded only on the maker page.
+
+DEPLOYMENT NOTE
+---------------
+The current live pages may continue to show the older deployment until the v92 ZIP is uploaded/pushed and the hosting cache updates. This package contains the corrected source and a v92 service-worker cache key so old browser caches are invalidated after deployment.
+
+RELEASE STATUS
+--------------
+SOURCE RELEASE GATE: PASS
+
+Full manual interaction testing of every one of the 59 tools cannot be truthfully claimed from this static/container environment. Code-level syntax, structural, link, schema, accessibility and targeted calculator/maker regressions were executed; real-device/browser smoke testing remains the final deployment-side verification step.

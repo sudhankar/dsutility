@@ -1,476 +1,475 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>
    PDF to PNG — Convert PDF Pages to PNG Images | DSUTILITY
   </title>
-  <meta content="Convert PDF pages to PNG images with selectable DPI. Download the pages as a ZIP, processed in your browser." name="description"/>
-  <link href="https://dsutility.pages.dev/tools/pdf-to-png/" rel="canonical"/>
-  <meta content="website" property="og:type"/>
-  <meta content="PDF to PNG — DSUTILITY" property="og:title"/>
-  <meta content="Convert PDF pages into PNG images with browser-side processing and configurable resolution." property="og:description"/>
-  <meta content="https://dsutility.pages.dev/tools/pdf-to-png/" property="og:url"/>
-  <meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
-  <link href="../../css/style.css" rel="stylesheet"/>
-  <link href="../../css/tools.css" rel="stylesheet"/>
-  <script type="application/ld+json">
+<meta content="Convert PDF pages to PNG images with selectable DPI. Download the pages as a ZIP, processed in your browser." name="description"/>
+<link href="https://dsutility.pages.dev/tools/pdf-to-png/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="PDF to PNG — DSUTILITY" property="og:title"/>
+<meta content="Convert PDF pages into PNG images with browser-side processing and configurable resolution." property="og:description"/>
+<meta content="https://dsutility.pages.dev/tools/pdf-to-png/" property="og:url"/>
+<meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/tools.css" rel="stylesheet"/>
+<script type="application/ld+json">
    {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"PDF to PNG — DSUTILITY","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/pdf-to-png/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"PDF to PNG","item":"https://dsutility.pages.dev/tools/pdf-to-png/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why choose PNG instead of JPG?","acceptedAnswer":{"@type":"Answer","text":"PNG is lossless and can preserve crisp text and line art well, although the files can be larger than JPEG images."}},{"@type":"Question","name":"Does PDF to PNG upload my PDF?","acceptedAnswer":{"@type":"Answer","text":"The conversion is performed in the browser; the PDF is not sent to a DSUTILITY processing server."}},{"@type":"Question","name":"What DPI should I use?","acceptedAnswer":{"@type":"Answer","text":"72 DPI is suitable for basic screen use, 150 DPI is a practical general setting, and 300 DPI is useful when higher detail is needed."}}]}]}
   </script>
-  <link href="../../manifest.json" rel="manifest"/>
-  <meta content="#0A1929" name="theme-color"/>
-  <link href="../../css/polish.css" rel="stylesheet"/>
-  <link href="https://dsutility.pages.dev/tools/pdf-to-png/" rel="canonical"/>
-  <meta content="PDF to PNG — Convert PDF Pages to PNG Images | DSUTILITY" name="twitter:title"/>
-  <meta content="Convert PDF pages to PNG images with selectable DPI. Download the pages as a ZIP, processed in your browser." name="twitter:description"/>
-  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
- </head>
- <body>
-  <a class="skip-link" href="#main">
+<link href="../../manifest.json" rel="manifest"/>
+<meta content="#0A1929" name="theme-color"/>
+<link href="../../css/polish.css" rel="stylesheet"/>
+
+<meta content="PDF to PNG — Convert PDF Pages to PNG Images | DSUTILITY" name="twitter:title"/>
+<meta content="Convert PDF pages to PNG images with selectable DPI. Download the pages as a ZIP, processed in your browser." name="twitter:description"/>
+<meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+</head>
+<body>
+<a class="skip-link" href="#main">
    Skip to content
   </a>
-  <header class="navbar">
-   <div class="container navbar__inner">
-    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-    </a>
-    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+<header class="navbar">
+<div class="container navbar__inner">
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
      ☰
     </button>
-    <nav aria-label="Primary">
-     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
-      <li>
-       <a href="../../tools/index.html">
+<nav aria-label="Primary">
+<ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+<li>
+<a href="../../tools/index.html">
         All Tools
        </a>
-      </li>
-      <li>
-       <a href="../../tools/pdf-editor/index.html">
+</li>
+<li>
+<a href="../../tools/pdf-editor/index.html">
         PDF Editor
        </a>
-      </li>
-      <li>
-       <a href="../../blog/index.html">
+</li>
+<li>
+<a href="../../blog/index.html">
         Blog
        </a>
-      </li>
-      <li>
-       <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
         FAQ
        </a>
-      </li>
-      <li>
-       <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
         About
        </a>
-      </li>
-      <li>
-       <a class="navbar__contact-link" href="../../contact/index.html">
+</li>
+<li>
+<a class="navbar__contact-link" href="../../contact/index.html">
         Contact
        </a>
-      </li>
-     </ul>
-    </nav>
-    <div class="navbar__actions">
-     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+</li>
+</ul>
+</nav>
+<div class="navbar__actions">
+<button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
       ☀️
      </button>
-    </div>
-   </div>
-  </header>
-  <main class="section" id="main">
-   <div class="container">
-    <nav aria-label="Breadcrumb">
-     <ol class="breadcrumb">
-      <li>
-       <a href="../../index.html">
+</div>
+</div>
+</header>
+<main class="section" id="main">
+<div class="container">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li>
+<a href="../../index.html">
         Home
        </a>
-      </li>
-      <li>
-       <a href="../index.html">
+</li>
+<li>
+<a href="../index.html">
         Tools
        </a>
-      </li>
-      <li>
-       <span aria-current="page">
+</li>
+<li>
+<span aria-current="page">
         PDF to PNG
        </span>
-      </li>
-     </ol>
-    </nav>
-    <h1>
+</li>
+</ol>
+</nav>
+<h1>
      PDF to PNG
     </h1>
-    <p class="lead">
+<p class="lead">
      Turn PDF pages into lossless PNG images. Choose a practical resolution and download all pages together as a ZIP.
     </p>
-    <p class="privacy-badge">
+<p class="privacy-badge">
      🔒 Processed locally in your browser.
     </p>
-    <section class="tool-panel mt-6">
-     <div aria-label="Add a PDF" class="upload-zone" id="uz-p2p" role="button" tabindex="0">
-      <svg aria-hidden="true" class="upload-zone__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
-       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4">
-       </path>
-       <polyline points="17 8 12 3 7 8">
-       </polyline>
-       <line x1="12" x2="12" y1="3" y2="15">
-       </line>
-      </svg>
-      <p class="upload-zone__title">
+<section class="tool-panel mt-6">
+<div aria-label="Add a PDF" class="upload-zone" id="uz-p2p" role="button" tabindex="0">
+<svg aria-hidden="true" class="upload-zone__icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4">
+</path>
+<polyline points="17 8 12 3 7 8">
+</polyline>
+<line x1="12" x2="12" y1="3" y2="15">
+</line>
+</svg>
+<p class="upload-zone__title">
        Drop a PDF here or click to select
       </p>
-      <input accept="application/pdf,.pdf" hidden="" type="file"/>
-     </div>
-     <div class="alert alert-error mt-4" hidden="" id="p2p-alert" role="alert">
-     </div>
-     <div class="mt-6" hidden="" id="p2p-toolbar">
-      <p class="text-muted" id="p2p-info">
-      </p>
-      <div class="opt-group mt-4">
-       <div class="opt-row">
-        <label>
+<input accept="application/pdf,.pdf" aria-label="Select PDF file" hidden="" type="file"/>
+</div>
+<div class="alert alert-error mt-4" hidden="" id="p2p-alert" role="alert">
+</div>
+<div class="mt-6" hidden="" id="p2p-toolbar">
+<p class="text-muted" id="p2p-info">
+</p>
+<div class="opt-group mt-4">
+<div class="opt-row">
+<label>
          Resolution
         </label>
-        <select id="p2p-dpi">
-         <option value="72">
+<select aria-label="P2p dpi" id="p2p-dpi">
+<option value="72">
           72 DPI — screen
          </option>
-         <option selected="" value="150">
+<option selected="" value="150">
           150 DPI — general use
          </option>
-         <option value="300">
+<option value="300">
           300 DPI — higher detail
          </option>
-        </select>
-       </div>
-      </div>
-      <div aria-live="polite" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="mt-4" hidden="" id="p2p-progress" role="progressbar">
-       <div class="progress">
-        <div class="progress__bar">
-        </div>
-       </div>
-       <p class="text-muted" data-progress-label="" style="font-size:.9rem;margin:8px 0 0">
-       </p>
-      </div>
-      <div class="tool-actions mt-6">
-       <button class="btn btn-primary btn-lg" id="p2p-apply" type="button">
+</select>
+</div>
+</div>
+<div aria-live="polite" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="mt-4" hidden="" id="p2p-progress" role="progressbar">
+<div class="progress">
+<div class="progress__bar">
+</div>
+</div>
+<p class="text-muted" data-progress-label="" style="font-size:.9rem;margin:8px 0 0">
+</p>
+</div>
+<div class="tool-actions mt-6">
+<button class="btn btn-primary btn-lg" id="p2p-apply" type="button">
         Convert to PNG (ZIP)
        </button>
-      </div>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</div>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       About PDF to PNG
      </h2>
-     <p>
+<p>
       PDF to PNG renders PDF pages into lossless PNG images. PNG is useful for text-heavy pages, diagrams, screenshots, and graphics where crisp edges matter more than the smaller files often produced by JPEG.
      </p>
-     <p>
-      <strong>
+<p>
+<strong>
        Good practice:
       </strong>
       Before creating the final pdf to png result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
      </p>
-    </section>
-    <section class="mt-6">
-     <p>
-      <strong>
+</section>
+<section class="mt-6">
+<p>
+<strong>
        Before you finish:
       </strong>
       Treat the preview as a review stage, not just a download step. Check the parts that matter most for pdf to png, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
      </p>
-     <h2>
+<h2>
       How to use PDF to PNG
      </h2>
-     <ol class="how-to">
-      <li>
+<ol class="how-to">
+<li>
        Upload the PDF
       </li>
-      <li>
+<li>
        select the required pages if supported
       </li>
-      <li>
+<li>
        choose the available scale or quality
       </li>
-      <li>
+<li>
        convert the pages
       </li>
-      <li>
+<li>
        inspect the PNGs
       </li>
-      <li>
+<li>
        download the outputs.
       </li>
-     </ol>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ol>
+</section>
+<section class="mt-6">
+<h2>
       Technical limitations
      </h2>
-     <ul>
-      <li>
+<ul>
+<li>
        PNG files can become large at high resolution.
       </li>
-      <li>
+<li>
        Very large or image-heavy PDFs can use substantial browser memory.
       </li>
-      <li>
+<li>
        The output is a flat image and does not retain PDF links, forms, or selectable text.
       </li>
-      <li>
+<li>
        Resolution affects both clarity and file size.
       </li>
-     </ul>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ul>
+</section>
+<section class="mt-6">
+<h2>
       Frequently asked
      </h2>
-     <div class="faq-accordion">
-      <details>
-       <summary>
+<div class="faq-accordion">
+<details>
+<summary>
         Why choose PNG instead of JPG?
        </summary>
-       <p>
+<p>
         PNG is lossless and can keep text and sharp graphics cleaner, although files may be larger.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Can I convert a single page?
        </summary>
-       <p>
+<p>
         Yes, when the page-selection control is available.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Will the PNG be searchable?
        </summary>
-       <p>
+<p>
         No. It is an image of the page.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Why does a high-resolution PNG take longer?
        </summary>
-       <p>
+<p>
         More pixels have to be rendered and encoded in the browser.
        </p>
-      </details>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</details>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related tools
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../pdf-to-jpg/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../pdf-to-jpg/index.html">
+<h3 class="tool-card__title">
         PDF to JPG
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Choose JPEG when smaller image files are more important.
        </p>
-      </a>
-      <a class="tool-card" href="../pdf-to-webp/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../pdf-to-webp/index.html">
+<h3 class="tool-card__title">
         PDF to WebP
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Use WebP when web-friendly image size is a priority.
        </p>
-      </a>
-      <a class="tool-card" href="../ocr-pdf/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../ocr-pdf/index.html">
+<h3 class="tool-card__title">
         OCR PDF
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Create searchable text from scanned PDF pages.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related reading
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../../blog/pdf-to-png-guide/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../../blog/pdf-to-png-guide/index.html">
+<h3 class="tool-card__title">
         PDF to PNG Guide
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Understand PNG quality and practical use cases.
        </p>
-      </a>
-      <a class="tool-card" href="../../blog/pdf-preview-dpi-quality/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../../blog/pdf-preview-dpi-quality/index.html">
+<h3 class="tool-card__title">
         PDF Preview and DPI Quality
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Learn how rendering resolution changes the result.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Privacy
      </h2>
-     <p>
+<p>
       The conversion runs in the browser for supported files. Your PDF is not required to be uploaded to a DSUTILITY image-processing server. Local browser memory and rendering performance determine how large a document can be handled comfortably.
      </p>
-    </section>
-   </div>
-  </main>
-  <footer class="footer">
-   <div class="container">
-    <div class="footer__grid">
-     <div>
-      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-      </a>
-      <p class="mt-4 footer-intro">
+</section>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div>
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<p class="mt-4 footer-intro">
        Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
       </p>
-     </div>
-     <div>
-      <h4>
+</div>
+<div>
+<h4>
        Tools
       </h4>
-      <ul>
-       <li>
-        <a href="../../tools/pdf-editor/index.html">
+<ul>
+<li>
+<a href="../../tools/pdf-editor/index.html">
          PDF Editor
         </a>
-       </li>
-       <li>
-        <a href="../../tools/merge-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/merge-pdf/index.html">
          Merge PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/split-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/split-pdf/index.html">
          Split PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/compress-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/compress-pdf/index.html">
          Compress PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/da-arrears-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/da-arrears-calculator/index.html">
          DA Arrears Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/gpf-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/gpf-calculator/index.html">
          GPF Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/index.html">
+</li>
+<li>
+<a href="../../tools/index.html">
          All Tools
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Learn
       </h4>
-      <ul>
-       <li>
-        <a href="../../blog/index.html">
+<ul>
+<li>
+<a href="../../blog/index.html">
          Blog
         </a>
-       </li>
-       <li>
-        <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
          FAQ
         </a>
-       </li>
-       <li>
-        <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
          About
         </a>
-       </li>
-       <li>
-        <a href="../../contact/index.html">
+</li>
+<li>
+<a href="../../contact/index.html">
          Contact
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Legal
       </h4>
-      <ul>
-       <li>
-        <a href="../../privacy-policy/index.html">
+<ul>
+<li>
+<a href="../../privacy-policy/index.html">
          Privacy Policy
         </a>
-       </li>
-       <li>
-        <a href="../../terms/index.html">
+</li>
+<li>
+<a href="../../terms/index.html">
          Terms of Service
         </a>
-       </li>
-       <li>
-        <a href="../../disclaimer/index.html">
+</li>
+<li>
+<a href="../../disclaimer/index.html">
          Disclaimer
         </a>
-       </li>
-       <li>
-        <a href="../../cookie-policy/index.html">
+</li>
+<li>
+<a href="../../cookie-policy/index.html">
          Cookie Policy
         </a>
-       </li>
-       <li>
-        <a href="../../dmca/index.html">
+</li>
+<li>
+<a href="../../dmca/index.html">
          DMCA
         </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer__bottom">
-     <span>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer__bottom">
+<span>
       ©
       <span data-year="">
        2026
       </span>
       DSUTILITY. All rights reserved.
      </span>
-     <span class="footer__badge">
+<span class="footer__badge">
       🔒 Supported file processing happens in your browser.
      </span>
-    </div>
-   </div>
-  </footer>
-  <script src="../../js/config.js">
-  </script>
-  <script src="../../js/main.js">
-  </script>
-  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js">
-  </script>
-  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js">
-  </script>
-  <script src="../../js/tools-engine.js">
-  </script>
-  <script src="../../js/tools/pdf-to-png.js">
-  </script>
- </body>
+</div>
+</div>
+</footer>
+<script src="../../js/config.js">
+</script>
+<script src="../../js/main.js">
+</script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js">
+</script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js">
+</script>
+<script src="../../js/tools-engine.js">
+</script>
+<script src="../../js/tools/pdf-to-png.js">
+</script>
+</body>
 </html>

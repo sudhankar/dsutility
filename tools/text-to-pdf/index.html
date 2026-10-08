@@ -1,498 +1,494 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>
    Text to PDF Online — Create a PDF from Text | DSUTILITY
   </title>
-  <meta content="Turn plain text into a clean PDF in your browser. Choose A4 or Letter, adjust font size and margins, and download the PDF without uploading your text to a processing server." name="description"/>
-  <link href="https://dsutility.pages.dev/tools/text-to-pdf/" rel="canonical"/>
-  <meta content="website" property="og:type"/>
-  <meta content="Text to PDF Online — DSUTILITY" property="og:title"/>
-  <meta content="Create a simple PDF from plain text with adjustable page size, font size and margins." property="og:description"/>
-  <meta content="https://dsutility.pages.dev/tools/text-to-pdf/" property="og:url"/>
-  <meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
-  <link href="../../css/style.css" rel="stylesheet"/>
-  <link href="../../css/tools.css" rel="stylesheet"/>
-  <script type="application/ld+json">
-   {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Text to PDF — DSUTILITY","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/text-to-pdf/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Text to PDF","item":"https://dsutility.pages.dev/tools/text-to-pdf/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I create multiple pages?","acceptedAnswer":{"@type":"Answer","text":"Yes. Longer text automatically flows onto additional PDF pages."}},{"@type":"Question","name":"Is my text uploaded?","acceptedAnswer":{"@type":"Answer","text":"The PDF is created in your browser. The tool does not require a DSUTILITY server upload for the text you enter."}},{"@type":"Question","name":"Can I create a Hindi PDF?","acceptedAnswer":{"@type":"Answer","text":"The lightweight version uses a built-in PDF font, so it is intended for Latin and other characters supported by that font. Complex scripts such as Hindi may require an embedded Unicode font and are not guaranteed here."}}]}
-  </script>
-  <link href="../../manifest.json" rel="manifest"/>
-  <meta content="#0A1929" name="theme-color"/>
-  <link href="../../css/polish.css" rel="stylesheet"/>
-  <link href="https://dsutility.pages.dev/tools/text-to-pdf/" rel="canonical"/>
-  <meta content="Text to PDF Online — Create a PDF from Text | DSUTILITY" name="twitter:title"/>
-  <meta content="Turn plain text into a clean PDF in your browser. Choose A4 or Letter, adjust font size and margins, and download the PDF without uploading your text to a processing server." name="twitter:description"/>
-  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
- </head>
- <body>
-  <a class="skip-link" href="#main">
+<meta content="Turn plain text into a clean PDF in your browser. Choose A4 or Letter, adjust font size and margins, and download the PDF without uploading your text to a processing server." name="description"/>
+<link href="https://dsutility.pages.dev/tools/text-to-pdf/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Text to PDF Online — DSUTILITY" property="og:title"/>
+<meta content="Create a simple PDF from plain text with adjustable page size, font size and margins." property="og:description"/>
+<meta content="https://dsutility.pages.dev/tools/text-to-pdf/" property="og:url"/>
+<meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../images/logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/tools.css" rel="stylesheet"/>
+
+<link href="../../manifest.json" rel="manifest"/>
+<meta content="#0A1929" name="theme-color"/>
+<link href="../../css/polish.css" rel="stylesheet"/>
+<meta content="Text to PDF Online — Create a PDF from Text | DSUTILITY" name="twitter:title"/>
+<meta content="Turn plain text into a clean PDF in your browser. Choose A4 or Letter, adjust font size and margins, and download the PDF without uploading your text to a processing server." name="twitter:description"/>
+<meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Text to PDF Online — Create a PDF from Text","description":"Turn plain text into a clean PDF in your browser. Choose A4 or Letter, adjust font size and margins, and download the PDF without uploading your text to a processing server.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/text-to-pdf/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Text to PDF Online — Create a PDF from Text","item":"https://dsutility.pages.dev/tools/text-to-pdf/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I paste Hindi text?","acceptedAnswer":{"@type":"Answer","text":"Yes, provided the browser and selected PDF font/rendering path support the characters."}},{"@type":"Question","name":"Can I create a multi-page PDF?","acceptedAnswer":{"@type":"Answer","text":"Yes. Longer text can flow across pages."}},{"@type":"Question","name":"Can I add images?","acceptedAnswer":{"@type":"Answer","text":"Use Add Image to PDF or PDF Editor when images are required."}},{"@type":"Question","name":"Why did spacing change?","acceptedAnswer":{"@type":"Answer","text":"Plain text uses the tool’s own document layout rather than preserving formatting from the source application."}}]}]}</script></head>
+<body>
+<a class="skip-link" href="#main">
    Skip to content
   </a>
-  <header class="navbar">
-   <div class="container navbar__inner">
-    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-    </a>
-    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+<header class="navbar">
+<div class="container navbar__inner">
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
      ☰
     </button>
-    <nav aria-label="Primary">
-     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
-      <li>
-       <a href="../../tools/index.html">
+<nav aria-label="Primary">
+<ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+<li>
+<a href="../../tools/index.html">
         All Tools
        </a>
-      </li>
-      <li>
-       <a href="../../tools/pdf-editor/index.html">
+</li>
+<li>
+<a href="../../tools/pdf-editor/index.html">
         PDF Editor
        </a>
-      </li>
-      <li>
-       <a href="../../blog/index.html">
+</li>
+<li>
+<a href="../../blog/index.html">
         Blog
        </a>
-      </li>
-      <li>
-       <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
         FAQ
        </a>
-      </li>
-      <li>
-       <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
         About
        </a>
-      </li>
-      <li>
-       <a class="navbar__contact-link" href="../../contact/index.html">
+</li>
+<li>
+<a class="navbar__contact-link" href="../../contact/index.html">
         Contact
        </a>
-      </li>
-     </ul>
-    </nav>
-    <div class="navbar__actions">
-     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+</li>
+</ul>
+</nav>
+<div class="navbar__actions">
+<button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
       ☀️
      </button>
-    </div>
-   </div>
-  </header>
-  <main class="section" id="main">
-   <div class="container">
-    <nav aria-label="Breadcrumb">
-     <ol class="breadcrumb">
-      <li>
-       <a href="../../index.html">
+</div>
+</div>
+</header>
+<main class="section" id="main">
+<div class="container">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li>
+<a href="../../index.html">
         Home
        </a>
-      </li>
-      <li>
-       <a href="../index.html">
+</li>
+<li>
+<a href="../index.html">
         Tools
        </a>
-      </li>
-      <li>
-       <span aria-current="page">
+</li>
+<li>
+<span aria-current="page">
         Text to PDF
        </span>
-      </li>
-     </ol>
-    </nav>
-    <h1>
+</li>
+</ol>
+</nav>
+<h1>
      Text to PDF
     </h1>
-    <p class="lead">
+<p class="lead">
      Create a simple, printable PDF from plain text. Choose a page size, font size and margin, then download the result.
     </p>
-    <p class="privacy-badge">
+<p class="privacy-badge">
      🔒 Created locally in your browser.
     </p>
-    <section class="tool-panel mt-6">
-     <label for="textpdf-file">
-      <strong>
+<section class="tool-panel mt-6">
+<label for="textpdf-file">
+<strong>
        Upload a .txt file (optional)
       </strong>
-     </label>
-     <input accept=".txt,text/plain" class="input mt-2" id="textpdf-file" type="file"/>
-     <p class="text-muted">
+</label>
+<input accept=".txt,text/plain" class="input mt-2" id="textpdf-file" type="file"/>
+<p class="text-muted">
       You can upload a plain-text file or type or edit the content below.
      </p>
-     <label for="textpdf-input">
-      <strong>
+<label for="textpdf-input">
+<strong>
        Enter or edit your text
       </strong>
-     </label>
-     <textarea class="input mt-2" id="textpdf-input" placeholder="Type or paste your text here…" rows="14" style="width:100%;resize:vertical"></textarea>
-     <div class="opt-row mt-4">
-      <label>
+</label>
+<textarea class="input mt-2" id="textpdf-input" placeholder="Type or paste your text here…" rows="14" style="width:100%;resize:vertical"></textarea>
+<div class="opt-row mt-4">
+<label>
        Page size
        <select class="input" id="textpdf-size">
-        <option value="a4">
+<option value="a4">
          A4
         </option>
-        <option value="letter">
+<option value="letter">
          Letter
         </option>
-       </select>
-      </label>
-      <label>
+</select>
+</label>
+<label>
        Font size
        <select class="input" id="textpdf-font-size">
-        <option>
+<option>
          10
         </option>
-        <option selected="">
+<option selected="">
          12
         </option>
-        <option>
+<option>
          14
         </option>
-        <option>
+<option>
          16
         </option>
-        <option>
+<option>
          18
         </option>
-        <option>
+<option>
          20
         </option>
-       </select>
-      </label>
-      <label>
+</select>
+</label>
+<label>
        Margin
        <select class="input" id="textpdf-margin">
-        <option value="36">
+<option value="36">
          36 pt
         </option>
-        <option selected="" value="50">
+<option selected="" value="50">
          50 pt
         </option>
-        <option value="72">
+<option value="72">
          72 pt
         </option>
-       </select>
-      </label>
-     </div>
-     <div class="alert alert-error mt-4" hidden="" id="textpdf-alert" role="alert">
-     </div>
-     <div class="progress-panel mt-4" hidden="" id="textpdf-progress">
-      <p class="text-muted">
+</select>
+</label>
+</div>
+<div class="alert alert-error mt-4" hidden="" id="textpdf-alert" role="alert">
+</div>
+<div class="progress-panel mt-4" hidden="" id="textpdf-progress">
+<p class="text-muted">
        Done — PDF downloaded.
       </p>
-     </div>
-     <div class="tool-actions mt-6">
-      <button class="btn btn-primary btn-lg" id="textpdf-create" type="button">
+</div>
+<div class="tool-actions mt-6">
+<button class="btn btn-primary btn-lg" id="textpdf-create" type="button">
        Create PDF &amp; Download
       </button>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       About Text to PDF
      </h2>
-     <p>
+<p>
       Text to PDF creates a clean PDF from plain text. It is a good fit for notes, drafts, instructions, simple letters, or text that needs a stable printable format without the complexity of a full document editor.
      </p>
-     <p>
-      <strong>
+<p>
+<strong>
        Good practice:
       </strong>
       Before creating the final text to pdf result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
      </p>
-    </section>
-    <section class="mt-6">
-     <p>
-      <strong>
+</section>
+<section class="mt-6">
+<p>
+<strong>
        Before you finish:
       </strong>
       Treat the preview as a review stage, not just a download step. Check the parts that matter most for text to pdf, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
      </p>
-     <h2>
+<h2>
       How to use Text to PDF
      </h2>
-     <ol class="how-to">
-      <li>
+<ol class="how-to">
+<li>
        Enter or paste the text
       </li>
-      <li>
+<li>
        review line breaks and spacing
       </li>
-      <li>
+<li>
        choose the available document options
       </li>
-      <li>
+<li>
        generate the PDF
       </li>
-      <li>
+<li>
        inspect pagination
       </li>
-      <li>
+<li>
        download the final file.
       </li>
-     </ol>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ol>
+</section>
+<section class="mt-6">
+<h2>
       Technical limitations
      </h2>
-     <ul>
-      <li>
+<ul>
+<li>
        Plain text cannot reproduce advanced word-processor layouts.
       </li>
-      <li>
+<li>
        Very long text can span many pages and may need manual review for page breaks.
       </li>
-      <li>
+<li>
        Formatting is limited to what the tool exposes.
       </li>
-      <li>
+<li>
        The result contains text rather than the original rich-document structure.
       </li>
-     </ul>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ul>
+</section>
+<section class="mt-6">
+<h2>
       Frequently asked
      </h2>
-     <div class="faq-accordion">
-      <details>
-       <summary>
+<div class="faq-accordion">
+<details>
+<summary>
         Can I paste Hindi text?
        </summary>
-       <p>
+<p>
         Yes, provided the browser and selected PDF font/rendering path support the characters.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Can I create a multi-page PDF?
        </summary>
-       <p>
+<p>
         Yes. Longer text can flow across pages.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Can I add images?
        </summary>
-       <p>
+<p>
         Use Add Image to PDF or PDF Editor when images are required.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Why did spacing change?
        </summary>
-       <p>
+<p>
         Plain text uses the tool’s own document layout rather than preserving formatting from the source application.
        </p>
-      </details>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</details>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related tools
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../html-to-pdf/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../html-to-pdf/index.html">
+<h3 class="tool-card__title">
         HTML to PDF
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Use HTML when structured markup is needed.
        </p>
-      </a>
-      <a class="tool-card" href="../pdf-to-text/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../pdf-to-text/index.html">
+<h3 class="tool-card__title">
         PDF to Text
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Extract text from an existing PDF.
        </p>
-      </a>
-      <a class="tool-card" href="../pdf-editor/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../pdf-editor/index.html">
+<h3 class="tool-card__title">
         PDF Editor
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Add visual elements after creating the PDF.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related reading
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../../blog/text-to-pdf-guide/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../../blog/text-to-pdf-guide/index.html">
+<h3 class="tool-card__title">
         How to Turn Plain Text into a Clean PDF
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Prepare readable text before conversion.
        </p>
-      </a>
-      <a class="tool-card" href="../../blog/pdf-editor-shapes-arrows-lines/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../../blog/pdf-editor-shapes-arrows-lines/index.html">
+<h3 class="tool-card__title">
         Using Lines, Arrows, Boxes and Highlights in a PDF Editor
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Continue editing the generated PDF.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Privacy
      </h2>
-     <p>
+<p>
       The text is converted locally in the browser for the supported workflow. The entered content does not need to be sent to a DSUTILITY document server. Your browser controls temporary text data and the generated download.
      </p>
-    </section>
-   </div>
-  </main>
-  <footer class="footer">
-   <div class="container">
-    <div class="footer__grid">
-     <div>
-      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-      </a>
-      <p class="mt-4 footer-intro">
+</section>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div>
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<p class="mt-4 footer-intro">
        Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
       </p>
-     </div>
-     <div>
-      <h4>
+</div>
+<div>
+<h4>
        Tools
       </h4>
-      <ul>
-       <li>
-        <a href="../../tools/pdf-editor/index.html">
+<ul>
+<li>
+<a href="../../tools/pdf-editor/index.html">
          PDF Editor
         </a>
-       </li>
-       <li>
-        <a href="../../tools/merge-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/merge-pdf/index.html">
          Merge PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/split-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/split-pdf/index.html">
          Split PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/compress-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/compress-pdf/index.html">
          Compress PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/da-arrears-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/da-arrears-calculator/index.html">
          DA Arrears Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/gpf-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/gpf-calculator/index.html">
          GPF Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/index.html">
+</li>
+<li>
+<a href="../../tools/index.html">
          All Tools
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Learn
       </h4>
-      <ul>
-       <li>
-        <a href="../../blog/index.html">
+<ul>
+<li>
+<a href="../../blog/index.html">
          Blog
         </a>
-       </li>
-       <li>
-        <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
          FAQ
         </a>
-       </li>
-       <li>
-        <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
          About
         </a>
-       </li>
-       <li>
-        <a href="../../contact/index.html">
+</li>
+<li>
+<a href="../../contact/index.html">
          Contact
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Legal
       </h4>
-      <ul>
-       <li>
-        <a href="../../privacy-policy/index.html">
+<ul>
+<li>
+<a href="../../privacy-policy/index.html">
          Privacy Policy
         </a>
-       </li>
-       <li>
-        <a href="../../terms/index.html">
+</li>
+<li>
+<a href="../../terms/index.html">
          Terms of Service
         </a>
-       </li>
-       <li>
-        <a href="../../disclaimer/index.html">
+</li>
+<li>
+<a href="../../disclaimer/index.html">
          Disclaimer
         </a>
-       </li>
-       <li>
-        <a href="../../cookie-policy/index.html">
+</li>
+<li>
+<a href="../../cookie-policy/index.html">
          Cookie Policy
         </a>
-       </li>
-       <li>
-        <a href="../../dmca/index.html">
+</li>
+<li>
+<a href="../../dmca/index.html">
          DMCA
         </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer__bottom">
-     <span>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer__bottom">
+<span>
       ©
       <span data-year="">
        2026
       </span>
       DSUTILITY. All rights reserved.
      </span>
-     <span class="footer__badge">
+<span class="footer__badge">
       🔒 Supported file processing happens in your browser.
      </span>
-    </div>
-   </div>
-  </footer>
-  <script src="../../js/config.js">
-  </script>
-  <script src="../../js/main.js">
-  </script>
-  <script src="../../js/tools-engine.js">
-  </script>
-  <script src="../../js/tools/text-to-pdf.js">
-  </script>
- </body>
+</div>
+</div>
+</footer>
+<script src="../../js/config.js">
+</script>
+<script src="../../js/main.js">
+</script>
+<script src="../../js/tools-engine.js">
+</script>
+<script src="../../js/tools/text-to-pdf.js">
+</script>
+</body>
 </html>

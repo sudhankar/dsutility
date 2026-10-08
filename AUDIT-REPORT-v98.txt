@@ -1,0 +1,37 @@
+DSUTILITY v98 RELEASE AUDIT
+=========================
+Source: DSUTILITY-v97-FINAL.zip
+New feature: Smart Image Compressor — Target KB
+
+CHANGE SCOPE
+- Added a distinct KB-first batch image compressor.
+- Existing Image Resize & Compress retained unchanged as the dimension/crop/quality workflow.
+- Existing Online Form Photo & Signature retained for application-specific photo/signature preparation.
+- Existing Passport Photo retained for ID-photo presets and print sheets.
+- No duplicate tool route created.
+- Added dedicated SEO tool page, blog guide, All Tools/Home listings, tool-search entry and sitemap URLs.
+
+QA
+- HTML pages: 136
+- Tools: 61
+- Blogs: 63
+- JS syntax errors: 0
+- JSON-LD parse errors: 0
+- Broken local links (fragment-aware): 0
+- Duplicate tool H1 names: 0
+- New tool H1: PASS
+- New tool canonical: PASS
+- New tool BreadcrumbList: PASS
+- New tool SoftwareApplication JSON-LD: PASS
+- New tool batch file input: PASS
+- New tool ZIP dependency: PASS
+- Service worker cache: dsutility-v98
+
+BROWSER SMOKE
+- Headless Chromium was attempted, but the execution environment terminated the browser before DOM output was produced.
+- Therefore interactive browser PASS is NOT claimed.
+
+RELEASE GATE
+- Static/source QA: PASS
+- Interactive browser QA: NOT VERIFIED
+- Critical static gate: PASS

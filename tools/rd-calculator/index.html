@@ -1,466 +1,465 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>
    RD Calculator — Recurring Deposit Maturity Estimate | DSUTILITY
   </title>
-  <meta content="Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model." name="description"/>
-  <link href="https://dsutility.pages.dev/tools/rd-calculator/" rel="canonical"/>
-  <link href="../../manifest.json" rel="manifest"/>
-  <link href="../../css/style.css" rel="stylesheet"/>
-  <link href="../../css/tools.css" rel="stylesheet"/>
-  <link href="../../css/polish.css" rel="stylesheet"/>
-  <link href="https://dsutility.pages.dev/tools/rd-calculator/" rel="canonical"/>
-  <meta content="RD Calculator — Recurring Deposit Maturity Estimate | DSUTILITY" property="og:title"/>
-  <meta content="Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model." property="og:description"/>
-  <meta content="https://dsutility.pages.dev/tools/rd-calculator/" property="og:url"/>
-  <meta content="website" property="og:type"/>
-  <meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="RD Calculator — Recurring Deposit Maturity Estimate | DSUTILITY" name="twitter:title"/>
-  <meta content="Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model." name="twitter:description"/>
-  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
- </head>
- <body data-tool="rd-calculator">
-  <a class="skip-link" href="#main">
+<meta content="Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model." name="description"/>
+<link href="https://dsutility.pages.dev/tools/rd-calculator/" rel="canonical"/>
+<link href="../../manifest.json" rel="manifest"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/tools.css" rel="stylesheet"/>
+<link href="../../css/polish.css" rel="stylesheet"/>
+
+<meta content="RD Calculator — Recurring Deposit Maturity Estimate | DSUTILITY" property="og:title"/>
+<meta content="Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model." property="og:description"/>
+<meta content="https://dsutility.pages.dev/tools/rd-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="https://dsutility.pages.dev/images/icon-512.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="RD Calculator — Recurring Deposit Maturity Estimate | DSUTILITY" name="twitter:title"/>
+<meta content="Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model." name="twitter:description"/>
+<meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"RD Calculator — Recurring Deposit Maturity Estimate","description":"Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/rd-calculator/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"RD Calculator — Recurring Deposit Maturity Estimate","item":"https://dsutility.pages.dev/tools/rd-calculator/"}]}]}</script></head>
+<body data-tool="rd-calculator">
+<a class="skip-link" href="#main">
    Skip to content
   </a>
-  <header class="navbar">
-   <div class="container navbar__inner">
-    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-    </a>
-    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+<header class="navbar">
+<div class="container navbar__inner">
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
      ☰
     </button>
-    <nav aria-label="Primary">
-     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
-      <li>
-       <a href="../../tools/index.html">
+<nav aria-label="Primary">
+<ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+<li>
+<a href="../../tools/index.html">
         All Tools
        </a>
-      </li>
-      <li>
-       <a href="../../tools/pdf-editor/index.html">
+</li>
+<li>
+<a href="../../tools/pdf-editor/index.html">
         PDF Editor
        </a>
-      </li>
-      <li>
-       <a href="../../blog/index.html">
+</li>
+<li>
+<a href="../../blog/index.html">
         Blog
        </a>
-      </li>
-      <li>
-       <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
         FAQ
        </a>
-      </li>
-      <li>
-       <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
         About
        </a>
-      </li>
-      <li>
-       <a class="navbar__contact-link" href="../../contact/index.html">
+</li>
+<li>
+<a class="navbar__contact-link" href="../../contact/index.html">
         Contact
        </a>
-      </li>
-     </ul>
-    </nav>
-    <div class="navbar__actions">
-     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+</li>
+</ul>
+</nav>
+<div class="navbar__actions">
+<button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
       ☀️
      </button>
-    </div>
-   </div>
-  </header>
-  <main class="section" id="main">
-   <div class="container fin-shell">
-    <nav aria-label="Breadcrumb">
-     <ol class="breadcrumb">
-      <li>
-       <a href="../../index.html">
+</div>
+</div>
+</header>
+<main class="section" id="main">
+<div class="container fin-shell">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li>
+<a href="../../index.html">
         Home
        </a>
-      </li>
-      <li>
-       <a href="../index.html">
+</li>
+<li>
+<a href="../index.html">
         Tools
        </a>
-      </li>
-      <li>
-       <span>
+</li>
+<li>
+<span>
         Rd Calculator
        </span>
-      </li>
-     </ol>
-    </nav>
-    <h1>
+</li>
+</ol>
+</nav>
+<h1>
      RD Calculator
     </h1>
-    <p class="lead">
+<p class="lead">
      Estimate recurring-deposit maturity from monthly contribution, annual rate and tenure using monthly instalments with a quarterly-rate growth model.
     </p>
-    <section class="fin-card mt-6">
-     <div class="fin-grid">
-      <div class="fin-field">
-       <label for="rdP">
+<section class="fin-card mt-6">
+<div class="fin-grid">
+<div class="fin-field">
+<label for="rdP">
         Monthly investment
        </label>
-       <input class="fin-input" id="rdP" min="0" step="0.01" type="number" value="5000"/>
-      </div>
-      <div class="fin-field">
-       <label for="rdR">
+<input class="fin-input" id="rdP" min="0" step="0.01" type="number" value="5000"/>
+</div>
+<div class="fin-field">
+<label for="rdR">
         Annual interest rate (%)
        </label>
-       <input class="fin-input" id="rdR" min="0" step="0.01" type="number" value="8.25"/>
-      </div>
-      <div class="fin-field">
-       <label for="rdY">
+<input class="fin-input" id="rdR" min="0" step="0.01" type="number" value="8.25"/>
+</div>
+<div class="fin-field">
+<label for="rdY">
         Tenure (years)
        </label>
-       <input class="fin-input" id="rdY" min="0" step="0.01" type="number" value="1"/>
-      </div>
-     </div>
-     <div class="fin-actions">
-      <button class="btn btn-primary" id="calculate">
+<input class="fin-input" id="rdY" min="0" step="0.01" type="number" value="1"/>
+</div>
+</div>
+<div class="fin-actions">
+<button class="btn btn-primary" id="calculate">
        Calculate
       </button>
-      <button class="btn btn-secondary" id="rst">
+<button class="btn btn-secondary" id="rst">
        Reset
       </button>
-     </div>
-     <div class="fin-results">
-      <div class="fin-result">
-       <span>
+</div>
+<div class="fin-results">
+<div class="fin-result">
+<span>
         Maturity value
        </span>
-       <strong id="rdX">
+<strong id="rdX">
         ₹0
        </strong>
-      </div>
-      <div class="fin-result">
-       <span>
+</div>
+<div class="fin-result">
+<span>
         Total invested
        </span>
-       <strong id="rdInvested">
+<strong id="rdInvested">
         ₹0
        </strong>
-      </div>
-      <div class="fin-result">
-       <span>
+</div>
+<div class="fin-result">
+<span>
         Estimated interest
        </span>
-       <strong id="rdInterest">
+<strong id="rdInterest">
         ₹0
        </strong>
-      </div>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</div>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       About RD Calculator
      </h2>
-     <p>
+<p>
       RD Calculator estimates the maturity value of a recurring deposit using regular contributions, an interest-rate assumption, tenure, and the available compounding method. It is useful for comparing savings plans where money is deposited periodically rather than as one initial lump sum.
      </p>
-     <p>
-      <strong>
+<p>
+<strong>
        Good practice:
       </strong>
       Before creating the final rd calculator result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
      </p>
-    </section>
-    <section class="mt-6">
-     <p>
-      <strong>
+</section>
+<section class="mt-6">
+<p>
+<strong>
        Before you finish:
       </strong>
       Treat the preview as a review stage, not just a download step. Check the parts that matter most for rd calculator, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
      </p>
-     <h2>
+<h2>
       How to use RD Calculator
      </h2>
-     <ol class="how-to">
-      <li>
+<ol class="how-to">
+<li>
        Enter the recurring deposit amount
       </li>
-      <li>
+<li>
        set the interest rate
       </li>
-      <li>
+<li>
        choose the tenure and compounding settings
       </li>
-      <li>
+<li>
        calculate
       </li>
-      <li>
+<li>
        review total invested, estimated interest, and maturity value
       </li>
-      <li>
+<li>
        compare another scenario if needed.
       </li>
-     </ol>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ol>
+</section>
+<section class="mt-6">
+<h2>
       Technical limitations
      </h2>
-     <ul>
-      <li>
+<ul>
+<li>
        Banks can calculate recurring deposits using institution-specific conventions.
       </li>
-      <li>
+<li>
        Actual maturity may differ because of rate changes, rounding, deposit dates, or special terms.
       </li>
-      <li>
+<li>
        The calculator is not connected to a bank’s live rate or account system.
       </li>
-      <li>
+<li>
        Tax, premature closure, and other bank-specific charges may need separate checking.
       </li>
-     </ul>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ul>
+</section>
+<section class="mt-6">
+<h2>
       Frequently asked
      </h2>
-     <div class="faq-accordion">
-      <details>
-       <summary>
+<div class="faq-accordion">
+<details>
+<summary>
         Why is RD different from FD?
        </summary>
-       <p>
+<p>
         RD builds the deposit through repeated contributions, so each instalment can earn interest for a different period.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         What does total invested mean?
        </summary>
-       <p>
+<p>
         It represents the sum of the recurring contributions entered for the selected tenure.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Can I change the interest rate?
        </summary>
-       <p>
+<p>
         Yes. Enter the rate applicable to the scenario you want to estimate.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Is the maturity value official?
        </summary>
-       <p>
+<p>
         No. Confirm the final amount with the bank’s product terms.
        </p>
-      </details>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</details>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related tools
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../fd-calculator/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../fd-calculator/index.html">
+<h3 class="tool-card__title">
         FD Calculator
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Estimate a one-time fixed deposit.
        </p>
-      </a>
-      <a class="tool-card" href="../sip-calculator/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../sip-calculator/index.html">
+<h3 class="tool-card__title">
         SIP Calculator
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Compare another periodic contribution model.
        </p>
-      </a>
-      <a class="tool-card" href="../swp-calculator/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../swp-calculator/index.html">
+<h3 class="tool-card__title">
         SWP Calculator
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Model withdrawals from an existing corpus.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related reading
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../../blog/rd-calculator-guide/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../../blog/rd-calculator-guide/index.html">
+<h3 class="tool-card__title">
         RD Calculator Guide
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Understand recurring-deposit calculations.
        </p>
-      </a>
-      <a class="tool-card" href="../../blog/fd-calculator-guide/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../../blog/fd-calculator-guide/index.html">
+<h3 class="tool-card__title">
         FD Calculator Guide
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Compare RD and FD assumptions.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Privacy
      </h2>
-     <p>
+<p>
       The RD calculation runs locally in the browser using user-entered figures. No bank account or customer data is retrieved. Verify rates, compounding rules, and the final maturity amount with the relevant financial institution.
      </p>
-    </section>
-   </div>
-  <section class="mt-6"><h2>Financial information notice</h2><p>This calculator is an informational mathematical tool, not financial, investment, tax or legal advice. It does not recommend a product, contribution amount, withdrawal amount or transaction. Rates, rules, eligibility and tax treatment can change; verify current authoritative information separately.</p></section></main>
-  <footer class="footer">
-   <div class="container">
-    <div class="footer__grid">
-     <div>
-      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-      </a>
-      <p class="mt-4 footer-intro">
+</section>
+</div>
+<section class="mt-6"><h2>Financial information notice</h2><p>This calculator is an informational mathematical tool, not financial, investment, tax or legal advice. It does not recommend a product, contribution amount, withdrawal amount or transaction. Rates, rules, eligibility and tax treatment can change; verify current authoritative information separately.</p></section></main>
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div>
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<p class="mt-4 footer-intro">
        Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
       </p>
-     </div>
-     <div>
-      <h4>
+</div>
+<div>
+<h4>
        Tools
       </h4>
-      <ul>
-       <li>
-        <a href="../../tools/pdf-editor/index.html">
+<ul>
+<li>
+<a href="../../tools/pdf-editor/index.html">
          PDF Editor
         </a>
-       </li>
-       <li>
-        <a href="../../tools/merge-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/merge-pdf/index.html">
          Merge PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/split-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/split-pdf/index.html">
          Split PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/compress-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/compress-pdf/index.html">
          Compress PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/da-arrears-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/da-arrears-calculator/index.html">
          DA Arrears Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/gpf-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/gpf-calculator/index.html">
          GPF Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/index.html">
+</li>
+<li>
+<a href="../../tools/index.html">
          All Tools
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Learn
       </h4>
-      <ul>
-       <li>
-        <a href="../../blog/index.html">
+<ul>
+<li>
+<a href="../../blog/index.html">
          Blog
         </a>
-       </li>
-       <li>
-        <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
          FAQ
         </a>
-       </li>
-       <li>
-        <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
          About
         </a>
-       </li>
-       <li>
-        <a href="../../contact/index.html">
+</li>
+<li>
+<a href="../../contact/index.html">
          Contact
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Legal
       </h4>
-      <ul>
-       <li>
-        <a href="../../privacy-policy/index.html">
+<ul>
+<li>
+<a href="../../privacy-policy/index.html">
          Privacy Policy
         </a>
-       </li>
-       <li>
-        <a href="../../terms/index.html">
+</li>
+<li>
+<a href="../../terms/index.html">
          Terms of Service
         </a>
-       </li>
-       <li>
-        <a href="../../disclaimer/index.html">
+</li>
+<li>
+<a href="../../disclaimer/index.html">
          Disclaimer
         </a>
-       </li>
-       <li>
-        <a href="../../cookie-policy/index.html">
+</li>
+<li>
+<a href="../../cookie-policy/index.html">
          Cookie Policy
         </a>
-       </li>
-       <li>
-        <a href="../../dmca/index.html">
+</li>
+<li>
+<a href="../../dmca/index.html">
          DMCA
         </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer__bottom">
-     <span>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer__bottom">
+<span>
       ©
       <span data-year="">
        2026
       </span>
       DSUTILITY. All rights reserved.
      </span>
-     <span class="footer__badge">
+<span class="footer__badge">
       🔒 Supported file processing happens in your browser.
      </span>
-    </div>
-   </div>
-  </footer>
-  <script src="../../js/main.js">
-  </script>
-  <script>
+</div>
+</div>
+</footer>
+<script src="../../js/main.js">
+</script>
+<script>
    document.body.dataset.m="rd";
   </script>
-  <script src="../../js/tools/financial-calculators.js">
-  </script>
- </body>
+<script src="../../js/tools/financial-calculators.js">
+</script>
+</body>
 </html>

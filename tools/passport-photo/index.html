@@ -1,560 +1,583 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>
    Passport Photo &amp; ID Photo Maker Online | DSUTILITY
   </title>
-  <meta content="Create a passport-style or ID photo locally in your browser. Choose common photo ratios, output size and background without uploading your image." name="description"/>
-  <link href="https://dsutility.pages.dev/tools/passport-photo/" rel="canonical"/>
-  <meta content="website" property="og:type"/>
-  <meta content="Passport Photo &amp; ID Photo Maker — DSUTILITY" property="og:title"/>
-  <meta content="Prepare a passport-style or ID photo in your browser with common aspect ratios and output sizes." property="og:description"/>
-  <meta content="https://dsutility.pages.dev/tools/passport-photo/" property="og:url"/>
-  <meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <link href="../../images/logo.svg" rel="icon"/>
-  <link href="../../css/style.css" rel="stylesheet"/>
-  <link href="../../css/tools.css" rel="stylesheet"/>
-  <style>
-   .photo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,420px);gap:20px}.photo-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.photo-controls label{display:block;font-weight:600;margin-bottom:6px}.photo-controls input,.photo-controls select{width:100%;box-sizing:border-box}.photo-preview{padding:16px;border:1px solid var(--border);border-radius:14px;background:var(--bg-card);text-align:center;overflow:auto}.photo-preview canvas{display:block;max-width:100%;height:auto;margin:auto;border-radius:8px}.photo-actions{display:flex;gap:10px;flex-wrap:wrap}.hint{font-size:.92rem;color:var(--text-muted)}@media(max-width:800px){.photo-grid{grid-template-columns:1fr}.photo-controls{grid-template-columns:1fr}}
+<meta content="Create a passport-style or ID photo locally in your browser. Choose common photo ratios, output size and background without uploading your image." name="description"/>
+<link href="https://dsutility.pages.dev/tools/passport-photo/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Passport Photo &amp; ID Photo Maker — DSUTILITY" property="og:title"/>
+<meta content="Prepare a passport-style or ID photo in your browser with common aspect ratios and output sizes." property="og:description"/>
+<meta content="https://dsutility.pages.dev/tools/passport-photo/" property="og:url"/>
+<meta content="https://dsutility.pages.dev/images/logo.svg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../images/logo.svg" rel="icon"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/tools.css" rel="stylesheet"/>
+<style>
+   .photo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,420px);gap:20px}.photo-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.photo-controls label{display:block;font-weight:600;margin-bottom:6px}.photo-controls input,.photo-controls select{width:100%;box-sizing:border-box}.photo-preview{padding:16px;border:1px solid var(--border);border-radius:14px;background:var(--bg-card);text-align:center;overflow:auto}.photo-preview canvas{display:block;max-width:100%;height:auto;margin:auto;border-radius:8px}.photo-actions{display:flex;gap:10px;flex-wrap:wrap}.sheet-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.sheet-summary{padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft,var(--bg-card));font-size:.94rem}.hint{font-size:.92rem;color:var(--text-muted)}@media(max-width:800px){.photo-grid{grid-template-columns:1fr}.photo-controls,.sheet-controls{grid-template-columns:1fr}}@media(max-width:800px){.photo-grid{grid-template-columns:1fr}.photo-controls{grid-template-columns:1fr}}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
    {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Passport Photo & ID Photo Maker — DSUTILITY","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/passport-photo/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Passport Photo & ID Photo Maker","item":"https://dsutility.pages.dev/tools/passport-photo/"}]}]}
   </script>
-  <link href="../../manifest.json" rel="manifest"/>
-  <meta content="#0A1929" name="theme-color"/>
-  <link href="../../css/polish.css" rel="stylesheet"/>
-  <link href="https://dsutility.pages.dev/tools/passport-photo/" rel="canonical"/>
-  <meta content="Passport Photo &amp; ID Photo Maker Online | DSUTILITY" name="twitter:title"/>
-  <meta content="Create a passport-style or ID photo locally in your browser. Choose common photo ratios, output size and background without uploading your image." name="twitter:description"/>
-  <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
- </head>
- <body data-tool="passport-photo">
-  <a class="skip-link" href="#main">
+<link href="../../manifest.json" rel="manifest"/>
+<meta content="#0A1929" name="theme-color"/>
+<link href="../../css/polish.css" rel="stylesheet"/>
+
+<meta content="Passport Photo &amp; ID Photo Maker Online | DSUTILITY" name="twitter:title"/>
+<meta content="Create a passport-style or ID photo locally in your browser. Choose common photo ratios, output size and background without uploading your image." name="twitter:description"/>
+<meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
+</head>
+<body data-tool="passport-photo">
+<a class="skip-link" href="#main">
    Skip to content
   </a>
-  <header class="navbar">
-   <div class="container navbar__inner">
-    <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-     <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-    </a>
-    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
+<header class="navbar">
+<div class="container navbar__inner">
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="navbar__toggle" data-nav-toggle="">
      ☰
     </button>
-    <nav aria-label="Primary">
-     <ul class="navbar__menu" data-nav-menu="" id="primary-nav">
-      <li>
-       <a href="../../tools/index.html">
+<nav aria-label="Primary">
+<ul class="navbar__menu" data-nav-menu="" id="primary-nav">
+<li>
+<a href="../../tools/index.html">
         All Tools
        </a>
-      </li>
-      <li>
-       <a href="../../tools/pdf-editor/index.html">
+</li>
+<li>
+<a href="../../tools/pdf-editor/index.html">
         PDF Editor
        </a>
-      </li>
-      <li>
-       <a href="../../blog/index.html">
+</li>
+<li>
+<a href="../../blog/index.html">
         Blog
        </a>
-      </li>
-      <li>
-       <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
         FAQ
        </a>
-      </li>
-      <li>
-       <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
         About
        </a>
-      </li>
-      <li>
-       <a class="navbar__contact-link" href="../../contact/index.html">
+</li>
+<li>
+<a class="navbar__contact-link" href="../../contact/index.html">
         Contact
        </a>
-      </li>
-     </ul>
-    </nav>
-    <div class="navbar__actions">
-     <button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
+</li>
+</ul>
+</nav>
+<div class="navbar__actions">
+<button aria-label="Switch menu" class="theme-toggle" data-theme-toggle="">
       ☀️
      </button>
-    </div>
-   </div>
-  </header>
-  <main class="section" id="main">
-   <div class="container">
-    <nav aria-label="Breadcrumb">
-     <ol class="breadcrumb">
-      <li>
-       <a href="../../index.html">
+</div>
+</div>
+</header>
+<main class="section" id="main">
+<div class="container">
+<nav aria-label="Breadcrumb">
+<ol class="breadcrumb">
+<li>
+<a href="../../index.html">
         Home
        </a>
-      </li>
-      <li>
-       <a href="../index.html">
+</li>
+<li>
+<a href="../index.html">
         Tools
        </a>
-      </li>
-      <li>
-       <span aria-current="page">
+</li>
+<li>
+<span aria-current="page">
         Passport Photo &amp; ID Photo Maker
        </span>
-      </li>
-     </ol>
-    </nav>
-    <h1>
+</li>
+</ol>
+</nav>
+<h1>
      Passport Photo &amp; ID Photo Maker
     </h1>
-    <p class="lead">
+<p class="lead">
      Prepare a passport-style or ID photo by choosing a common aspect ratio and output size. Your image stays in your browser.
     </p>
-    <p class="privacy-badge">
+<p class="privacy-badge">
      🔒 Browser-based processing — your image is not uploaded to a DSUTILITY processing server.
     </p>
-    <section class="tool-panel mt-6">
-     <label for="photoFile">
-      <strong>
+<section class="tool-panel mt-6">
+<label for="photoFile">
+<strong>
        Choose a photo
       </strong>
-     </label>
-     <input accept="image/jpeg,image/png,image/webp" id="photoFile" type="file"/>
-     <div class="status" id="status">
+</label>
+<input accept="image/jpeg,image/png,image/webp" id="photoFile" type="file"/>
+<div class="status" id="status">
       Choose an image to begin.
      </div>
-     <div class="photo-grid mt-4">
-      <div class="photo-preview">
-       <canvas height="531" id="canvas" width="413">
-       </canvas>
-       <p class="hint mt-3">
+<div class="photo-grid mt-4">
+<div class="photo-preview">
+<canvas height="531" id="canvas" width="413">
+</canvas>
+<p class="hint mt-3">
         The preview uses a centered crop. Adjust the horizontal and vertical focus when the subject is not centered.
        </p>
-      </div>
-      <div>
-       <div class="photo-controls">
-        <div>
-         <label for="preset">
+</div>
+<div>
+<div class="photo-controls">
+<div>
+<label for="preset">
           Photo ratio
          </label>
-         <select id="preset">
-          <option value="35x45">
+<select id="preset">
+<option value="35x45">
            35 × 45 mm style (7:9)
           </option>
-          <option value="2x2">
+<option value="2x2">
            2 × 2 inch style (1:1)
           </option>
-          <option value="4x6">
+<option value="4x6">
            4 × 6 inch print sheet (2:3)
           </option>
-          <option value="custom">
+<option value="custom">
            Custom ratio
           </option>
-         </select>
-        </div>
-        <div>
-         <label for="background">
+</select>
+</div>
+<div>
+<label for="background">
           Background
          </label>
-         <select id="background">
-          <option value="original">
+<select id="background">
+<option value="original">
            Keep original
           </option>
-          <option value="remove">
+<option value="remove">
            Remove background
           </option>
-         </select>
-         <label for="bgTolerance">
+</select>
+<label for="bgTolerance">
           Background tolerance
          </label>
-         <input id="bgTolerance" max="100" min="10" type="range" value="35"/>
-         <output id="bgToleranceVal">
+<input id="bgTolerance" max="100" min="10" type="range" value="35"/>
+<output id="bgToleranceVal">
           35
          </output>
-        </div>
-        <div>
-         <label for="width">
+</div>
+<div>
+<label for="width">
           Output width (px)
          </label>
-         <input id="width" max="4000" min="40" type="number" value="413"/>
-        </div>
-        <div>
-         <label for="height">
+<input id="width" max="4000" min="40" type="number" value="413"/>
+</div>
+<div>
+<label for="height">
           Output height (px)
          </label>
-         <input id="height" max="4000" min="40" type="number" value="531"/>
-        </div>
-        <div>
-         <label for="focusX">
+<input id="height" max="4000" min="40" type="number" value="531"/>
+</div>
+<div>
+<label for="focusX">
           Horizontal focus
          </label>
-         <input id="focusX" max="100" min="0" type="range" value="50"/>
-         <output id="focusXVal">
+<input id="focusX" max="100" min="0" type="range" value="50"/>
+<output id="focusXVal">
           50%
          </output>
-        </div>
-        <div>
-         <label for="focusY">
+</div>
+<div>
+<label for="focusY">
           Vertical focus
          </label>
-         <input id="focusY" max="100" min="0" type="range" value="50"/>
-         <output id="focusYVal">
+<input id="focusY" max="100" min="0" type="range" value="50"/>
+<output id="focusYVal">
           50%
          </output>
-        </div>
-        <div>
-         <label for="zoom">
+</div>
+<div>
+<label for="zoom">
           Crop zoom
          </label>
-         <input id="zoom" max="180" min="100" type="range" value="100"/>
-         <output id="zoomVal">
+<input id="zoom" max="180" min="100" type="range" value="100"/>
+<output id="zoomVal">
           100%
          </output>
-        </div>
-        <div hidden="" id="customRatioWrap">
-         <label for="ratio">
+</div>
+<div hidden="" id="customRatioWrap">
+<label for="ratio">
           Custom width : height
          </label>
-         <input id="ratio" inputmode="decimal" type="text" value="3:4"/>
-        </div>
-       </div>
-       <div class="photo-actions mt-4">
-        <button class="btn btn-secondary" id="reset" type="button">
+<input id="ratio" inputmode="decimal" type="text" value="3:4"/>
+</div>
+</div>
+<div class="photo-actions mt-4">
+<button class="btn btn-secondary" id="reset" type="button">
          Reset
         </button>
-        <label class="mt-4" for="targetKB">
+<label class="mt-4" for="targetKB">
          Target file size (optional)
         </label>
-        <select id="targetKB">
-         <option value="0">
+<select id="targetKB">
+<option value="0">
           No target
          </option>
-         <option value="15">
+<option value="15">
           15 KB
          </option>
-         <option value="20">
+<option value="20">
           20 KB
          </option>
-         <option value="25">
+<option value="25">
           25 KB
          </option>
-         <option value="50">
+<option value="50">
           50 KB
          </option>
-        </select>
-        <button class="btn btn-primary" id="download" type="button">
+</select>
+<button class="btn btn-primary" id="download" type="button">
          Create &amp; Download
         </button>
-       </div>
-      </div>
-     </div>
-     <div class="result-box mt-4" hidden="" id="output">
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</div>
+</div>
+</div>
+<section class="tool-panel mt-6" aria-labelledby="sheetHeading">
+<h2 id="sheetHeading">Passport Photo Print Sheet</h2>
+<p class="hint">Enter how many copies you need. DSUTILITY will arrange them automatically on A4 pages with rows, columns, margins and gaps so you can download a print-ready colour PDF.</p>
+<div class="sheet-controls mt-4">
+<div><label for="sheetCopies">Number of photos</label><input id="sheetCopies" type="number" min="1" max="100" value="12"/></div>
+<div><label for="sheetPaper">Paper size</label><select id="sheetPaper"><option value="a4">A4 — 210 × 297 mm</option><option value="a5">A5 — 148 × 210 mm</option><option value="letter">Letter — 216 × 279 mm</option></select></div>
+<div><label for="sheetOrientation">Orientation</label><select id="sheetOrientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></div>
+<div><label for="sheetMargin">Page margin (mm)</label><input id="sheetMargin" type="number" min="3" max="25" value="10" step="1"/></div>
+<div><label for="sheetGap">Gap between photos (mm)</label><input id="sheetGap" type="number" min="0" max="15" value="2" step="1"/></div>
+<div><label for="sheetQuality">PDF image quality</label><select id="sheetQuality"><option value="0.95">High — best for printing</option><option value="0.9" selected>Balanced</option><option value="0.82">Smaller PDF</option></select></div>
+</div>
+<div class="sheet-summary mt-4" id="sheetSummary" role="status">Upload a photo and choose the required photo size to calculate the sheet layout.</div>
+<div class="photo-actions mt-4">
+<button class="btn btn-primary" id="downloadSheet" type="button">Create Colour PDF Sheet</button>
+</div>
+</section>
+<div class="result-box mt-4" hidden="" id="output">
+</div>
+</section>
+<section class="mt-6">
+<h2>
       About Passport Photo &amp; ID Photo Maker
      </h2>
-     <p>
+<p>
       Passport Photo &amp; ID Photo Maker prepares an uploaded portrait for common passport-style or ID-photo layouts. It can resize, crop, arrange, and prepare multiple copies while giving you a preview before download.
      </p>
-     <p>
-      <strong>
+<p>
+<strong>
        Good practice:
       </strong>
       Before creating the final passport photo &amp; id photo maker result, keep the original source available and decide what the output must achieve. A quick review of page order, dimensions, readability, or calculation inputs can prevent a technically correct file from being unsuitable for its actual purpose.
      </p>
-    </section>
-    <section class="mt-6">
-     <p>
-      <strong>
+</section>
+<section class="mt-6">
+<p>
+<strong>
        Before you finish:
       </strong>
       Treat the preview as a review stage, not just a download step. Check the parts that matter most for passport photo &amp; id photo maker, then open the exported file or result once more before sharing, printing, submitting, or replacing the original.
      </p>
-     <h2>
+<h2>
       How to use Passport Photo &amp; ID Photo Maker
      </h2>
-     <ol class="how-to">
-      <li>
+<ol class="how-to">
+<li>
        Upload a clear portrait
       </li>
-      <li>
+<li>
        choose the required photo format or size
       </li>
-      <li>
+<li>
        position the face and crop
       </li>
-      <li>
+<li>
        adjust the background options when available
       </li>
-      <li>
+<li>
        preview the sheet
       </li>
-      <li>
+<li>
        download the final image/PDF
       </li>
-      <li>
+<li>
        check the target authority’s current photo rules before submission.
       </li>
-     </ol>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ol>
+</section>
+<section class="mt-6">
+<h2>
       Technical limitations
      </h2>
-     <ul>
-      <li>
+<ul>
+<li>
        Official photo specifications vary by country, department, application, and document type.
       </li>
-      <li>
+<li>
        A browser tool cannot guarantee that a generated image meets every authority’s biometric or background requirement.
       </li>
-      <li>
+<li>
        Low-resolution originals can remain visibly soft after resizing.
       </li>
-      <li>
+<li>
        Do not assume a generic passport size is valid for every application.
       </li>
-     </ul>
-    </section>
-    <section class="mt-6">
-     <h2>
+</ul>
+</section>
+<section class="mt-6">
+<h2>
       Frequently asked
      </h2>
-     <div class="faq-accordion">
-      <details>
-       <summary>
+<div class="faq-accordion">
+<details>
+<summary>
         Can I change the background?
        </summary>
-       <p>
+<p>
         Use the background controls provided, and verify the result against the target application’s rules.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Can I make multiple ID photos on one sheet?
        </summary>
-       <p>
+<p>
         Use the available sheet/layout options when provided.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Will this guarantee government acceptance?
        </summary>
-       <p>
+<p>
         No. Always check the current requirements of the authority receiving the photo.
        </p>
-      </details>
-      <details>
-       <summary>
+</details>
+<details>
+<summary>
         Can I use a phone photo?
        </summary>
-       <p>
+<p>
         Yes, if the source is clear enough and meets the required framing and lighting conditions.
        </p>
-      </details>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</details>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related tools
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../image-resize-compress/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../image-resize-compress/index.html">
+<h3 class="tool-card__title">
         Image Resize &amp; Compress
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Fine-tune dimensions and file size.
        </p>
-      </a>
-      <a class="tool-card" href="../background-remover/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../background-remover/index.html">
+<h3 class="tool-card__title">
         Background Remover
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Prepare a cleaner background when appropriate.
        </p>
-      </a>
-      <a class="tool-card" href="../photo-enhancer/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../photo-enhancer/index.html">
+<h3 class="tool-card__title">
         Photo Enhancer
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Improve a weak original before sizing.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Related reading
      </h2>
-     <div class="related-grid">
-      <a class="tool-card" href="../../blog/passport-photo-guide/index.html">
-       <h3 class="tool-card__title">
+<div class="related-grid">
+<a class="tool-card" href="../../blog/passport-photo-guide/index.html">
+<h3 class="tool-card__title">
         Passport Photo Guide
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Review framing, size, and practical checks.
        </p>
-      </a>
-      <a class="tool-card" href="../../blog/image-resize-compress-guide/index.html">
-       <h3 class="tool-card__title">
+</a>
+<a class="tool-card" href="../../blog/image-resize-compress-guide/index.html">
+<h3 class="tool-card__title">
         Image Resize &amp; Compression Guide
        </h3>
-       <p class="tool-card__desc">
+<p class="tool-card__desc">
         Control dimensions and output size.
        </p>
-      </a>
-     </div>
-    </section>
-    <section class="mt-6">
-     <h2>
+</a>
+</div>
+</section>
+<section class="mt-6">
+<h2>
       Privacy
      </h2>
-     <p>
+<p>
       Photo processing occurs in the browser for the supported workflow. The uploaded portrait does not need to be sent to a DSUTILITY image server. Because face photographs are personal information, avoid sharing the source image unnecessarily and store the generated file securely.
      </p>
-    </section>
-   </div>
-  </main>
-  <footer class="footer">
-   <div class="container">
-    <div class="footer__grid">
-     <div>
-      <a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
-       <img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
-      </a>
-      <p class="mt-4 footer-intro">
+</section>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div>
+<a aria-label="DSUTILITY home" class="navbar__brand" href="../../index.html">
+<img alt="DSUTILITY logo" class="dspdf-shared-logo" src="../../images/logo.svg"/>
+</a>
+<p class="mt-4 footer-intro">
        Practical PDF, image, document, government and financial utility tools designed for useful browser-based work, with local processing for supported tools.
       </p>
-     </div>
-     <div>
-      <h4>
+</div>
+<div>
+<h4>
        Tools
       </h4>
-      <ul>
-       <li>
-        <a href="../../tools/pdf-editor/index.html">
+<ul>
+<li>
+<a href="../../tools/pdf-editor/index.html">
          PDF Editor
         </a>
-       </li>
-       <li>
-        <a href="../../tools/merge-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/merge-pdf/index.html">
          Merge PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/split-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/split-pdf/index.html">
          Split PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/compress-pdf/index.html">
+</li>
+<li>
+<a href="../../tools/compress-pdf/index.html">
          Compress PDF
         </a>
-       </li>
-       <li>
-        <a href="../../tools/da-arrears-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/da-arrears-calculator/index.html">
          DA Arrears Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/gpf-calculator/index.html">
+</li>
+<li>
+<a href="../../tools/gpf-calculator/index.html">
          GPF Calculator
         </a>
-       </li>
-       <li>
-        <a href="../../tools/index.html">
+</li>
+<li>
+<a href="../../tools/index.html">
          All Tools
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Learn
       </h4>
-      <ul>
-       <li>
-        <a href="../../blog/index.html">
+<ul>
+<li>
+<a href="../../blog/index.html">
          Blog
         </a>
-       </li>
-       <li>
-        <a href="../../faq/index.html">
+</li>
+<li>
+<a href="../../faq/index.html">
          FAQ
         </a>
-       </li>
-       <li>
-        <a href="../../about/index.html">
+</li>
+<li>
+<a href="../../about/index.html">
          About
         </a>
-       </li>
-       <li>
-        <a href="../../contact/index.html">
+</li>
+<li>
+<a href="../../contact/index.html">
          Contact
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4>
+</li>
+</ul>
+</div>
+<div>
+<h4>
        Legal
       </h4>
-      <ul>
-       <li>
-        <a href="../../privacy-policy/index.html">
+<ul>
+<li>
+<a href="../../privacy-policy/index.html">
          Privacy Policy
         </a>
-       </li>
-       <li>
-        <a href="../../terms/index.html">
+</li>
+<li>
+<a href="../../terms/index.html">
          Terms of Service
         </a>
-       </li>
-       <li>
-        <a href="../../disclaimer/index.html">
+</li>
+<li>
+<a href="../../disclaimer/index.html">
          Disclaimer
         </a>
-       </li>
-       <li>
-        <a href="../../cookie-policy/index.html">
+</li>
+<li>
+<a href="../../cookie-policy/index.html">
          Cookie Policy
         </a>
-       </li>
-       <li>
-        <a href="../../dmca/index.html">
+</li>
+<li>
+<a href="../../dmca/index.html">
          DMCA
         </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer__bottom">
-     <span>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer__bottom">
+<span>
       ©
       <span data-year="">
        2026
       </span>
       DSUTILITY. All rights reserved.
      </span>
-     <span class="footer__badge">
+<span class="footer__badge">
       🔒 Supported file processing happens in your browser.
      </span>
-    </div>
-   </div>
-  </footer>
-  <script src="../../js/main.js">
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../../js/main.js">
+</script>
+<script>
+   (function(){const f=document.getElementById('photoFile'),c=document.getElementById('canvas'),ctx=c.getContext('2d'),status=document.getElementById('status'),preset=document.getElementById('preset'),bg=document.getElementById('background'),w=document.getElementById('width'),h=document.getElementById('height'),fx=document.getElementById('focusX'),fy=document.getElementById('focusY'),fxv=document.getElementById('focusXVal'),fyv=document.getElementById('focusYVal'),zoom=document.getElementById('zoom'),zoomv=document.getElementById('zoomVal'),ratio=document.getElementById('ratio'),custom=document.getElementById('customRatioWrap'),download=document.getElementById('download'),reset=document.getElementById('reset'),output=document.getElementById('output'),tol=document.getElementById('bgTolerance'),tolv=document.getElementById('bgToleranceVal');let img=null;function dims(){if(preset.value==='35x45'){w.value=413;h.value=531}else if(preset.value==='2x2'){w.value=600;h.value=600}else if(preset.value==='4x6'){w.value=1200;h.value=1800}else{let m=String(ratio.value).split(':').map(Number);if(m.length===2&&m[0]>0&&m[1]>0)h.value=Math.max(40,Math.round(Number(w.value)*m[1]/m[0]))}}function removeBg(data,W,H,T){const total=W*H,seen=new Uint8Array(total),q=[],samples=[];[[0,0],[W-1,0],[0,H-1],[W-1,H-1]].forEach(([xx,yy])=>{let i=(yy*W+xx)*4;samples.push([data[i],data[i+1],data[i+2]])});function sim(i){let r=data[i*4],g=data[i*4+1],b=data[i*4+2];return samples.some(s=>Math.abs(r-s[0])+Math.abs(g-s[1])+Math.abs(b-s[2])<=T*3)}function push(k){if(k>=0&&k<total&&!seen[k]){seen[k]=1;q.push(k)}}for(let xx=0;xx<W;xx++){push(xx);push((H-1)*W+xx)}for(let yy=0;yy<H;yy++){push(yy*W);push(yy*W+W-1)}for(let hq=0;hq<q.length;hq++){let k=q[hq];if(!sim(k))continue;data[k*4+3]=0;let x=k%W,y=(k/W)|0;if(x)push(k-1);if(x<W-1)push(k+1);if(y)push(k-W);if(y<H-1)push(k+W)}}function draw(){if(!img)return;let W=Math.max(40,Math.min(4000,+w.value||413)),H=Math.max(40,Math.min(4000,+h.value||531));c.width=W;c.height=H;let target=W/H,sw=img.naturalWidth,sh=img.naturalHeight,srcRatio=sw/sh,z=Math.max(1,(+zoom.value||100)/100),baseW,baseH,sww,shh;if(srcRatio>target){baseH=sh;baseW=sh*target}else{baseW=sw;baseH=sw/target}sww=Math.min(sw,baseW/z);shh=Math.min(sh,baseH/z);let maxX=Math.max(0,sw-sww),maxY=Math.max(0,sh-shh),sx=Math.round(maxX*(+fx.value/100)),sy=Math.round(maxY*(+fy.value/100));ctx.clearRect(0,0,W,H);ctx.drawImage(img,sx,sy,sww,shh,0,0,W,H);if(bg.value==='remove'){let im=ctx.getImageData(0,0,W,H);removeBg(im.data,W,H,+tol.value);ctx.putImageData(im,0,0)}fxv.textContent=fx.value+'%';fyv.textContent=fy.value+'%';zoomv.textContent=zoom.value+'%';tolv.textContent=tol.value;status.textContent=bg.value==='remove'?'Preview ready — connected background removal applied.':'Preview ready — '+W+' × '+H+' px.'}f.onchange=()=>{let file=f.files&&f.files[0];if(!file)return;status.textContent='Loading image…';let u=URL.createObjectURL(file),im=new Image();im.onload=()=>{img=im;URL.revokeObjectURL(u);draw()};im.onerror=()=>status.textContent='Could not read this image.';im.src=u};preset.onchange=()=>{custom.hidden=preset.value!=='custom';dims();draw()};[bg,w,h,fx,fy,zoom,ratio,tol].forEach(e=>e.addEventListener('input',draw));reset.onclick=()=>{f.value='';img=null;fx.value=fy.value=50;zoom.value=100;tol.value=35;preset.value='35x45';bg.value='original';custom.hidden=true;dims();ctx.clearRect(0,0,c.width,c.height);output.hidden=true;draw()};download.onclick=async()=>{if(!img){status.textContent='Choose an image first.';return}download.disabled=true;try{let targetKB=Number(document.getElementById('targetKB')?.value||0),mime=targetKB>0?'image/jpeg':'image/png',ext=targetKB>0?'jpg':'png';const renderBlob=(quality)=>new Promise(resolve=>c.toBlob(resolve,mime,mime==='image/jpeg'?quality:undefined));let quality=mime==='image/jpeg'?0.88:undefined,b=await renderBlob(quality);if(targetKB>0){let target=Math.max(1024,Math.round(targetKB*1024*0.98));let best=null;for(let pass=0;pass<8;pass++){let lo=0.04,hi=quality;for(let i=0;i<10;i++){let q=(lo+hi)/2, candidate=await renderBlob(q);if(candidate.size>target)hi=q;else{lo=q;best={blob:candidate,q}}}if(best&&best.blob.size<=target)break;if(c.width<=120||c.height<=120)break;c.width=Math.max(80,Math.floor(c.width*.86));c.height=Math.max(80,Math.floor(c.height*.86));draw();quality=.82}if(!best){best={blob:b,q:quality}}b=best.blob;if(b.size>target){for(let pass=0;pass<6&&b.size>target;pass++){c.width=Math.max(64,Math.floor(c.width*.8));c.height=Math.max(64,Math.floor(c.height*.8));draw();b=await renderBlob(Math.max(.03,quality-.06))}}}if(!b){status.textContent='Could not create the output image.';return}let u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='dsutility-photo.'+ext;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);output.hidden=false;output.textContent='Photo created locally: '+(b.size/1024).toFixed(1)+' KB ('+c.width+' × '+c.height+' px).'+(targetKB?' Target: '+targetKB+' KB; the downloaded file is kept at or below the selected target when technically achievable.':'');status.textContent='Done — output downloaded.'}catch(err){console.error(err);status.textContent='Could not create the requested file. Try a larger target size.'}finally{download.disabled=false}};const sheetCopies=document.getElementById('sheetCopies'),sheetPaper=document.getElementById('sheetPaper'),sheetOrientation=document.getElementById('sheetOrientation'),sheetMargin=document.getElementById('sheetMargin'),sheetGap=document.getElementById('sheetGap'),sheetQuality=document.getElementById('sheetQuality'),sheetSummary=document.getElementById('sheetSummary'),downloadSheet=document.getElementById('downloadSheet');
+function photoMM(){if(preset.value==='35x45')return {w:35,h:45};if(preset.value==='2x2')return {w:50.8,h:50.8};if(preset.value==='4x6')return {w:101.6,h:152.4};let parts=String(ratio.value).split(':').map(Number),rw=parts[0]>0?parts[0]:3,rh=parts[1]>0?parts[1]:4;return {w:35,h:35*rh/rw}}
+function paperMM(){if(sheetPaper.value==='a5')return {w:148,h:210};if(sheetPaper.value==='letter')return {w:216,h:279};return {w:210,h:297}}
+function sheetLayout(){let paper=paperMM(),m=Math.max(3,Math.min(25,+sheetMargin.value||10)),gap=Math.max(0,Math.min(15,+sheetGap.value||2)),o=sheetOrientation.value;if(o==='landscape') [paper.w,paper.h]=[paper.h,paper.w];let ph=photoMM(),cols=Math.max(1,Math.floor((paper.w-2*m+gap)/(ph.w+gap))),rows=Math.max(1,Math.floor((paper.h-2*m+gap)/(ph.h+gap))),per=cols*rows,copies=Math.max(1,Math.min(100,+sheetCopies.value||1)),pages=Math.ceil(copies/per);return {paper,m,gap,ph,cols,rows,per,copies,pages}}
+function updateSheetSummary(){let L=sheetLayout();sheetSummary.textContent=L.cols+' columns × '+L.rows+' rows = '+L.per+' photos per page. '+L.copies+' photos require '+L.pages+' page'+(L.pages>1?'s':'')+'. Each photo: '+L.ph.w.toFixed(1)+' × '+L.ph.h.toFixed(1)+' mm.'}
+[sheetCopies,sheetPaper,sheetOrientation,sheetMargin,sheetGap,preset,ratio].forEach(e=>e&&e.addEventListener('input',updateSheetSummary));
+downloadSheet.onclick=async()=>{if(!img){status.textContent='Choose a photo first.';return}downloadSheet.disabled=true;try{if(!window.jspdf||!window.jspdf.jsPDF)throw new Error('PDF library unavailable');let L=sheetLayout(),{jsPDF}=window.jspdf,doc=new jsPDF({orientation:sheetOrientation.value,unit:'mm',format:sheetPaper.value==='a5'?'a5':sheetPaper.value==='letter'?'letter':'a4',compress:true});let quality=Number(sheetQuality.value||.9),blob=await new Promise(r=>c.toBlob(r,'image/jpeg',quality));if(!blob)throw new Error('Image render failed');let data=await new Promise((resolve,reject)=>{let fr=new FileReader();fr.onload=()=>resolve(fr.result);fr.onerror=reject;fr.readAsDataURL(blob)});for(let page=0;page<L.pages;page++){if(page)doc.addPage();for(let i=0;i<L.per&&page*L.per+i<L.copies;i++){let idx=page*L.per+i,col=idx%L.cols,row=Math.floor((idx%L.per)/L.cols);let x=L.m+(L.paper.w-(2*L.m+L.cols*L.ph.w+(L.cols-1)*L.gap))/2+col*(L.ph.w+L.gap);let y=L.m+(L.paper.h-(2*L.m+L.rows*L.ph.h+(L.rows-1)*L.gap))/2+row*(L.ph.h+L.gap);doc.addImage(data,'JPEG',x,y,L.ph.w,L.ph.h,undefined,'FAST')}}doc.save('dsutility-passport-photo-print-sheet.pdf');status.textContent='Colour PDF sheet downloaded.';sheetSummary.textContent=L.cols+' columns × '+L.rows+' rows = '+L.per+' photos per page. '+L.copies+' photos exported across '+L.pages+' page'+(L.pages>1?'s':'')+'.'}catch(e){console.error(e);status.textContent='Could not create the print sheet PDF. Please try again.'}finally{downloadSheet.disabled=false}};
+dims();updateSheetSummary();})();
   </script>
-  <script>
-   (function(){const f=document.getElementById('photoFile'),c=document.getElementById('canvas'),ctx=c.getContext('2d'),status=document.getElementById('status'),preset=document.getElementById('preset'),bg=document.getElementById('background'),w=document.getElementById('width'),h=document.getElementById('height'),fx=document.getElementById('focusX'),fy=document.getElementById('focusY'),fxv=document.getElementById('focusXVal'),fyv=document.getElementById('focusYVal'),zoom=document.getElementById('zoom'),zoomv=document.getElementById('zoomVal'),ratio=document.getElementById('ratio'),custom=document.getElementById('customRatioWrap'),download=document.getElementById('download'),reset=document.getElementById('reset'),output=document.getElementById('output'),tol=document.getElementById('bgTolerance'),tolv=document.getElementById('bgToleranceVal');let img=null;function dims(){if(preset.value==='35x45'){w.value=413;h.value=531}else if(preset.value==='2x2'){w.value=600;h.value=600}else if(preset.value==='4x6'){w.value=1200;h.value=1800}else{let m=String(ratio.value).split(':').map(Number);if(m.length===2&&m[0]>0&&m[1]>0)h.value=Math.max(40,Math.round(Number(w.value)*m[1]/m[0]))}}function removeBg(data,W,H,T){const total=W*H,seen=new Uint8Array(total),q=[],samples=[];[[0,0],[W-1,0],[0,H-1],[W-1,H-1]].forEach(([xx,yy])=>{let i=(yy*W+xx)*4;samples.push([data[i],data[i+1],data[i+2]])});function sim(i){let r=data[i*4],g=data[i*4+1],b=data[i*4+2];return samples.some(s=>Math.abs(r-s[0])+Math.abs(g-s[1])+Math.abs(b-s[2])<=T*3)}function push(k){if(k>=0&&k<total&&!seen[k]){seen[k]=1;q.push(k)}}for(let xx=0;xx<W;xx++){push(xx);push((H-1)*W+xx)}for(let yy=0;yy<H;yy++){push(yy*W);push(yy*W+W-1)}for(let hq=0;hq<q.length;hq++){let k=q[hq];if(!sim(k))continue;data[k*4+3]=0;let x=k%W,y=(k/W)|0;if(x)push(k-1);if(x<W-1)push(k+1);if(y)push(k-W);if(y<H-1)push(k+W)}}function draw(){if(!img)return;let W=Math.max(40,Math.min(4000,+w.value||413)),H=Math.max(40,Math.min(4000,+h.value||531));c.width=W;c.height=H;let target=W/H,sw=img.naturalWidth,sh=img.naturalHeight,srcRatio=sw/sh,z=Math.max(1,(+zoom.value||100)/100),baseW,baseH,sww,shh;if(srcRatio>target){baseH=sh;baseW=sh*target}else{baseW=sw;baseH=sw/target}sww=Math.min(sw,baseW/z);shh=Math.min(sh,baseH/z);let maxX=Math.max(0,sw-sww),maxY=Math.max(0,sh-shh),sx=Math.round(maxX*(+fx.value/100)),sy=Math.round(maxY*(+fy.value/100));ctx.clearRect(0,0,W,H);ctx.drawImage(img,sx,sy,sww,shh,0,0,W,H);if(bg.value==='remove'){let im=ctx.getImageData(0,0,W,H);removeBg(im.data,W,H,+tol.value);ctx.putImageData(im,0,0)}fxv.textContent=fx.value+'%';fyv.textContent=fy.value+'%';zoomv.textContent=zoom.value+'%';tolv.textContent=tol.value;status.textContent=bg.value==='remove'?'Preview ready — connected background removal applied.':'Preview ready — '+W+' × '+H+' px.'}f.onchange=()=>{let file=f.files&&f.files[0];if(!file)return;status.textContent='Loading image…';let u=URL.createObjectURL(file),im=new Image();im.onload=()=>{img=im;URL.revokeObjectURL(u);draw()};im.onerror=()=>status.textContent='Could not read this image.';im.src=u};preset.onchange=()=>{custom.hidden=preset.value!=='custom';dims();draw()};[bg,w,h,fx,fy,zoom,ratio,tol].forEach(e=>e.addEventListener('input',draw));reset.onclick=()=>{f.value='';img=null;fx.value=fy.value=50;zoom.value=100;tol.value=35;preset.value='35x45';bg.value='original';custom.hidden=true;dims();ctx.clearRect(0,0,c.width,c.height);output.hidden=true;draw()};download.onclick=async()=>{if(!img){status.textContent='Choose an image first.';return}download.disabled=true;try{let targetKB=Number(document.getElementById('targetKB')?.value||0),mime=targetKB>0?'image/jpeg':'image/png',ext=targetKB>0?'jpg':'png';const renderBlob=(quality)=>new Promise(resolve=>c.toBlob(resolve,mime,mime==='image/jpeg'?quality:undefined));let quality=mime==='image/jpeg'?0.88:undefined,b=await renderBlob(quality);if(targetKB>0){let target=Math.max(1024,Math.round(targetKB*1024*0.98));let best=null;for(let pass=0;pass<8;pass++){let lo=0.04,hi=quality;for(let i=0;i<10;i++){let q=(lo+hi)/2, candidate=await renderBlob(q);if(candidate.size>target)hi=q;else{lo=q;best={blob:candidate,q}}}if(best&&best.blob.size<=target)break;if(c.width<=120||c.height<=120)break;c.width=Math.max(80,Math.floor(c.width*.86));c.height=Math.max(80,Math.floor(c.height*.86));draw();quality=.82}if(!best){best={blob:b,q:quality}}b=best.blob;if(b.size>target){for(let pass=0;pass<6&&b.size>target;pass++){c.width=Math.max(64,Math.floor(c.width*.8));c.height=Math.max(64,Math.floor(c.height*.8));draw();b=await renderBlob(Math.max(.03,quality-.06))}}}if(!b){status.textContent='Could not create the output image.';return}let u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='dsutility-photo.'+ext;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);output.hidden=false;output.textContent='Photo created locally: '+(b.size/1024).toFixed(1)+' KB ('+c.width+' × '+c.height+' px).'+(targetKB?' Target: '+targetKB+' KB; the downloaded file is kept at or below the selected target when technically achievable.':'');status.textContent='Done — output downloaded.'}catch(err){console.error(err);status.textContent='Could not create the requested file. Try a larger target size.'}finally{download.disabled=false}};dims();})();
-  </script>
- </body>
+</body>
 </html>
