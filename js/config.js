@@ -1,7 +1,7 @@
 /**
  * DSUTILITY — Site Configuration
  * -------------------------------------------------
- * 👉 OWNER: This is THE most important file for deployment.
+ * This is THE most important file for deployment.
  *    Read the comments carefully and edit only the marked lines.
  *    Everything else uses these values automatically.
  */
@@ -10,7 +10,7 @@ window.DSUTILITY_CONFIG = {
   tagline: "Useful PDF, Image & Everyday Tools. Private and Browser-Based.",
 
   /**
-   * 👉 OWNER: basePath
+   * basePath
    * If your site lives at  https://dsutility.pages.dev/
    * then basePath should be "/"
    *
@@ -24,18 +24,18 @@ window.DSUTILITY_CONFIG = {
   basePath: "/",
 
   /**
-   * 👉 OWNER: siteUrl — the full public URL, WITH trailing slash.
+   * siteUrl — the full public URL, WITH trailing slash.
    * Used for sitemap, canonical tags, Open Graph.
    */
   siteUrl: "https://dsutility.pages.dev/",
 
   /**
-   * 👉 OWNER: Your real contact email. Shown on /contact.
+   * Your real contact email. Shown on /contact.
    */
   contactEmail: "dstechnocomp@gmail.com",
 
   /**
-   * 👉 OWNER: Ads — set to true ONLY after AdSense approves your site.
+   * Ads — set to true ONLY after AdSense approves your site.
    * Then paste your ca-pub-XXXX number below.
    * Until approved, leave everything false/empty — do not paste ad code.
    */
@@ -43,7 +43,7 @@ window.DSUTILITY_CONFIG = {
   adsenseClient: "",
 
   /**
-   * 👉 OWNER: Analytics — optional. Set enabled:true and paste your ID
+   * Analytics — optional. Set enabled:true and paste your ID
    * (e.g. Google Analytics "G-XXXXXXXXXX") if you want visitor stats.
    * Leave blank to keep analytics fully off.
    */
