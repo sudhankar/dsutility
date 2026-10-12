@@ -208,7 +208,8 @@ p  { margin: 0 0 var(--space-4); color: var(--text-primary); }
 .navbar__brand:hover { color: var(--text-primary); text-decoration: none; }
 .navbar__brand svg { height: 32px; width: auto; color: var(--text-primary); }
 
-.navbar__menu {
+.navbar__menu,
+.navbar__list {
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -216,7 +217,8 @@ p  { margin: 0 0 var(--space-4); color: var(--text-primary); }
   margin: 0;
   padding: 0;
 }
-.navbar__menu a {
+.navbar__menu a,
+.navbar__list a {
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
@@ -225,15 +227,18 @@ p  { margin: 0 0 var(--space-4); color: var(--text-primary); }
   font-size: 0.92rem;
   font-weight: 500;
 }
-.navbar__menu a:hover { color: var(--text-primary); background: var(--bg-elevated); text-decoration: none; }
+.navbar__menu a:hover,
+.navbar__list a:hover { color: var(--text-primary); background: var(--bg-elevated); text-decoration: none; }
 
-.navbar__menu a.navbar__contact-link {
+.navbar__menu a.navbar__contact-link,
+.navbar__list a.navbar__contact-link {
   background: var(--accent);
   color: #fff;
   font-weight: 700;
   box-shadow: 0 2px 8px rgba(0,0,0,.14);
 }
-.navbar__menu a.navbar__contact-link:hover {
+.navbar__menu a.navbar__contact-link:hover,
+.navbar__list a.navbar__contact-link:hover {
   background: var(--accent-hover, var(--accent));
   color: #fff;
   text-decoration: none;
@@ -266,7 +271,8 @@ p  { margin: 0 0 var(--space-4); color: var(--text-primary); }
 
 @media (max-width: 860px) {
   .navbar__toggle { display: inline-flex; align-items: center; justify-content: center; }
-  .navbar__menu {
+  .navbar__menu,
+  .navbar__list {
     position: absolute;
     top: var(--header-h); left: 0; right: 0;
     flex-direction: column;
@@ -277,8 +283,10 @@ p  { margin: 0 0 var(--space-4); color: var(--text-primary); }
     gap: 0;
     display: none;
   }
-  .navbar__menu.is-open { display: flex; }
-  .navbar__menu a { padding: 12px 14px; font-size: 1rem; }
+  .navbar__menu.is-open,
+  .navbar__list.is-open { display: flex; }
+  .navbar__menu a,
+.navbar__list a { padding: 12px 14px; font-size: 1rem; }
 }
 
 /* ---------- Hero ---------- */
@@ -795,3 +803,11 @@ body[data-tool="pdf-editor"] .site-share{display:none!important}
 
 /* v69: allow the Home tool-search result panel to extend outside the hero section */
 .hero{overflow:visible!important}
+
+/* Header compatibility: several older tool templates use navbar__list/navbar__nav. */
+.navbar__nav{display:flex;align-items:center;min-width:0}
+.navbar__list{align-items:center;gap:var(--space-1);list-style:none;margin:0;padding:0}
+.navbar__list li{list-style:none;margin:0;padding:0}
+.navbar__list a{display:inline-flex;align-items:center;padding:8px 12px;border-radius:var(--radius-sm);color:var(--text-secondary);font-size:.92rem;font-weight:500;text-decoration:none}
+.navbar__list a:hover{color:var(--text-primary);background:var(--bg-elevated);text-decoration:none}
+@media(max-width:860px){.navbar__nav{position:absolute;top:var(--header-h);left:0;right:0}.navbar__list{display:none;position:absolute;top:0;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg-card);border-bottom:1px solid var(--border);padding:var(--space-2);gap:0}.navbar__list.is-open{display:flex}.navbar__list a{padding:12px 14px;font-size:1rem}}
