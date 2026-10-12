@@ -27,11 +27,11 @@
 <link href="../../manifest.json" rel="manifest"/>
 <meta content="#0A1929" name="theme-color"/>
 <link href="../../css/polish.css" rel="stylesheet"/>
-
 <meta content="Leave Encashment Calculator — DSUTILITY" name="twitter:title"/>
 <meta content="Estimate earned leave encashment from Basic Pay, DA and leave days. Browser-based, privacy-friendly and clearly marked as an estimate." name="twitter:description"/>
 <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
-</head>
+<link href="../../css/tool-page-redesign.css" rel="stylesheet"/>
+<link href="../../css/site-consistency-v114.css" rel="stylesheet"/></head>
 <body data-tool="leave-encashment-calculator">
 <a class="skip-link" href="#main">
    Skip to content
@@ -106,12 +106,13 @@
 </li>
 </ol>
 </nav>
-<h1>
+<section aria-label="Leave Encashment Calculator" class="ds-tool-hero"><div class="ds-tool-hero-copy"><h1>
      Leave Encashment Calculator
     </h1>
 <p class="lead">
      Estimate earned-leave encashment from Basic Pay, DA and the number of eligible leave days you enter.
-    </p>
+    </p></div><div aria-hidden="true" class="ds-tool-hero-art ds-art-leave-encashment-calculator"><div class="ds-hero-document"><span class="ds-hero-category">CALCULATOR</span><span class="ds-hero-art-title">Leave Encashment Calculator</span><span class="ds-hero-art-line"></span><span class="ds-hero-art-line short"></span><span class="ds-hero-art-stamp">✓</span></div><span class="ds-hero-orbit one"></span><span class="ds-hero-orbit two"></span></div></section>
+<section aria-label="Tool overview" class="ds-tool-feature-grid"><article class="ds-tool-feature-card"><span class="ds-feature-kicker">01 · HOW TO USE</span><h2>Estimate leave encashment</h2><p>Enter the salary basis, eligible leave days and other requested values, then review the calculated estimate.</p><p>Review the preview or result, then download a separate copy and confirm it opens correctly.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">02 · WHAT IT CAN DO</span><h2>Useful leave encashment workflow</h2><p>Estimate a possible leave encashment amount from the inputs provided.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">03 · TECHNICAL LIMITATIONS</span><h2>Check before relying on it</h2><p>Eligibility, leave limits and salary definitions depend on service rules. Confirm with your department or HR office.</p></article></section>
 <p class="privacy-badge">
      🔒 Calculated locally in your browser.
     </p>
@@ -456,5 +457,5 @@
 <script>
    const basic=document.getElementById('basic'),da=document.getElementById('da'),days=document.getElementById('days'),ceiling=document.getElementById('ceiling'),result=document.getElementById('result');function money(n){return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(n||0)}document.getElementById('calculate').addEventListener('click',()=>{const b=Number(basic.value),d=Number(da.value),raw=Number(days.value);if(!(b>=0&&d>=0&&raw>=0)){result.hidden=false;result.textContent='Please enter valid non-negative values.';return}const eligible=ceiling.value==='yes'?Math.min(raw,300):raw;const monthly=b*(1+d/100),daily=monthly/30,amount=daily*eligible;result.hidden=false;result.innerHTML='<strong>Estimated leave encashment</strong><div class="result-grid"><div class="metric">Monthly Basic + DA<strong>'+money(monthly)+'</strong></div><div class="metric">Daily equivalent<strong>'+money(daily)+'</strong></div><div class="metric">Eligible days used<strong>'+eligible+'</strong></div></div><p class="mt-4"><strong>Estimated amount: '+money(amount)+'</strong></p>'});
   </script>
-</body>
+<script defer="" src="../../js/site-consistency-v114.js"></script></body>
 </html>

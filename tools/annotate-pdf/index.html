@@ -35,12 +35,12 @@
 <link href="../../manifest.json" rel="manifest"/>
 <meta content="#0A1929" name="theme-color"/>
 <link href="../../css/polish.css" rel="stylesheet"/>
-
 <meta content="Annotate PDF Online — Notes, Stamps &amp; Markup | DSUTILITY" name="twitter:title"/>
 <meta content="Annotate your PDF with text notes, stamps like APPROVED or DRAFT, and freehand markup. Free, private, all in your browser." name="twitter:description"/>
 <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
-</head>
-<body>
+<link href="../../css/tool-page-redesign.css" rel="stylesheet"/>
+<link href="../../css/site-consistency-v114.css" rel="stylesheet"/></head>
+<body data-tool="annotate-pdf">
 <a class="skip-link" href="#main">
    Skip to content
   </a>
@@ -114,12 +114,13 @@
 </li>
 </ol>
 </nav>
-<h1>
+<section aria-label="Annotate PDF" class="ds-tool-hero"><div class="ds-tool-hero-copy"><h1>
      Annotate PDF
     </h1>
 <p class="lead">
      Add text notes, preset stamps (APPROVED, DRAFT, CONFIDENTIAL), and freehand markup to any page.
-    </p>
+    </p></div><div aria-hidden="true" class="ds-tool-hero-art ds-art-annotate-pdf"><div class="ds-hero-document"><span class="ds-hero-category">PDF TOOL</span><span class="ds-hero-art-title">Annotate PDF</span><span class="ds-hero-art-line"></span><span class="ds-hero-art-line short"></span><span class="ds-hero-art-stamp">✓</span></div><span class="ds-hero-orbit one"></span><span class="ds-hero-orbit two"></span></div></section>
+<section aria-label="Tool overview" class="ds-tool-feature-grid"><article class="ds-tool-feature-card"><span class="ds-feature-kicker">01 · HOW TO USE</span><h2>Mark up a PDF</h2><p>Open the PDF, choose a text note, stamp or freehand mark, place it on the page, then export and inspect the result.</p><p>Review the preview or result, then download a separate copy and confirm it opens correctly.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">02 · WHAT IT CAN DO</span><h2>Useful pdf annotation workflow</h2><p>Add review notes and visible draft/approved/confidential stamps to a working copy.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">03 · TECHNICAL LIMITATIONS</span><h2>Check before relying on it</h2><p>Annotations are visual markups, not a substitute for secure redaction. Check every page after export.</p></article></section>
 <p class="privacy-badge">
      🔒 Processed locally in your browser.
     </p>
@@ -602,5 +603,5 @@
 </script>
 <script src="../../js/tools/annotate-pdf.js">
 </script>
-</body>
+<script defer="" src="../../js/site-consistency-v114.js"></script></body>
 </html>

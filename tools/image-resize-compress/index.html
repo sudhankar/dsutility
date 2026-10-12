@@ -27,11 +27,11 @@
 <link href="../../manifest.json" rel="manifest"/>
 <meta content="#0A1929" name="theme-color"/>
 <link href="../../css/polish.css" rel="stylesheet"/>
-
 <meta content="Image Resize &amp; Compress Online — Free Browser Tool | DSUTILITY" name="twitter:title"/>
 <meta content="Resize and compress JPG, PNG and WebP images in your browser. Change dimensions, quality and format without uploading your image to a server." name="twitter:description"/>
 <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
-</head>
+<link href="../../css/tool-page-redesign.css" rel="stylesheet"/>
+<link href="../../css/site-consistency-v114.css" rel="stylesheet"/></head>
 <body data-tool="image-resize-compress">
 <a class="skip-link" href="#main">
    Skip to content
@@ -106,12 +106,13 @@
 </li>
 </ol>
 </nav>
-<h1>
+<section aria-label="Image Resize &amp; Compress" class="ds-tool-hero"><div class="ds-tool-hero-copy"><h1>
      Image Resize &amp; Compress
     </h1>
 <p class="lead">
      Resize JPG, PNG or WebP images, adjust quality, and download a smaller copy without uploading the original file.
-    </p>
+    </p></div><div aria-hidden="true" class="ds-tool-hero-art ds-art-image-resize-compress"><div class="ds-hero-document"><span class="ds-hero-category">RESIZE IMAGE</span><span class="ds-hero-art-title">Image Resize &amp; Compress</span><span class="ds-hero-art-line"></span><span class="ds-hero-art-line short"></span><span class="ds-hero-art-stamp">✓</span></div><span class="ds-hero-orbit one"></span><span class="ds-hero-orbit two"></span></div></section>
+<section aria-label="Tool overview" class="ds-tool-feature-grid"><article class="ds-tool-feature-card"><span class="ds-feature-kicker">01 · HOW TO USE</span><h2>Resize and compress an image</h2><p>Select an image, enter the target dimensions and file-size limit, adjust quality if needed, and verify the exported file.</p><p>Review the preview or result, then download a separate copy and confirm it opens correctly.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">02 · WHAT IT CAN DO</span><h2>Useful image resizing workflow</h2><p>Prepare an image for a form, website or upload field with pixel and KB constraints.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">03 · TECHNICAL LIMITATIONS</span><h2>Check before relying on it</h2><p>Repeated compression can reduce quality. Check dimensions and actual file size after downloading.</p></article></section>
 <p class="privacy-badge">
      🔒 Image processing happens in your browser.
     </p>
@@ -550,5 +551,5 @@
 <script>
    document.getElementById('quality').addEventListener('input',function(){document.getElementById('qval').textContent=this.value;});
   </script>
-</body>
+<script defer="" src="../../js/site-consistency-v114.js"></script></body>
 </html>

@@ -13,7 +13,6 @@
 <link href="../../css/style.css" rel="stylesheet"/>
 <link href="../../css/tools.css" rel="stylesheet"/>
 <link href="../../css/polish.css" rel="stylesheet"/>
-
 <meta content="Background Remover &amp; Changer | DSUTILITY" property="og:title"/>
 <meta content="Remove a plain or fairly uniform photo background locally, then keep it transparent or add a clean background colour." property="og:description"/>
 <meta content="https://dsutility.pages.dev/tools/background-remover/" property="og:url"/>
@@ -23,7 +22,8 @@
 <meta content="Background Remover &amp; Changer | DSUTILITY" name="twitter:title"/>
 <meta content="Remove a plain or fairly uniform photo background locally, then keep it transparent or add a clean background colour." name="twitter:description"/>
 <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Background Remover","description":"Remove a plain or fairly uniform photo background locally, then keep it transparent or add a clean background colour.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/background-remover/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Background Remover & Changer","item":"https://dsutility.pages.dev/tools/background-remover/"}]}]}</script></head>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Background Remover","description":"Remove a plain or fairly uniform photo background locally, then keep it transparent or add a clean background colour.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://dsutility.pages.dev/tools/background-remover/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dsutility.pages.dev/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://dsutility.pages.dev/tools/"},{"@type":"ListItem","position":3,"name":"Background Remover & Changer","item":"https://dsutility.pages.dev/tools/background-remover/"}]}]}</script><link href="../../css/tool-page-redesign.css" rel="stylesheet"/>
+<link href="../../css/site-consistency-v114.css" rel="stylesheet"/></head>
 <body data-tool="background-remover">
 <header class="navbar">
 <div class="container navbar__inner">
@@ -95,12 +95,13 @@
 </li>
 </ol>
 </nav>
-<h1>
+<section aria-label="Background Remover &amp; Changer" class="ds-tool-hero"><div class="ds-tool-hero-copy"><h1>
      Background Remover &amp; Changer
     </h1>
 <p class="lead">
      Remove a plain or fairly uniform photo background locally, then keep it transparent or add a clean background colour.
-    </p>
+    </p></div><div aria-hidden="true" class="ds-tool-hero-art ds-art-background-remover"><div class="ds-hero-document"><span class="ds-hero-category">CUTOUT PNG</span><span class="ds-hero-art-title">Background Remover &amp; Changer</span><span class="ds-hero-art-line"></span><span class="ds-hero-art-line short"></span><span class="ds-hero-art-stamp">✓</span></div><span class="ds-hero-orbit one"></span><span class="ds-hero-orbit two"></span></div></section>
+<section aria-label="Tool overview" class="ds-tool-feature-grid"><article class="ds-tool-feature-card"><span class="ds-feature-kicker">01 · HOW TO USE</span><h2>Remove or replace a background</h2><p>Choose an image, adjust the background-removal controls, preview edges, choose transparent or solid colour output, and save.</p><p>Review the preview or result, then download a separate copy and confirm it opens correctly.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">02 · WHAT IT CAN DO</span><h2>Useful image cutout workflow</h2><p>Create a cleaner portrait or product image for forms, documents and listings.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">03 · TECHNICAL LIMITATIONS</span><h2>Check before relying on it</h2><p>Uniform backgrounds work best. Hair, shadows, low contrast and complex edges may leave artifacts; inspect before use.</p></article></section>
 <section class="tool-panel mt-6">
 <input accept="image/jpeg,image/png,image/webp" aria-label="F" id="f" type="file"/>
 <label class="mt-4">
@@ -108,12 +109,12 @@
      </label>
 <input aria-label="T" id="t" max="90" min="5" type="range" value="35"/>
 <label class="mt-4" for="bgMode">New background</label>
-<select id="bgMode" aria-label="New background">
+<select aria-label="New background" id="bgMode">
 <option value="transparent">Transparent</option>
 <option value="white">White</option>
 <option value="custom">Custom colour</option>
 </select>
-<input id="bgColor" aria-label="Custom background colour" type="color" value="#ffffff" class="mt-4" hidden/>
+<input aria-label="Custom background colour" class="mt-4" hidden="" id="bgColor" type="color" value="#ffffff"/>
 <p class="text-muted" id="s">
       Choose an image.
      </p>
@@ -423,5 +424,5 @@
 </script>
 <script src="../../js/tools/background-remover.js">
 </script>
-</body>
+<script defer="" src="../../js/site-consistency-v114.js"></script></body>
 </html>

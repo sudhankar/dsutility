@@ -27,11 +27,11 @@
 <link href="../../manifest.json" rel="manifest"/>
 <meta content="#0A1929" name="theme-color"/>
 <link href="../../css/polish.css" rel="stylesheet"/>
-
 <meta content="NPS Calculator — Contribution &amp; Retirement Corpus Estimator | DSUTILITY" name="twitter:title"/>
 <meta content="Estimate monthly NPS contributions and a projected retirement corpus from salary, contribution rates, years and an assumed return. Browser-based and privacy-friendly." name="twitter:description"/>
 <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
-</head>
+<link href="../../css/tool-page-redesign.css" rel="stylesheet"/>
+<link href="../../css/site-consistency-v114.css" rel="stylesheet"/></head>
 <body data-tool="nps-calculator">
 <a class="skip-link" href="#main">
    Skip to content
@@ -106,12 +106,13 @@
 </li>
 </ol>
 </nav>
-<h1>
+<section aria-label="NPS Calculator" class="ds-tool-hero"><div class="ds-tool-hero-copy"><h1>
      NPS Calculator
     </h1>
 <p class="lead">
      Estimate NPS contributions and a projected retirement corpus from your salary, contribution rates, investment period and assumed annual return.
-    </p>
+    </p></div><div aria-hidden="true" class="ds-tool-hero-art ds-art-nps-calculator"><div class="ds-hero-document"><span class="ds-hero-category">RETIREMENT PLAN</span><span class="ds-hero-art-title">NPS Calculator</span><span class="ds-hero-art-line"></span><span class="ds-hero-art-line short"></span><span class="ds-hero-art-stamp">✓</span></div><span class="ds-hero-orbit one"></span><span class="ds-hero-orbit two"></span></div></section>
+<section aria-label="Tool overview" class="ds-tool-feature-grid"><article class="ds-tool-feature-card"><span class="ds-feature-kicker">01 · HOW TO USE</span><h2>Estimate NPS growth</h2><p>Enter the contribution, investment period and assumed return values, then review the projected corpus and any available breakdown.</p><p>Review the preview or result, then download a separate copy and confirm it opens correctly.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">02 · WHAT IT CAN DO</span><h2>Useful nps estimate workflow</h2><p>Explore how contributions and assumed returns can affect a hypothetical NPS projection.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">03 · TECHNICAL LIMITATIONS</span><h2>Check before relying on it</h2><p>Returns are not guaranteed and pension outcomes depend on applicable NPS rules and annuity choices. This is an estimate, not financial advice.</p></article></section>
 <p class="privacy-badge">
      🔒 Calculated locally in your browser.
     </p>
@@ -461,5 +462,5 @@
 <script>
    (function(){const b=document.getElementById('basic'),y=document.getElementById('years'),e=document.getElementById('employee'),er=document.getElementById('employer'),r=document.getElementById('return'),g=document.getElementById('growth'),btn=document.getElementById('calculate'),out=document.getElementById('result');function money(n){return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n||0)}function calc(){const basic=Math.max(0,+b.value||0),years=Math.max(1,Math.min(60,+y.value||1)),ep=Math.max(0,+e.value||0)/100,erp=Math.max(0,+er.value||0)/100,annual=Math.max(0,+r.value||0)/100,growth=Math.max(0,+g.value||0)/100;let corpus=0,employeeTotal=0,employerTotal=0;const monthlyRate=Math.pow(1+annual,1/12)-1;for(let m=0;m<years*12;m++){const salary=basic*Math.pow(1+growth,m/12);const employee=salary*ep;const employer=salary*erp;employeeTotal+=employee;employerTotal+=employer;corpus=(corpus+employee+employer)*(1+monthlyRate)}out.hidden=false;out.innerHTML='<div class="text-muted">Estimated result</div><div class="result-grid"><div class="metric">Employee contributions<strong>'+money(employeeTotal)+'</strong></div><div class="metric">Employer contributions<strong>'+money(employerTotal)+'</strong></div><div class="metric">Projected corpus<strong>'+money(corpus)+'</strong></div></div><p class="text-muted mt-4">Projection assumes monthly contributions and monthly compounding at the annual return you entered. Actual NPS outcomes can differ.</p>'}btn.addEventListener('click',calc);[b,y,e,er,r,g].forEach(x=>x.addEventListener('input',calc));calc()})();
   </script>
-</body>
+<script defer="" src="../../js/site-consistency-v114.js"></script></body>
 </html>

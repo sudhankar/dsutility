@@ -27,11 +27,11 @@
 <link href="../../manifest.json" rel="manifest"/>
 <meta content="#0A1929" name="theme-color"/>
 <link href="../../css/polish.css" rel="stylesheet"/>
-
 <meta content="Passport Photo &amp; ID Photo Maker Online | DSUTILITY" name="twitter:title"/>
 <meta content="Create a passport-style or ID photo locally in your browser. Choose common photo ratios, output size and background without uploading your image." name="twitter:description"/>
 <meta content="https://dsutility.pages.dev/images/icon-512.png" name="twitter:image"/>
-</head>
+<link href="../../css/tool-page-redesign.css" rel="stylesheet"/>
+<link href="../../css/site-consistency-v114.css" rel="stylesheet"/></head>
 <body data-tool="passport-photo">
 <a class="skip-link" href="#main">
    Skip to content
@@ -106,12 +106,13 @@
 </li>
 </ol>
 </nav>
-<h1>
+<section aria-label="Passport Photo &amp; ID Photo Maker" class="ds-tool-hero"><div class="ds-tool-hero-copy"><h1>
      Passport Photo &amp; ID Photo Maker
     </h1>
 <p class="lead">
      Prepare a passport-style or ID photo by choosing a common aspect ratio and output size. Your image stays in your browser.
-    </p>
+    </p></div><div aria-hidden="true" class="ds-tool-hero-art ds-art-passport-photo"><div class="ds-hero-document"><span class="ds-hero-category">ID PHOTO</span><span class="ds-hero-art-title">Passport Photo &amp; ID Photo Maker</span><span class="ds-hero-art-line"></span><span class="ds-hero-art-line short"></span><span class="ds-hero-art-stamp">✓</span></div><span class="ds-hero-orbit one"></span><span class="ds-hero-orbit two"></span></div></section>
+<section aria-label="Tool overview" class="ds-tool-feature-grid"><article class="ds-tool-feature-card"><span class="ds-feature-kicker">01 · HOW TO USE</span><h2>Create an ID-size photo sheet</h2><p>Choose a portrait, select the required photo dimensions, adjust crop and background options, then export the photo or print sheet.</p><p>Review the preview or result, then download a separate copy and confirm it opens correctly.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">02 · WHAT IT CAN DO</span><h2>Useful passport &amp; id photo workflow</h2><p>Prepare ID-size photographs and arrange multiple copies on a printable page.</p></article><article class="ds-tool-feature-card"><span class="ds-feature-kicker">03 · TECHNICAL LIMITATIONS</span><h2>Check before relying on it</h2><p>Country, visa and institution requirements differ. Verify the exact dimensions, background, head position and print scale before use.</p></article></section>
 <p class="privacy-badge">
      🔒 Browser-based processing — your image is not uploaded to a DSUTILITY processing server.
     </p>
@@ -250,16 +251,16 @@
 </div>
 </div>
 </div>
-<section class="tool-panel mt-6" aria-labelledby="sheetHeading">
+<section aria-labelledby="sheetHeading" class="tool-panel mt-6">
 <h2 id="sheetHeading">Passport Photo Print Sheet</h2>
 <p class="hint">Enter how many copies you need. DSUTILITY will arrange them automatically on A4 pages with rows, columns, margins and gaps so you can download a print-ready colour PDF.</p>
 <div class="sheet-controls mt-4">
-<div><label for="sheetCopies">Number of photos</label><input id="sheetCopies" type="number" min="1" max="100" value="12"/></div>
+<div><label for="sheetCopies">Number of photos</label><input id="sheetCopies" max="100" min="1" type="number" value="12"/></div>
 <div><label for="sheetPaper">Paper size</label><select id="sheetPaper"><option value="a4">A4 — 210 × 297 mm</option><option value="a5">A5 — 148 × 210 mm</option><option value="letter">Letter — 216 × 279 mm</option></select></div>
 <div><label for="sheetOrientation">Orientation</label><select id="sheetOrientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></div>
-<div><label for="sheetMargin">Page margin (mm)</label><input id="sheetMargin" type="number" min="3" max="25" value="10" step="1"/></div>
-<div><label for="sheetGap">Gap between photos (mm)</label><input id="sheetGap" type="number" min="0" max="15" value="2" step="1"/></div>
-<div><label for="sheetQuality">PDF image quality</label><select id="sheetQuality"><option value="0.95">High — best for printing</option><option value="0.9" selected>Balanced</option><option value="0.82">Smaller PDF</option></select></div>
+<div><label for="sheetMargin">Page margin (mm)</label><input id="sheetMargin" max="25" min="3" step="1" type="number" value="10"/></div>
+<div><label for="sheetGap">Gap between photos (mm)</label><input id="sheetGap" max="15" min="0" step="1" type="number" value="2"/></div>
+<div><label for="sheetQuality">PDF image quality</label><select id="sheetQuality"><option value="0.95">High — best for printing</option><option selected="" value="0.9">Balanced</option><option value="0.82">Smaller PDF</option></select></div>
 </div>
 <div class="sheet-summary mt-4" id="sheetSummary" role="status">Upload a photo and choose the required photo size to calculate the sheet layout.</div>
 <div class="photo-actions mt-4">
@@ -579,5 +580,5 @@ function updateSheetSummary(){let L=sheetLayout();sheetSummary.textContent=L.col
 downloadSheet.onclick=async()=>{if(!img){status.textContent='Choose a photo first.';return}downloadSheet.disabled=true;try{if(!window.jspdf||!window.jspdf.jsPDF)throw new Error('PDF library unavailable');let L=sheetLayout(),{jsPDF}=window.jspdf,doc=new jsPDF({orientation:sheetOrientation.value,unit:'mm',format:sheetPaper.value==='a5'?'a5':sheetPaper.value==='letter'?'letter':'a4',compress:true});let quality=Number(sheetQuality.value||.9),blob=await new Promise(r=>c.toBlob(r,'image/jpeg',quality));if(!blob)throw new Error('Image render failed');let data=await new Promise((resolve,reject)=>{let fr=new FileReader();fr.onload=()=>resolve(fr.result);fr.onerror=reject;fr.readAsDataURL(blob)});for(let page=0;page<L.pages;page++){if(page)doc.addPage();for(let i=0;i<L.per&&page*L.per+i<L.copies;i++){let idx=page*L.per+i,col=idx%L.cols,row=Math.floor((idx%L.per)/L.cols);let x=L.m+(L.paper.w-(2*L.m+L.cols*L.ph.w+(L.cols-1)*L.gap))/2+col*(L.ph.w+L.gap);let y=L.m+(L.paper.h-(2*L.m+L.rows*L.ph.h+(L.rows-1)*L.gap))/2+row*(L.ph.h+L.gap);doc.addImage(data,'JPEG',x,y,L.ph.w,L.ph.h,undefined,'FAST')}}doc.save('dsutility-passport-photo-print-sheet.pdf');status.textContent='Colour PDF sheet downloaded.';sheetSummary.textContent=L.cols+' columns × '+L.rows+' rows = '+L.per+' photos per page. '+L.copies+' photos exported across '+L.pages+' page'+(L.pages>1?'s':'')+'.'}catch(e){console.error(e);status.textContent='Could not create the print sheet PDF. Please try again.'}finally{downloadSheet.disabled=false}};
 dims();updateSheetSummary();})();
   </script>
-</body>
+<script defer="" src="../../js/site-consistency-v114.js"></script></body>
 </html>
